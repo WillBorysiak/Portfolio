@@ -6,7 +6,7 @@ interface ContextPropTypes {
 }
 
 const initialTheme = {
-	dark: false,
+	dark: true,
 };
 
 export const ThemeContext = createContext(initialTheme);

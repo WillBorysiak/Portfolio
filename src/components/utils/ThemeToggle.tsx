@@ -30,14 +30,14 @@ const ThemeToggle = () => {
 				}
 			}}
 		>
-			{!night && (
+			{!theme.dark && (
 				<FontAwesomeIcon
 					className="text-black transition-all delay-200 duration-1000 ease-in-out hover:text-gray-100"
 					icon={faMoon}
 					size="4x"
 				/>
 			)}
-			{night && (
+			{theme.dark && (
 				<FontAwesomeIcon
 					className="text-black transition delay-200 duration-1000 ease-in-out hover:text-yellow-300"
 					icon={faSun}

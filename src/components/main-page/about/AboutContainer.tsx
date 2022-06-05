@@ -7,7 +7,7 @@ interface AboutContainerPropTypes {
 const AboutContainer = (props: AboutContainerPropTypes) => {
 	return (
 		<section className="m-5 overflow-hidden bg-white font-kalam ">
-			<div className="relative mx-auto max-w-7xl bg-[url('../../src/assets/images/pexels-rudolf-jakkel-418831.jpg')] px-1 pt-1 pb-1  sm:px-2 lg:px-2 lg:py-2">
+			<div className="relative mx-auto max-w-7xl bg-[url('../../src/assets/images/pexels-chama-691901.jpg')] bg-cover bg-center px-1 pt-1 pb-1 dark:bg-[url('../../src/assets/images/pexels-rudolf-jakkel-418831.jpg')] dark:bg-auto dark:bg-top sm:px-2 lg:px-2 lg:py-2">
 				<div
 					className={
 						props.reverse
