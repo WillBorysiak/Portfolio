@@ -4,11 +4,14 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
+				lightBackground: '#7dd3fc',
+				darkBackground: '#334155',
 				lightTransition: '#4C92D2',
 				darkTransition: '#000F29',
 			},
 			fontFamily: {
-				bebas: ['Bebas Neue', 'san-serif'],
+				amatic: ['Amatic SC', 'san-serif'],
+				kalam: ['Kalam', 'san-serif'],
 			},
 		},
 	},

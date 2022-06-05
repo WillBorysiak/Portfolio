@@ -32,16 +32,16 @@ const ThemeToggle = () => {
 		>
 			{!night && (
 				<FontAwesomeIcon
-					className="text-black transition-all duration-500 ease-in-out hover:text-gray-100"
+					className="text-black transition-all delay-200 duration-1000 ease-in-out hover:text-gray-100"
 					icon={faMoon}
-					size="5x"
+					size="4x"
 				/>
 			)}
 			{night && (
 				<FontAwesomeIcon
-					className="text-black transition duration-500 ease-in-out hover:text-yellow-300"
+					className="text-black transition delay-200 duration-1000 ease-in-out hover:text-yellow-300"
 					icon={faSun}
-					size="5x"
+					size="4x"
 				/>
 			)}
 		</button>
