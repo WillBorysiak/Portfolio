@@ -9,7 +9,7 @@ const Layout = (props: LayoutPropTypes) => {
 	return (
 		<>
 			<ThemeProvider>
-				<div>{props.children}</div>
+				<div className="overflow-y-hidden">{props.children}</div>
 			</ThemeProvider>
 		</>
 	);
