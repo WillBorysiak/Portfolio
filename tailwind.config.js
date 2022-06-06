@@ -29,7 +29,7 @@ module.exports = {
 			keyframes: {
 				floatingLG: {
 					'0%': { left: '0%', opacity: '0' },
-					'50%': { left: '50%', opacity: '1' },
+					'50%': { left: '50%', opacity: '0.8' },
 					'100%': { left: '85%', opacity: '0' },
 				},
 				floatingMD: {
@@ -39,7 +39,7 @@ module.exports = {
 				},
 				floatingSM: {
 					'0%': { left: '0%', opacity: '0' },
-					'50%': { left: '20%', opacity: '1' },
+					'50%': { left: '20%', opacity: '0.8' },
 					'100%': { left: '45%', opacity: '0' },
 				},
 			},

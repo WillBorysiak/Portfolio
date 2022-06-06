@@ -1,6 +1,5 @@
 import React, { useEffect, useContext } from 'react';
 
-import { ThemeProvider } from '../components/context/ThemeContext';
 import { ThemeContext } from '../components/context/ThemeContext';
 
 interface LayoutPropTypes {
@@ -20,13 +19,7 @@ const Layout = (props: LayoutPropTypes) => {
 		}
 	}, []);
 
-	return (
-		<>
-			<ThemeProvider>
-				<div className="overflow-y-hidden">{props.children}</div>
-			</ThemeProvider>
-		</>
-	);
+	return <div className="overflow-y-hidden">{props.children}</div>;
 };
 
 export default Layout;

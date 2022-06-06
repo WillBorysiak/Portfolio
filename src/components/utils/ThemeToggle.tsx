@@ -7,7 +7,7 @@ import { faSun } from '@fortawesome/pro-duotone-svg-icons';
 
 const ThemeToggle = () => {
 	const theme = useContext(ThemeContext);
-	const [night, setNight] = useState(false);
+	const [night, setNight] = useState(true);
 
 	return (
 		<button
