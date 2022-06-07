@@ -1,15 +1,33 @@
 import React from 'react';
 
-import Cloud from './Cloud';
+import MobileClouds from './Clouds/MobileClouds';
+import TabletClouds from './Clouds/TabletClouds';
+import DesktopClouds from './Clouds/DesktopClouds';
 
 const CloudContainer = () => {
+	const device = {
+		mobile: false,
+		tablet: false,
+		desktop: false,
+	};
+	const width = window.innerWidth;
+
+	if (width < 640) {
+		device.mobile = true;
+	}
+	if (width > 641 && width < 1024) {
+		device.tablet = true;
+	}
+	if (width > 1025) {
+		device.desktop = true;
+	}
+
 	return (
 		<>
 			<div className="z-0">
-				<Cloud size="3x" location="mt-0" speed="animate-floatSM_Slow" />
-				<Cloud size="7x" location="mt-60" speed="animate-floatSM_Fast" />
-				<Cloud size="5x" location="mt-96" speed="animate-floatSM_Slow" />
-				<Cloud size="6x" location="mt-[500px]" speed="animate-floatSM_Med" />
+				{device.mobile && <MobileClouds />}
+				{device.tablet && <TabletClouds />}
+				{device.desktop && <DesktopClouds />}
 			</div>
 		</>
 	);

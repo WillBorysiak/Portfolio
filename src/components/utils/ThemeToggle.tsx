@@ -7,7 +7,6 @@ import { faSun } from '@fortawesome/pro-duotone-svg-icons';
 
 const ThemeToggle = () => {
 	const theme = useContext(ThemeContext);
-	const [night, setNight] = useState(true);
 
 	return (
 		<button
@@ -16,31 +15,29 @@ const ThemeToggle = () => {
 			onClick={() => {
 				const root = window.document.documentElement;
 
-				if (theme.dark === false) {
-					theme.dark = true;
+				if (!theme.isDark) {
+					theme.setIsDark(true);
 					root.classList.add('dark');
-					setNight(true);
 					return;
 				}
-				if (theme.dark === true) {
-					theme.dark = false;
+				if (theme.isDark) {
+					theme.setIsDark(false);
 					root.classList.remove('dark');
-					setNight(false);
 					return;
 				}
 			}}
 		>
-			{!theme.dark && (
-				<FontAwesomeIcon
-					className="text-black transition-all delay-200 duration-1000 ease-in-out hover:text-gray-100"
-					icon={faMoon}
-					size="4x"
-				/>
-			)}
-			{theme.dark && (
+			{theme.isDark && (
 				<FontAwesomeIcon
 					className="text-black transition delay-200 duration-1000 ease-in-out hover:text-yellow-300"
 					icon={faSun}
+					size="4x"
+				/>
+			)}
+			{!theme.isDark && (
+				<FontAwesomeIcon
+					className="text-black transition-all delay-200 duration-1000 ease-in-out hover:text-gray-100"
+					icon={faMoon}
 					size="4x"
 				/>
 			)}

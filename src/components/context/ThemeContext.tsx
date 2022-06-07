@@ -5,12 +5,17 @@ interface ContextPropTypes {
 	children: React.ReactNode;
 }
 
-const defaultState = {
-	dark: true,
-};
+interface StateType {
+	isDark: boolean;
+	setIsDark: any;
+}
 
-export const ThemeContext = createContext(defaultState);
+const defaultState: any = true;
+
+export const ThemeContext = createContext<StateType>(defaultState);
 
 export const ThemeProvider = (props: ContextPropTypes) => {
-	return <ThemeContext.Provider value={defaultState}>{props.children}</ThemeContext.Provider>;
+	const [isDark, setIsDark] = useState(defaultState);
+
+	return <ThemeContext.Provider value={{ isDark, setIsDark }}>{props.children}</ThemeContext.Provider>;
 };

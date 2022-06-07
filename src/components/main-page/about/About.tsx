@@ -19,7 +19,6 @@ interface SectionTypes {
 const About = () => {
 	const data = useStaticQuery(query);
 	const sections = data.allContentfulPortfolioAbout.nodes;
-	console.log(sections);
 
 	return (
 		<>

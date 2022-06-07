@@ -10,8 +10,8 @@ const ParallaxBackground = () => {
 
 	return (
 		<div className="fixed -z-10 h-full w-full bg-sky-300 dark:bg-slate-700">
-			{theme.dark && <CloudContainer />}
-			{theme.dark && <StarContainer />}
+			{theme.isDark && <StarContainer />}
+			{!theme.isDark && <CloudContainer />}
 		</div>
 	);
 };

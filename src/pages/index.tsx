@@ -11,9 +11,9 @@ const HomePage = () => {
 	return (
 		<Layout>
 			<Hero />
+			<Projects />
 			<About />
 			<Skills />
-			<Projects />
 			<Contact />
 		</Layout>
 	);
