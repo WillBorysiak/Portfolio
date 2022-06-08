@@ -1,18 +1,33 @@
 import React from 'react';
 
-import Star from './Star';
+import MobileStars from './stars/MobileStars';
+import TabletStars from './stars/TabletStars';
+import DesktopStars from './stars/DesktopStars';
 
 const StarContainer = () => {
+	const device = {
+		mobile: false,
+		tablet: false,
+		desktop: false,
+	};
+	const width = window.innerWidth;
+
+	if (width < 640) {
+		device.mobile = true;
+	}
+	if (width > 641 && width < 1024) {
+		device.tablet = true;
+	}
+	if (width > 1025) {
+		device.desktop = true;
+	}
+
 	return (
 		<>
 			<div className="z-0">
-				<Star size="1x" location="mt-0" speed="animate-floatSM_Slow" />
-				<Star size="1x" location="mt-60" speed="animate-floatSM_Fast" />
-				<Star size="1x" location="mt-96" speed="animate-floatSM_Slow" />
-				<Star size="1x" location="mt-[500px]" speed="animate-floatSM_Slow" />
-				<Star size="1x" location="mt-[600px]" speed="animate-floatSM_Slow" />
-				<Star size="1x" location="mt-[750px]" speed="animate-floatSM_Slow" />
-				<Star size="1x" location="mt-[800px]" speed="animate-floatSM_Slow" />
+				{device.mobile && <MobileStars />}
+				{device.tablet && <TabletStars />}
+				{device.desktop && <DesktopStars />}
 			</div>
 		</>
 	);

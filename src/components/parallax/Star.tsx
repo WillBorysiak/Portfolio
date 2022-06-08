@@ -15,7 +15,7 @@ const Star = (props: CloudPropTypes) => {
 		<div>
 			<FontAwesomeIcon
 				icon={faStar}
-				className={`absolute ${props.location} z-0 ${props.speed} text-white md:${props.speed}`}
+				className={`absolute ${props.location} z-0 text-white ${props.speed}`}
 				size={props.size}
 			/>
 		</div>

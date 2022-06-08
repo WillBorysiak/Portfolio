@@ -15,7 +15,7 @@ const Cloud = (props: CloudPropTypes) => {
 		<div>
 			<FontAwesomeIcon
 				icon={faCloud}
-				className={`absolute ${props.location} z-0 text-white ${props.speed} `}
+				className={`absolute ${props.location} z-0 text-white ${props.speed}`}
 				size={props.size}
 			/>
 		</div>
