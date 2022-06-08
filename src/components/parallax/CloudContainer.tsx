@@ -1,8 +1,8 @@
 import React from 'react';
 
-import MobileClouds from './Clouds/MobileClouds';
-import TabletClouds from './Clouds/TabletClouds';
-import DesktopClouds from './Clouds/DesktopClouds';
+import MobileClouds from './clouds/MobileClouds';
+import TabletClouds from './clouds/TabletClouds';
+import DesktopClouds from './clouds/DesktopClouds';
 
 const CloudContainer = () => {
 	const device = {
