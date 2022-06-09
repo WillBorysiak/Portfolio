@@ -20,7 +20,7 @@ const DesktopStars = () => {
 			<FontAwesomeIcon
 				icon={faPlanetRinged}
 				size="6x"
-				className="absolute left-2/3 top-24 z-0 text-lightText opacity-20"
+				className="absolute left-2/3 top-40 z-0 text-lightText opacity-20"
 			/>
 			<FontAwesomeIcon
 				icon={faPlanetMoon}

@@ -8,7 +8,7 @@ import { faClouds } from '@fortawesome/pro-duotone-svg-icons';
 const TabletClouds = () => {
 	return (
 		<>
-			<Cloud speed="animate-[cloudMD_14s_linear_infinite]" size="7x" location="mt-5" />
+			<Cloud speed="animate-[cloudMD_14s_linear_infinite]" size="5x" location="mt-5" />
 			<Cloud speed="animate-[cloudMDReverse_20s_linear_infinite]" size="7x" location="mt-60" />
 			<Cloud speed="animate-[cloudMDReverse_23s_linear_infinite]" size="5x" location="mt-96" />
 			<Cloud speed="animate-[cloudMD_30s_linear_infinite]" size="6x" location="mt-[500px]" />
@@ -17,9 +17,9 @@ const TabletClouds = () => {
 			<FontAwesomeIcon
 				icon={faPlaneProp}
 				size="6x"
-				className="absolute z-0 ml-[500px] mt-24 text-lightText opacity-50"
+				className="absolute z-0 ml-[500px] mt-36 text-lightText opacity-50"
 			/>
-			<FontAwesomeIcon icon={faClouds} size="5x" className="absolute z-0 ml-16 mt-[600px] text-lightText opacity-100" />
+			<FontAwesomeIcon icon={faClouds} size="5x" className="absolute z-0 ml-16 mt-[600px] text-lightText opacity-50" />
 		</>
 	);
 };

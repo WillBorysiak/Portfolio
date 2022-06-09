@@ -8,7 +8,7 @@ const Projects = () => {
 	return (
 		<>
 			<ParallaxBackground />
-			<div className="flex w-screen flex-col items-center justify-start ">
+			<div id="projects" className="flex w-screen flex-col items-center justify-start ">
 				<SectionTitle text="Projects" />
 				<ProjectContainer />
 			</div>

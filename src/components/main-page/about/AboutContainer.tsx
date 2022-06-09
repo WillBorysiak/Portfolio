@@ -14,8 +14,8 @@ const AboutContainer = (props: AboutContainerPropTypes) => {
 				<div
 					className={
 						props.reverse
-							? 'relative w-full flex-row-reverse rounded-md p-5 backdrop-brightness-[0.85]  lg:flex lg:flex-row-reverse lg:items-center '
-							: 'relative w-full rounded-md p-5  backdrop-brightness-[0.85] lg:flex lg:flex-row lg:items-center'
+							? 'relative w-full flex-row-reverse rounded-md p-5 backdrop-brightness-[0.8]  lg:flex lg:flex-row-reverse lg:items-center '
+							: 'relative w-full rounded-md p-5  backdrop-brightness-[0.8] lg:flex lg:flex-row lg:items-center'
 					}
 				>
 					<div className="hidden lg:block lg:flex-shrink-0">

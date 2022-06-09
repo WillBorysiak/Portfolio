@@ -1,103 +1,103 @@
-import React from 'react';
-import { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
+
+import { ThemeContext } from '../components/context/ThemeContext';
 
 import { Menu, Transition } from '@headlessui/react';
-import { DuplicateIcon } from '@heroicons/react/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCloudFog } from '@fortawesome/pro-duotone-svg-icons';
+import { faEarthEurope } from '@fortawesome/pro-duotone-svg-icons';
+import { faCloudWord } from '@fortawesome/pro-solid-svg-icons';
+import { Link } from 'gatsby';
 
 function classNames(...classes: any) {
 	return classes.filter(Boolean).join(' ');
 }
 
-export default function Example() {
+const Navbar = () => {
+	const theme = useContext(ThemeContext);
+
 	return (
 		<Menu as="div" className="relative mt-3 inline-block text-left">
 			<div>
-				<Menu.Button className="inline-flex w-full justify-center rounded-md  px-4 py-2 text-sm font-medium      ">
-					<FontAwesomeIcon className="text-lightText" icon={faCloudFog} size="4x" />
+				<Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium">
+					{theme.isDark && <FontAwesomeIcon className="text-lightText" icon={faEarthEurope} size="4x" />}
+					{!theme.isDark && <FontAwesomeIcon className="text-white" icon={faCloudWord} size="4x" />}
 				</Menu.Button>
 			</div>
 
 			<Transition
 				as={Fragment}
-				enter="transition ease-out duration-1000"
+				enter="transition ease-out duration-500"
 				enterFrom="transform opacity-0 scale-95"
 				enterTo="transform opacity-100 scale-100"
-				leave="transition ease-in duration-1000"
+				leave="transition ease-in duration-500"
 				leaveFrom="transform opacity-100 scale-100"
 				leaveTo="transform opacity-0 scale-95"
 			>
-				<Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-					<div className="py-1">
+				<Menu.Items className="absolute right-0 mt-2 h-[400px] w-64 origin-top-right divide-y  rounded-md bg-darkText backdrop-brightness-[0.9] dark:bg-lightText">
+					<div className=" flex h-full flex-col items-center justify-evenly py-1">
 						<Menu.Item>
 							{({ active }) => (
 								<a
 									href="#"
 									className={classNames(
-										active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-										'group flex items-center px-4 py-2 text-sm',
+										active ? '' : 'text-lightText dark:text-darkText',
+										'group flex items-center px-4 py-2 text-4xl ',
 									)}
 								>
-									<DuplicateIcon className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
 									Home
 								</a>
 							)}
 						</Menu.Item>
 						<Menu.Item>
 							{({ active }) => (
-								<a
-									href="#"
+								<Link
+									to="#projects"
 									className={classNames(
-										active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-										'group flex items-center px-4 py-2 text-sm',
+										active ? '' : 'text-lightText dark:text-darkText',
+										'group flex items-center border-t-4 border-solid border-lightText px-4 py-2 text-4xl dark:border-darkText',
 									)}
 								>
-									<DuplicateIcon className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
 									Projects
-								</a>
+								</Link>
 							)}
 						</Menu.Item>
 						<Menu.Item>
 							{({ active }) => (
-								<a
-									href="#"
+								<Link
+									to="#about"
 									className={classNames(
-										active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-										'group flex items-center px-4 py-2 text-sm',
+										active ? '' : 'text-lightText dark:text-darkText',
+										'group flex items-center border-t-4 border-solid border-lightText px-4 py-2 text-4xl dark:border-darkText',
 									)}
 								>
-									<DuplicateIcon className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
 									About
-								</a>
+								</Link>
 							)}
 						</Menu.Item>
 						<Menu.Item>
 							{({ active }) => (
-								<a
-									href="#"
+								<Link
+									to="#skills"
 									className={classNames(
-										active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-										'group flex items-center px-4 py-2 text-sm',
+										active ? '' : 'text-lightText dark:text-darkText',
+										'group flex items-center border-t-4 border-solid border-lightText px-4 py-2 text-4xl dark:border-darkText',
 									)}
 								>
-									<DuplicateIcon className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
 									Skills
-								</a>
+								</Link>
 							)}
 						</Menu.Item>
 						<Menu.Item>
 							{({ active }) => (
-								<a
-									href="#"
+								<Link
+									to="#contact"
 									className={classNames(
-										active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-										'group flex items-center px-4 py-2 text-sm',
+										active ? '' : 'text-lightText dark:text-darkText',
+										'group flex items-center border-t-4 border-solid border-lightText px-4 py-2 text-4xl dark:border-darkText',
 									)}
 								>
-									<DuplicateIcon className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500" aria-hidden="true" />
 									Contact
-								</a>
+								</Link>
 							)}
 						</Menu.Item>
 					</div>
@@ -105,4 +105,6 @@ export default function Example() {
 			</Transition>
 		</Menu>
 	);
-}
+};
+
+export default Navbar;
