@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 import ParallaxBackground from '../../parallax/ParallaxBackground';
+import SectionTitle from '../../typography/SectionTitle';
 import AboutContainer from './AboutContainer';
 
 interface SectionTypes {
@@ -23,7 +24,8 @@ const About = () => {
 	return (
 		<>
 			<ParallaxBackground />
-			<div className=" z-10 flex  w-screen flex-col items-center justify-start ">
+			<section className=" z-10 flex  w-screen flex-col items-center justify-start ">
+				<SectionTitle text="About Me" />
 				{sections.map((section: SectionTypes) => {
 					return (
 						<AboutContainer
@@ -34,7 +36,7 @@ const About = () => {
 						/>
 					);
 				})}
-			</div>
+			</section>
 		</>
 	);
 };
