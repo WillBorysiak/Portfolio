@@ -1,4 +1,4 @@
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 interface AboutContainerPropTypes {
@@ -9,13 +9,13 @@ interface AboutContainerPropTypes {
 
 const AboutContainer = (props: AboutContainerPropTypes) => {
 	return (
-		<section className="m-5 overflow-hidden font-kalam ">
+		<section className="mx-5 mt-5 overflow-hidden font-kalam ">
 			<div className="relative mx-auto max-w-7xl text-center sm:px-2 lg:px-2 lg:py-2">
 				<div
 					className={
 						props.reverse
-							? 'relative w-full flex-row-reverse rounded-3xl p-5 backdrop-blur-lg backdrop-brightness-50 lg:flex lg:flex-row-reverse lg:items-center '
-							: 'relative w-full rounded-3xl p-5 backdrop-blur-lg backdrop-brightness-50 lg:flex lg:flex-row lg:items-center'
+							? 'relative w-full flex-row-reverse rounded-md p-5 backdrop-brightness-[0.85]  lg:flex lg:flex-row-reverse lg:items-center '
+							: 'relative w-full rounded-md p-5  backdrop-brightness-[0.85] lg:flex lg:flex-row lg:items-center'
 					}
 				>
 					<div className="hidden lg:block lg:flex-shrink-0">

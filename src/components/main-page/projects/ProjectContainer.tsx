@@ -5,6 +5,7 @@ const ProjectContainer = () => {
 	return (
 		<>
 			<Project />
+			<Project />
 		</>
 	);
 };

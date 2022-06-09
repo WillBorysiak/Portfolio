@@ -6,7 +6,7 @@ interface SectionTitlePropTypes {
 
 const SectionTitle = (props: SectionTitlePropTypes) => {
 	return (
-		<h1 className="pb-3 font-amatic text-8xl font-extrabold text-gray-800 dark:text-gray-100 sm:text-9xl">
+		<h1 className="mt-5 mb-5 font-amatic text-7xl font-extrabold text-gray-800 dark:text-gray-100 sm:text-8xl">
 			{props.text}
 		</h1>
 	);

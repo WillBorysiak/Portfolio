@@ -2,14 +2,16 @@ import React from 'react';
 
 import ThemeToggle from '../../utils/ThemeToggle';
 import ParallaxBackground from '../../parallax/ParallaxBackground';
+import Example from '../../../layout/Navbar';
 
 const Hero = () => {
 	return (
 		<>
 			<ParallaxBackground />
-			<section className=" z-10 mx-auto flex h-screen w-screen flex-col justify-evenly ">
-				<div className=" flex flex-row justify-center">
+			<section className="z-10 mx-auto flex h-screen w-screen flex-col justify-evenly ">
+				<div className=" flex flex-row items-start justify-around">
 					<ThemeToggle />
+					<Example />
 				</div>
 				<div className="flex h-full flex-col items-center justify-center">
 					<h1 className="pb-3 font-amatic text-8xl font-extrabold text-darkText dark:text-lightText sm:text-9xl">
