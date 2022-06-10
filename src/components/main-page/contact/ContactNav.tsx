@@ -11,7 +11,7 @@ const ContactNav = () => {
 				<FontAwesomeIcon
 					icon={faCircleArrowUp}
 					size="4x"
-					className="mt-10 mb-10 animate-bounce text-darkText dark:text-lightText"
+					className="mt-10 mb-10 animate-bounce text-light dark:text-light"
 				/>
 			</Link>
 		</>

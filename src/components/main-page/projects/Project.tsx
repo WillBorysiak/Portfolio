@@ -8,10 +8,10 @@ const Project = () => {
 				<div className="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
 					<div>
 						<div className="mt-5">
-							<h2 className="pt-5 text-3xl font-extrabold tracking-tight text-darkText dark:text-lightText md:pt-5 md:text-4xl">
+							<h2 className="pt-5 text-3xl font-extrabold tracking-tight text-dark dark:text-light md:pt-5 md:text-4xl">
 								Project
 							</h2>
-							<p className="mt-4 text-lg font-bold text-darkText dark:text-lightText md:text-xl">
+							<p className="mt-4 text-lg font-bold text-dark dark:text-light md:text-xl">
 								This project involves Lorem ipsum, dolor sit amet consectetur adipisicing elit. This project involves
 								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 							</p>

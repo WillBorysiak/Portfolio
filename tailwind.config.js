@@ -4,11 +4,14 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				lightText: '#f3f4f6',
-				darkText: '#1f2937',
+				light: '#f3f4f6',
+				dark: '#1f2937',
 				lightBackground: '#7dd3fc',
 				darkBackground: '#334155',
-				lightTransition: '#4C92D2',
+				mobileLightTransition: '#488FD1',
+				tabletLightTransition: '#4D94D6',
+				desktopLightTransition: '#5195D6',
+				wideLightTransition: '#5A9BD8',
 				darkTransition: '#000F29',
 			},
 			fontFamily: {

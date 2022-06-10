@@ -16,8 +16,8 @@ const MobileStars = () => {
 			<Star speed="animate-[starSM_26s_linear_infinite]" size="1x" location="mt-[475px]" />
 			<Star speed="animate-[starSMReverse_14s_linear_infinite]" size="1x" location="mt-[550px]" />
 			<Star speed="animate-[starSM_9s_linear_infinite]" size="1x" location="mt-[600px]" />
-			<FontAwesomeIcon icon={faPlanetRinged} size="6x" className="absolute z-0 ml-56 mt-32 text-lightText opacity-20" />
-			<FontAwesomeIcon icon={faPlanetMoon} size="6x" className="absolute z-0 mt-96 ml-16 text-lightText opacity-20" />
+			<FontAwesomeIcon icon={faPlanetRinged} size="6x" className="text-lightT absolute z-0 ml-56 mt-32 opacity-20" />
+			<FontAwesomeIcon icon={faPlanetMoon} size="6x" className="absolute z-0 mt-96 ml-16 text-light opacity-20" />
 		</>
 	);
 };

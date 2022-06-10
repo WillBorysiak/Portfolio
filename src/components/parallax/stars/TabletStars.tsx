@@ -20,13 +20,9 @@ const TabletStars = () => {
 			<FontAwesomeIcon
 				icon={faPlanetRinged}
 				size="6x"
-				className="absolute z-0 ml-[500px] mt-36 text-lightText opacity-20"
+				className="absolute z-0 ml-[500px] mt-36 text-light opacity-20"
 			/>
-			<FontAwesomeIcon
-				icon={faPlanetMoon}
-				size="6x"
-				className="absolute z-0 ml-16 mt-[600px] text-lightText opacity-20"
-			/>
+			<FontAwesomeIcon icon={faPlanetMoon} size="6x" className="absolute z-0 ml-16 mt-[600px] text-light opacity-20" />
 		</>
 	);
 };

@@ -19,7 +19,7 @@ const Navbar = () => {
 		<Menu as="div" className="relative mt-3 inline-block text-left">
 			<div>
 				<Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium">
-					{theme.isDark && <FontAwesomeIcon className="text-lightText" icon={faEarthEurope} size="4x" />}
+					{theme.isDark && <FontAwesomeIcon className="text-light" icon={faEarthEurope} size="4x" />}
 					{!theme.isDark && <FontAwesomeIcon className="text-white" icon={faCloudWord} size="4x" />}
 				</Menu.Button>
 			</div>
@@ -33,14 +33,14 @@ const Navbar = () => {
 				leaveFrom="transform opacity-100 scale-100"
 				leaveTo="transform opacity-0 scale-95"
 			>
-				<Menu.Items className="absolute right-0 mt-2 h-[400px] w-64 origin-top-right divide-y  rounded-md bg-darkText backdrop-brightness-[0.9] dark:bg-lightText">
+				<Menu.Items className="absolute right-0 mt-2 h-[400px] w-64 origin-top-right divide-y  rounded-md bg-dark backdrop-brightness-[0.9] dark:bg-light">
 					<div className=" flex h-full flex-col items-center justify-evenly py-1">
 						<Menu.Item>
 							{({ active }) => (
 								<a
 									href="#"
 									className={classNames(
-										active ? '' : 'text-lightText dark:text-darkText',
+										active ? '' : 'text-light dark:text-dark',
 										'group flex items-center px-4 py-2 text-4xl ',
 									)}
 								>
@@ -53,8 +53,8 @@ const Navbar = () => {
 								<Link
 									to="#projects"
 									className={classNames(
-										active ? '' : 'text-lightText dark:text-darkText',
-										'group flex items-center border-t-4 border-solid border-lightText px-4 py-2 text-4xl dark:border-darkText',
+										active ? '' : 'text-light dark:text-dark',
+										'group flex items-center border-t-4 border-solid border-light px-4 py-2 text-4xl dark:border-dark',
 									)}
 								>
 									Projects
@@ -66,8 +66,8 @@ const Navbar = () => {
 								<Link
 									to="#about"
 									className={classNames(
-										active ? '' : 'text-lightText dark:text-darkText',
-										'group flex items-center border-t-4 border-solid border-lightText px-4 py-2 text-4xl dark:border-darkText',
+										active ? '' : 'text-light dark:text-dark',
+										'group flex items-center border-t-4 border-solid border-light px-4 py-2 text-4xl dark:border-dark',
 									)}
 								>
 									About
@@ -79,8 +79,8 @@ const Navbar = () => {
 								<Link
 									to="#skills"
 									className={classNames(
-										active ? '' : 'text-lightText dark:text-darkText',
-										'group flex items-center border-t-4 border-solid border-lightText px-4 py-2 text-4xl dark:border-darkText',
+										active ? '' : 'text-light dark:text-dark',
+										'group flex items-center border-t-4 border-solid border-light px-4 py-2 text-4xl dark:border-dark',
 									)}
 								>
 									Skills
@@ -92,8 +92,8 @@ const Navbar = () => {
 								<Link
 									to="#contact"
 									className={classNames(
-										active ? '' : 'text-lightText dark:text-darkText',
-										'group flex items-center border-t-4 border-solid border-lightText px-4 py-2 text-4xl dark:border-darkText',
+										active ? '' : 'text-light dark:text-dark',
+										'group flex items-center border-t-4 border-solid border-light px-4 py-2 text-4xl dark:border-dark',
 									)}
 								>
 									Contact

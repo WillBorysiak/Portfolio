@@ -17,16 +17,8 @@ const DesktopStars = () => {
 			<Star speed="animate-[starLGReverse_19s_linear_infinite]" size="1x" location="mt-[650px]" />
 			<Star speed="animate-[starLG_26s_linear_infinite]" size="1x" location="mt-[725px]" />
 			<Star speed="animate-[starLG_30s_linear_infinite]" size="1x" location="mt-[900px]" />
-			<FontAwesomeIcon
-				icon={faPlanetRinged}
-				size="6x"
-				className="absolute left-2/3 top-40 z-0 text-lightText opacity-20"
-			/>
-			<FontAwesomeIcon
-				icon={faPlanetMoon}
-				size="6x"
-				className="absolute left-52 top-2/4 z-0 text-lightText opacity-20"
-			/>
+			<FontAwesomeIcon icon={faPlanetRinged} size="6x" className="absolute left-2/3 top-40 z-0 text-light opacity-20" />
+			<FontAwesomeIcon icon={faPlanetMoon} size="6x" className="absolute left-52 top-2/4 z-0 text-light opacity-20" />
 		</>
 	);
 };
