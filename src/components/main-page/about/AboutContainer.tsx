@@ -9,7 +9,7 @@ interface AboutContainerPropTypes {
 
 const AboutContainer = (props: AboutContainerPropTypes) => {
 	return (
-		<section className="mx-5 mt-5 overflow-hidden font-kalam ">
+		<section className="mx-5 mt-5 overflow-hidden font-kalam">
 			<div className="relative mx-auto max-w-7xl text-center sm:px-2 lg:px-2 lg:py-2">
 				<div
 					className={
