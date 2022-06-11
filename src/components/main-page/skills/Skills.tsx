@@ -1,17 +1,17 @@
 import React from 'react';
 
 import SectionTitle from '../../typography/SectionTitle';
-import SkillContainer from './SkillContainer';
+import SkillsContainer from './SkillsContainer';
 
 const Skills = () => {
 	return (
 		<>
 			<section
 				id="skills"
-				className="flex h-screen w-screen flex-col items-center justify-start bg-gradient-to-b from-lightBackground to-mobileLightTransition dark:bg-gradient-to-b dark:from-darkBackground dark:to-darkTransition md:to-tabletLightTransition lg:to-desktopLightTransition xl:to-wideLightTransition"
+				className="flex w-screen flex-col items-center justify-start bg-gradient-to-b from-lightBackground to-mobileLightTransition pb-10 dark:bg-gradient-to-b dark:from-darkBackground dark:to-darkTransition md:to-tabletLightTransition lg:to-desktopLightTransition xl:to-wideLightTransition"
 			>
 				<SectionTitle text="Skills/Experience" />
-				<SkillContainer />
+				<SkillsContainer />
 			</section>
 		</>
 	);
