@@ -12,7 +12,8 @@ module.exports = {
 				tabletLightTransition: '#4D94D6',
 				desktopLightTransition: '#5195D6',
 				wideLightTransition: '#5A9BD8',
-				darkTransition: '#000F29',
+				mobileDarkTransition: '#000F29',
+				desktopDarkTransition: '#001431',
 			},
 			fontFamily: {
 				amatic: ['Amatic SC', 'san-serif'],

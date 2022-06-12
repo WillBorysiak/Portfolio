@@ -8,7 +8,7 @@ const Hero = () => {
 	return (
 		<>
 			<ParallaxBackground />
-			<section id="home" className="z-10 mx-auto flex h-screen w-screen flex-col justify-evenly ">
+			<section id="home" className="z-10 mx-auto flex h-screen w-screen flex-col justify-evenly">
 				<div className=" flex flex-row items-start justify-around">
 					<ThemeToggle />
 					<Navbar />

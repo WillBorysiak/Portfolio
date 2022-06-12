@@ -1,28 +1,19 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Heading from '../../typography/Heading';
+import Experience from './Experience';
 
 const ExperiencePanel = () => {
 	const data = useStaticQuery(query);
-	const experience = data.allContentfulPortfolioExperience.nodes;
-	const { company, position, date, description, contentful_id } = experience[0];
-	console.log(experience);
-	console.log(description.description[0].one);
+	const jobs = data.allContentfulPortfolioExperience.nodes;
 
 	return (
-		<section className="mx-5 mt-5 overflow-hidden rounded-md font-kalam">
-			<div className="relative mx-auto max-w-7xl text-dark backdrop-brightness-[0.8] dark:text-light sm:px-2 lg:px-2 lg:py-2">
+		<section className="mt-10 overflow-hidden rounded-md font-kalam">
+			<div className="relative mx-auto max-w-7xl py-8 text-dark backdrop-brightness-[0.8] dark:text-light sm:px-2 lg:px-2 lg:py-8">
 				<Heading content="Work Experience" />
-				<div className="mt-5 flex flex-col md:flex-row">
-					<div className="mb-5 md:mt-0 md:pr-10">
-						<h2 className="text-2xl md:text-3xl">{company}</h2>
-					</div>
-					<div className="text-xl md:text-2xl">
-						<h2 className="font-bold">{position}</h2>
-						<h4 className="italic">{date}</h4>
-						<div>{description.description[0].one}</div>
-					</div>
-				</div>
+				{jobs.map((job: any, index: number) => {
+					return <Experience key={index} job={job} />;
+				})}
 			</div>
 		</section>
 	);
@@ -32,7 +23,7 @@ export default ExperiencePanel;
 
 const query = graphql`
 	{
-		allContentfulPortfolioExperience {
+		allContentfulPortfolioExperience(sort: { fields: date, order: DESC }) {
 			nodes {
 				position
 				company
@@ -42,6 +33,9 @@ const query = graphql`
 					description {
 						one
 						two
+						three
+						four
+						five
 					}
 				}
 			}

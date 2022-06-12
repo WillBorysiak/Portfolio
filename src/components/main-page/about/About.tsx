@@ -24,7 +24,7 @@ const About = () => {
 	return (
 		<>
 			<ParallaxBackground />
-			<section id="about" className=" z-10 flex  w-screen flex-col items-center justify-start ">
+			<section id="about" className="z-10 flex w-screen flex-col items-center justify-start ">
 				<SectionTitle text="About Me" />
 				{sections.map((section: SectionTypes) => {
 					return (
