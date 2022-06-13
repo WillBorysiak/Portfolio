@@ -29,16 +29,15 @@ const Experience = (props: ExperiencePropTypes) => {
 			<div className="mt-5 text-xl md:text-2xl">
 				<h2 className="font-bold">{position}</h2>
 				<h4 className="italic">{date}</h4>
-				<div className="mx-auto w-40 border-b-2 border-solid border-light pt-3" />
+				<div className="mx-auto w-40 border-b-2 border-solid border-dark pt-3  dark:border-light" />
 				<ul className="mt-5 list-disc">
 					{descriptionArr.map((desc: string, index: number) => {
-						return <li key={index}>{desc}</li>;
+						return (
+							<li className="mb-2 text-lg font-bold text-dark dark:text-light md:text-xl" key={index}>
+								{desc}
+							</li>
+						);
 					})}
-					{/* <li>{props.description.description[0].one}</li>
-					<li>{props.description.description[0].two}</li>
-					<li>{props.description.description[0].three}</li>
-					<li>{props.description.description[0].four}</li>
-					<li>{props.description.description[0].five}</li> */}
 				</ul>
 			</div>
 		</div>

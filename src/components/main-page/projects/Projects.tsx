@@ -2,15 +2,17 @@ import React from 'react';
 import ParallaxBackground from '../../parallax/ParallaxBackground';
 
 import SectionTitle from '../../typography/SectionTitle';
-import ProjectContainer from './ProjectContainer';
+import HandcraftedByBR from './HandcraftedByBR';
+import WW2EuropeanMap from './WW2EuropeanMap';
 
 const Projects = () => {
 	return (
 		<>
 			<ParallaxBackground />
-			<div id="projects" className="flex w-screen flex-col items-center justify-start ">
+			<div id="projects" className="flex w-screen flex-col items-center">
 				<SectionTitle text="Projects" />
-				<ProjectContainer />
+				<HandcraftedByBR />
+				<WW2EuropeanMap />
 			</div>
 		</>
 	);

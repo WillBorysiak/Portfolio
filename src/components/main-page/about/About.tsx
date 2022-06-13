@@ -4,7 +4,7 @@ import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 import ParallaxBackground from '../../parallax/ParallaxBackground';
 import SectionTitle from '../../typography/SectionTitle';
-import AboutContainer from './AboutContainer';
+import AboutCard from './AboutCard';
 
 interface SectionTypes {
 	contentful_id: string;
@@ -28,7 +28,7 @@ const About = () => {
 				<SectionTitle text="About Me" />
 				{sections.map((section: SectionTypes) => {
 					return (
-						<AboutContainer
+						<AboutCard
 							key={section.contentful_id}
 							reverse={section.reverse}
 							content={section.content.content}
