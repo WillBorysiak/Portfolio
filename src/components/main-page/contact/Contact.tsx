@@ -10,7 +10,7 @@ const Contact = () => {
 	return (
 		<section
 			id="contact"
-			className="flex w-screen flex-col bg-[url('../../src/assets/images/DSC04608.jpg')] bg-cover bg-center dark:bg-[url('../../src/assets/images/pexels-pixabay-358528.jpg')]"
+			className="flex w-screen flex-col bg-[url('../../src/assets/images/LightBackground.jpg')] bg-cover bg-center dark:bg-[url('../../src/assets/images/DarkBackground.jpg')]"
 		>
 			<SectionTitle text="Contact Me" />
 			<div className="flex flex-col items-center justify-center">

@@ -1,4 +1,6 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
+
 import HandcraftedTechStack from './HandcraftedTechStack';
 import ProjectLinks from './ProjectLinks';
 
@@ -14,12 +16,12 @@ const HandcraftedByBR = () => {
 							</h2>
 							<p className="mt-4 text-lg font-bold text-dark dark:text-light md:text-xl">
 								This project was created to serve as a marketing website for my mothers business. The UI and state was
-								managed by React / Gatsby with Tailwind CSS for styling. I also used the Contentful CMS to display data
-								using Graphql.
+								managed by Gatsby with Tailwind CSS for styling. I also used the Contentful CMS to display data using
+								Graphql.
 							</p>
 							<ProjectLinks
-								github="https://github.com/WillBorysiak/WW2-European-Map"
-								website="https://ww2-european-map.netlify.app/"
+								github="https://github.com/WillBorysiak/Handcrafted-By-BR"
+								website="https://www.handcrafted-by-barbara-ruth.com/"
 							/>
 						</div>
 					</div>
@@ -29,9 +31,9 @@ const HandcraftedByBR = () => {
 				</div>
 				<div className=" mt-5 sm:mt-5 lg:mt-0 ">
 					<div className="-mr-48 pl-4 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-						<img
-							className=" w-full  shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-							src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
+						<StaticImage
+							className="w-full shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+							src="../../../assets/images/WW2Screen.png"
 							alt="Inbox user interface"
 						/>
 					</div>

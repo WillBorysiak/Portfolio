@@ -3,8 +3,6 @@ import React from 'react';
 import ProjectLinks from './ProjectLinks';
 import WW2TechStack from './WW2TechStack';
 
-import image from '../../../assets/images/WW2-Screenshot.png';
-
 const WW2EuropeanMap = () => {
 	return (
 		<article className="relative overflow-hidden font-kalam">
@@ -33,7 +31,7 @@ const WW2EuropeanMap = () => {
 					<div className="-mr-48 pl-4 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
 						<StaticImage
 							className="w-full shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-							src="../../../assets/images/WW2-Screenshot.png"
+							src="../../../assets/images/WW2Screen.png"
 							alt="Inbox user interface"
 						/>
 					</div>
