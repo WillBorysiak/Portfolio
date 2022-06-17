@@ -10,7 +10,10 @@ const CloudContainer = () => {
 		tablet: false,
 		desktop: false,
 	};
-	const width = window.innerWidth;
+
+	const windowGlobal = typeof window !== 'undefined' && window.innerWidth;
+
+	const width = windowGlobal;
 
 	if (width < 640) {
 		device.mobile = true;

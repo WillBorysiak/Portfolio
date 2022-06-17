@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -29,14 +29,14 @@ const ThemeToggle = () => {
 		>
 			{theme.isDark && (
 				<FontAwesomeIcon
-					className="text-black opacity-50 transition delay-200 duration-1000 ease-in-out hover:text-yellow-300 hover:opacity-100"
+					className="text-black opacity-50 transition delay-200 duration-1000 ease-in-out hover:text-yellow-300 hover:opacity-100 md:hover:scale-125"
 					icon={faSunBright}
 					size="4x"
 				/>
 			)}
 			{!theme.isDark && (
 				<FontAwesomeIcon
-					className="text-black opacity-50 transition-all delay-200 duration-1000 ease-in-out hover:text-gray-100 hover:opacity-100"
+					className="text-black opacity-50 transition-all delay-200 duration-1000 ease-in-out hover:text-gray-100 hover:opacity-100 md:hover:scale-125"
 					icon={faMoon}
 					size="4x"
 				/>

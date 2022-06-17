@@ -19,8 +19,20 @@ const Navbar = () => {
 		<Menu as="div" className="relative mt-3 inline-block text-left">
 			<div>
 				<Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium">
-					{theme.isDark && <FontAwesomeIcon className="text-light" icon={faEarthEurope} size="4x" />}
-					{!theme.isDark && <FontAwesomeIcon className="text-white" icon={faCloudWord} size="4x" />}
+					{theme.isDark && (
+						<FontAwesomeIcon
+							className="text-light transition delay-200 duration-1000 ease-in-out hover:scale-125"
+							icon={faEarthEurope}
+							size="4x"
+						/>
+					)}
+					{!theme.isDark && (
+						<FontAwesomeIcon
+							className="text-white transition delay-200 duration-1000 ease-in-out hover:scale-125"
+							icon={faCloudWord}
+							size="4x"
+						/>
+					)}
 				</Menu.Button>
 			</div>
 

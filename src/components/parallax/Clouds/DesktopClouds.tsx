@@ -14,8 +14,16 @@ const DesktopClouds = () => {
 			<Cloud speed="animate-[cloudLG_40s_linear_infinite]" size="6x" location="mt-[500px]" />
 			<Cloud speed="animate-[cloudLGReverse_30s_linear_infinite]" size="6x" location="mt-[750px]" />
 			<Cloud speed="animate-[cloudLG_37s_linear_infinite]" size="6x" location="mt-[900px]" />
-			<FontAwesomeIcon icon={faPlaneProp} size="6x" className="absolute left-2/3 top-40 z-0 text-light opacity-50" />
-			<FontAwesomeIcon icon={faClouds} size="5x" className="absolute top-2/4 left-52 z-0 text-light opacity-50" />
+			<FontAwesomeIcon
+				icon={faPlaneProp}
+				size="6x"
+				className="absolute left-2/3 top-40 z-0 text-light opacity-50 transition delay-200 duration-1000 ease-in-out dark:opacity-0"
+			/>
+			<FontAwesomeIcon
+				icon={faClouds}
+				size="5x"
+				className="absolute top-2/4 left-52 z-0 text-light opacity-50 transition delay-200 duration-1000 ease-in-out dark:opacity-0"
+			/>
 		</>
 	);
 };

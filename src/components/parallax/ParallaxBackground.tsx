@@ -9,7 +9,7 @@ const ParallaxBackground = () => {
 	const theme = useContext(ThemeContext);
 
 	return (
-		<div className="fixed -z-10 h-full w-full bg-lightBackground dark:bg-darkBackground">
+		<div className="linear fixed -z-10 h-full w-full bg-lightBackground transition duration-1000 dark:bg-darkBackground">
 			{theme.isDark && <StarContainer />}
 			{!theme.isDark && <CloudContainer />}
 		</div>
