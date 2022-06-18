@@ -1,10 +1,14 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import HandcraftedTechStack from './HandcraftedTechStack';
 import ProjectLinks from './ProjectLinks';
 
 const HandcraftedByBR = () => {
+	const data = useStaticQuery(query);
+	const { title, description, screenshot } = data.contentfulPortfolioProjects;
+
 	return (
 		<article className="relative overflow-hidden font-kalam">
 			<div className="mb-5 mt-5 rounded-md backdrop-brightness-[0.8] lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:pl-8">
@@ -12,13 +16,9 @@ const HandcraftedByBR = () => {
 					<div>
 						<div className="mt-5">
 							<h2 className="pt-5 text-3xl font-extrabold tracking-tight text-dark dark:text-light md:pt-5 md:text-4xl">
-								Handcrafted by BarbaraRuth
+								{title}
 							</h2>
-							<p className="mt-4 text-lg font-bold text-dark dark:text-light md:text-xl">
-								This project was created to serve as a marketing website for my mothers business. The UI and state was
-								managed by Gatsby with Tailwind CSS for styling. I also used the Contentful CMS to display data using
-								Graphql.
-							</p>
+							<p className="mt-4 text-lg font-bold text-dark dark:text-light md:text-xl">{description}</p>
 							<ProjectLinks
 								github="https://github.com/WillBorysiak/Handcrafted-By-BR"
 								website="https://www.handcrafted-by-barbara-ruth.com/"
@@ -29,13 +29,13 @@ const HandcraftedByBR = () => {
 						<HandcraftedTechStack />
 					</div>
 				</div>
-				<div className=" mt-5 sm:mt-5 lg:mt-0 ">
-					<div className="-mr-48 pl-4 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-						<StaticImage
-							className=" w-full"
-							src="../../../assets/images/HCScreen.png"
-							alt="Image of my the handcrafted by barbara ruth marketing website"
-							layout="constrained"
+				<div className="mt-5 sm:mt-5 lg:mt-0">
+					<div className="lg:relative lg:m-0 lg:h-full lg:px-0">
+						<GatsbyImage
+							image={screenshot.gatsbyImageData}
+							alt={title}
+							objectFit={'cover'}
+							className="h-96 w-full md:h-[475px] md:w-full"
 						/>
 					</div>
 				</div>
@@ -45,3 +45,15 @@ const HandcraftedByBR = () => {
 };
 
 export default HandcraftedByBR;
+
+const query = graphql`
+	{
+		contentfulPortfolioProjects(title: { eq: "Handcrafted by BarbaraRuth" }) {
+			title
+			description
+			screenshot {
+				gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+			}
+		}
+	}
+`;

@@ -22,7 +22,7 @@ const AboutCard = (props: AboutContainerPropTypes) => {
 						<GatsbyImage className="xl:h-50 xl:w-50 h-64 w-64 rounded-full bg-top" image={props.image} alt="" />
 					</div>
 					<div className="relative lg:ml-10">
-						<div className="text-2xl leading-9 text-dark dark:text-light">
+						<div className="text-2xl font-bold leading-9 text-dark dark:text-light">
 							<p>{props.content}</p>
 						</div>
 						<div className="mt-3">

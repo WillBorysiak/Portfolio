@@ -16,9 +16,6 @@ const ContactInfo = () => {
 					<p className="dark:text-v mt-3 text-2xl text-dark dark:text-light sm:mt-4">
 						Hybrid or remote working practises are preferred.
 					</p>
-					<p className="mt-3 text-2xl text-dark dark:text-light sm:mt-4">
-						Office based work in the Derbyshire or Nottingham area would also be an option!
-					</p>
 				</div>
 			</div>
 			<div className="mt-10 pb-12 sm:pb-16">
