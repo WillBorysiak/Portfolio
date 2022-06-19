@@ -7,10 +7,15 @@ import Skills from '../components/main-page/skills/Skills';
 import Projects from '../components/main-page/projects/Projects';
 import Contact from '../components/main-page/contact/Contact';
 import Transition from '../layout/Transition';
+import SEO from '../layout/SEO';
 
 const HomePage = () => {
 	return (
 		<Layout>
+			<SEO
+				title="Will Borysiak | Portfolio"
+				description={`Welcome to my web dev portfolio site. Here you will find out more about me, my projects and my experience.`}
+			/>
 			<Hero />
 			<Projects />
 			<About />
