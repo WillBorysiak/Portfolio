@@ -17,8 +17,8 @@
    
 <div align="center">
   <div style="display: flex; flex-direction: row">
-    <img align="center" src="https://symbols.getvecta.com/stencil_81/10_gatsbyjs-icon.1eebf66862.svg" alt="HTML" height="50"/>
-    <p align="center">Gatsby</p>
+    <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="HTML" height="50"/>
+    <p align="center">Next JS</p>
   </div>
 </div>
    

@@ -1,5 +1,7 @@
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
-	content: ['./src/**/*.tsx'],
+	content: ['./pages/**/*.tsx', './components/**/*.tsx'],
 	darkMode: 'class',
 	theme: {
 		extend: {
@@ -18,6 +20,10 @@ module.exports = {
 			fontFamily: {
 				amatic: ['Amatic SC', 'san-serif'],
 				kalam: ['Kalam', 'san-serif'],
+			},
+			backgroundImage: {
+				nightSky: "url('/DarkBackground.jpg')",
+				daySky: "url('/LightBackground.jpg')",
 			},
 
 			keyframes: {
@@ -101,5 +107,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('@tailwindcss/aspect-ratio')],
+	plugins: [],
 };
