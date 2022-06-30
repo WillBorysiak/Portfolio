@@ -12,7 +12,7 @@ const Experience = (props: ExperienceTypes) => {
 		<>
 			<ParallaxBackground />
 			<section id="skills" className="flex w-screen flex-col items-center justify-start pb-10 md:mt-0">
-				<SectionTitle text="Skills/Experience" />
+				<SectionTitle text="Experience" />
 				<SkillsPanel />
 				<JobsPanel experiences={props.experiences} />
 			</section>

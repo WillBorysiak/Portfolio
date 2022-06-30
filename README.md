@@ -22,27 +22,29 @@
   </div>
 </div>
    
-<div align="center">
-  <div style="display: flex; flex-direction: row">
-    <img align="center" src="https://symbols.getvecta.com/stencil_82/66_graphql-icon.cdedad214a.svg" alt="HTML" height="50"/>
-    <p align="center">Graphql</p>
-  </div>
-</div>
- 
-<div align="center">
+ <div align="center">
   <div style="display: flex; flex-direction: row">
     <img align="center" src="https://symbols.getvecta.com/stencil_97/3_tailwind-css-icon.5009c3dbea.svg" alt="HTML" height="50"/>
     <p align="center">Tailwind CSS</p>
+  </div>
+</div>
+
+<div align="center">
+  <div style="display: flex; flex-direction: row">
+    <img align="center" src="https://seeklogo.com/images/C/contentful-logo-C395C545BF-seeklogo.com.png" alt="HTML" height="50"/>
+    <p align="center">Contentful</p>
   </div>
 </div>
  
   
 <h2 style="color: grey" align="center">What I learnt:</h2>
  
-<p align="center">Continued development of my React knowledge and my initial usage of global state with useContext / Context API .</p>
+ <p align="center">First usage of Next JS and its SSG/SSR/CSR functionality.</p>
+<p align="center">Continued development of my React knowledge and my initial usage of global state with useContext / Context API.</p>
 <p align="center">Further usage of Typescript with React including usage of generics and interfaces.</p>
 <p align="center">First implementation of a ‘dark mode’ toggle via the context API and the tailwind dark: selector.</p>
 <p align="center">Creating a parallax background using fixed properties and the z index via CSS.</p>
 <p align="center">Customising the tailwind config to create simple animations used in the background.</p>
+<p align="center">How to host the project on Vercel using continuous deployment and enviromental variables.</p>
  
 </div>

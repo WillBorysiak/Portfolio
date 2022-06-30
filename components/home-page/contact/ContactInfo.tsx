@@ -7,7 +7,7 @@ const ContactInfo = () => {
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				<div className="mx-auto max-w-4xl text-center">
 					<h2 className="text-3xl font-extrabold text-dark dark:text-light sm:text-4xl">
-						I am currently looking for a junior web developer job based the UK.
+						I am currently looking for a junior web developer job based in the UK.
 					</h2>
 					<p className="dark:text-v mt-3 text-2xl text-dark dark:text-light sm:mt-4">
 						Hybrid or remote working practises are preferred.
