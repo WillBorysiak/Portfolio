@@ -1,13 +1,10 @@
-interface ExperienceTypes {
-	content: {
-		position: string;
-		company: string;
-		date: string;
-		description: { description: [0] };
-	};
+import { JobTypes as JobModel } from '../../../models/job.model';
+
+interface JobTypes {
+	content: JobModel;
 }
 
-const Job = (props: ExperienceTypes) => {
+const Job = (props: JobTypes) => {
 	const { position, company, date, description } = props.content;
 	const descriptions: any = description.description[0];
 	const descriptionArr = [];

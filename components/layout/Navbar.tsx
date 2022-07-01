@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEarthEurope } from '@fortawesome/pro-duotone-svg-icons';
 import { faCloudWord } from '@fortawesome/pro-solid-svg-icons';
 
-function classNames(...classes: any) {
+function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ');
 }
 

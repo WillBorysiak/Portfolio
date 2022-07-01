@@ -1,19 +1,13 @@
 import Image from 'next/image';
-
+import { ProjectTypes as ProjectModel } from '../../../models/project.model';
 import ProjectLinks from './ProjectLinks';
 import WW2TechStack from './WW2TechStack';
 
-interface WW2Types {
-	content: {
-		fields: {
-			title: string;
-			description: string;
-			screenshot: { fields: { file: { url: string } } };
-		};
-	};
+interface ProjectTypes {
+	content: { fields: ProjectModel };
 }
 
-const WW2EuropeanMap = (props: WW2Types) => {
+const WW2EuropeanMap = (props: ProjectTypes) => {
 	const content = props.content.fields;
 	const { title, description, screenshot } = content;
 
@@ -47,6 +41,7 @@ const WW2EuropeanMap = (props: WW2Types) => {
 								width={200}
 								layout="responsive"
 								objectFit="cover"
+								priority={true}
 							/>
 						</div>
 					</div>

@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, Dispatch } from 'react';
 
 interface ContextPropTypes {
 	children: React.ReactNode;
@@ -6,7 +6,7 @@ interface ContextPropTypes {
 
 interface StateType {
 	isDark: boolean;
-	setIsDark: any;
+	setIsDark: Dispatch<boolean>;
 }
 
 const defaultState: any = true;

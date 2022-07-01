@@ -1,19 +1,13 @@
 import Image from 'next/image';
-
+import { ProjectTypes as ProjectModel } from '../../../models/project.model';
 import ProjectLinks from './ProjectLinks';
 import HandcraftedTechStack from './HandcraftedTechStack';
 
-interface HandcraftedByBRTypes {
-	content: {
-		fields: {
-			title: string;
-			description: string;
-			screenshot: { fields: { file: { url: string } } };
-		};
-	};
+interface ProjectTypes {
+	content: { fields: ProjectModel };
 }
 
-const HandcraftedByBR = (props: HandcraftedByBRTypes) => {
+const HandcraftedByBR = (props: ProjectTypes) => {
 	const content = props.content.fields;
 	const { title, description, screenshot } = content;
 
@@ -47,6 +41,7 @@ const HandcraftedByBR = (props: HandcraftedByBRTypes) => {
 								width={200}
 								layout="responsive"
 								objectFit="cover"
+								priority={true}
 							/>
 						</div>
 					</div>

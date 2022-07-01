@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 
 import * as contentful from 'contentful';
+import { HomeTypes } from '../models/home.model';
 
 import Layout from '../components/layout/Layout';
 import Hero from '../components/home-page/hero/Hero';
@@ -16,7 +17,7 @@ let client = contentful.createClient({
 	accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
 });
 
-const Home: NextPage = (props: any) => {
+const Home: NextPage<HomeTypes> = props => {
 	return (
 		<>
 			<Layout>

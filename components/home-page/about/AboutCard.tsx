@@ -1,15 +1,11 @@
 import Image from 'next/image';
+import { AboutTypes as AboutCardModel } from '../../../models/about.model';
 
 interface AboutCardTypes {
-	content: {
-		content: string;
-		reverse: boolean;
-		image: { fields: { file: { url: string } } };
-		imageAlt: string;
-	};
+	content: AboutCardModel;
 }
 
-const AboutCard = (props: any) => {
+const AboutCard = (props: AboutCardTypes) => {
 	const { content, reverse, image, imageAlt } = props.content;
 
 	return (
