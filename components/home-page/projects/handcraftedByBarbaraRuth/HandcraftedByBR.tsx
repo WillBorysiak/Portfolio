@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import { ProjectTypes as ProjectModel } from '../../../models/project.model';
-import ProjectLinks from './ProjectLinks';
-import WW2TechStack from './WW2TechStack';
+import { ProjectTypes as ProjectModel } from '../../../../models/project.model';
+import ProjectLinks from '../ProjectLinks';
+import HandcraftedTechStack from './HandcraftedTechStack';
 
 interface ProjectTypes {
 	content: { fields: ProjectModel };
 }
 
-const WW2EuropeanMap = (props: ProjectTypes) => {
+const HandcraftedByBR = (props: ProjectTypes) => {
 	const content = props.content.fields;
 	const { title, description, screenshot } = content;
 
@@ -22,13 +22,13 @@ const WW2EuropeanMap = (props: ProjectTypes) => {
 							</h2>
 							<p className="mt-4 text-lg font-bold text-dark dark:text-light md:text-xl">{description}</p>
 							<ProjectLinks
-								github="https://github.com/WillBorysiak/WW2-European-Map"
-								website="https://ww2-european-map.netlify.app/"
+								github="https://github.com/WillBorysiak/Handcrafted-By-BR"
+								website="https://www.handcrafted-by-barbara-ruth.com/"
 							/>
 						</div>
 					</div>
 					<div className="mt-5 border-t border-gray-200">
-						<WW2TechStack />
+						<HandcraftedTechStack />
 					</div>
 				</div>
 				<div className="mt-5 sm:mt-5 lg:mt-0">
@@ -36,7 +36,7 @@ const WW2EuropeanMap = (props: ProjectTypes) => {
 						<div>
 							<Image
 								src={'https:' + screenshot.fields.file.url}
-								alt="Screenshot of the WW2 European Map"
+								alt="Handcrafted by BarbaraRuth screenshot"
 								height={200}
 								width={200}
 								layout="responsive"
@@ -51,4 +51,4 @@ const WW2EuropeanMap = (props: ProjectTypes) => {
 	);
 };
 
-export default WW2EuropeanMap;
+export default HandcraftedByBR;

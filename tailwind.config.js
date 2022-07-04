@@ -5,6 +5,9 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		extend: {
+			screens: {
+				xs: '360px',
+			},
 			colors: {
 				light: '#f3f4f6',
 				dark: '#1f2937',

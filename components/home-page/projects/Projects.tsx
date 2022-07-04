@@ -1,11 +1,14 @@
 import { ProjectTypes as ProjectModel } from '../../../models/project.model';
 import ParallaxBackground from '../../parallax/ParallaxBackground';
 import SectionTitle from '../../typography/SectionTitle';
-import HandcraftedByBR from './HandcraftedByBR';
-import WW2EuropeanMap from './WW2EuropeanMap';
+import CyclingDashboard from './cyclingDashboard/CyclingDashboard';
+import HandcraftedByBR from './handcraftedByBarbaraRuth/HandcraftedByBR';
+import WW2EuropeanMap from './ww2EuropeanMap/WW2EuropeanMap';
 
 interface ProjectsTypes {
-	projects: { items: [content: { fields: ProjectModel }, content: { fields: ProjectModel }] };
+	projects: {
+		items: [content: { fields: ProjectModel }, content: { fields: ProjectModel }, content: { fields: ProjectModel }];
+	};
 }
 
 const Projects = (props: ProjectsTypes) => {
@@ -16,8 +19,9 @@ const Projects = (props: ProjectsTypes) => {
 			<ParallaxBackground />
 			<section id="projects" className="flex w-screen flex-col items-center">
 				<SectionTitle text="Projects" />
-				<HandcraftedByBR content={projectArray[0]} />
-				<WW2EuropeanMap content={projectArray[1]} />
+				<CyclingDashboard content={projectArray[0]} />
+				<HandcraftedByBR content={projectArray[1]} />
+				<WW2EuropeanMap content={projectArray[2]} />
 			</section>
 		</>
 	);

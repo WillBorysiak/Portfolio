@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import { ProjectTypes as ProjectModel } from '../../../models/project.model';
-import ProjectLinks from './ProjectLinks';
-import HandcraftedTechStack from './HandcraftedTechStack';
+import { ProjectTypes as ProjectModel } from '../../../../models/project.model';
+import ProjectLinks from '../ProjectLinks';
+import CyclingTechStack from '../cyclingDashboard/CyclingTechStack';
 
 interface ProjectTypes {
 	content: { fields: ProjectModel };
 }
 
-const HandcraftedByBR = (props: ProjectTypes) => {
+const CyclingDashboard = (props: ProjectTypes) => {
 	const content = props.content.fields;
 	const { title, description, screenshot } = content;
 
@@ -22,13 +22,13 @@ const HandcraftedByBR = (props: ProjectTypes) => {
 							</h2>
 							<p className="mt-4 text-lg font-bold text-dark dark:text-light md:text-xl">{description}</p>
 							<ProjectLinks
-								github="https://github.com/WillBorysiak/Handcrafted-By-BR"
-								website="https://www.handcrafted-by-barbara-ruth.com/"
+								github="https://github.com/WillBorysiak/Cycling-Dashboard"
+								website="https://cycling-dashboard.vercel.app/"
 							/>
 						</div>
 					</div>
 					<div className="mt-5 border-t border-gray-200">
-						<HandcraftedTechStack />
+						<CyclingTechStack />
 					</div>
 				</div>
 				<div className="mt-5 sm:mt-5 lg:mt-0">
@@ -36,7 +36,7 @@ const HandcraftedByBR = (props: ProjectTypes) => {
 						<div>
 							<Image
 								src={'https:' + screenshot.fields.file.url}
-								alt="Handcrafted by BarbaraRuth screenshot"
+								alt="Screenshot of the WW2 European Map"
 								height={200}
 								width={200}
 								layout="responsive"
@@ -51,4 +51,4 @@ const HandcraftedByBR = (props: ProjectTypes) => {
 	);
 };
 
-export default HandcraftedByBR;
+export default CyclingDashboard;
