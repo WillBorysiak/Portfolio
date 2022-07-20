@@ -25,8 +25,8 @@ module.exports = {
 				kalam: ['Kalam', 'san-serif'],
 			},
 			backgroundImage: {
-				nightSky: "url('/DarkBackground.jpg')",
-				daySky: "url('/LightBackground.jpg')",
+				nightSky: "url('/backgrounds/DarkBackground.jpg')",
+				daySky: "url('/backgrounds/LightBackground.jpg')",
 			},
 
 			keyframes: {

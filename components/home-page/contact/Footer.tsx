@@ -13,8 +13,8 @@ const Footer = () => {
 					</p>
 					<p className="text-center text-lg text-dark dark:text-light">
 						Powered by{' '}
-						<a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">
-							<span className="text-purple-700">Gatsby.</span>
+						<a href="https://nextjs.org/" target="_blank" rel="noreferrer">
+							<span className="bg-white text-black">NextJS.</span>
 						</a>
 					</p>
 				</div>

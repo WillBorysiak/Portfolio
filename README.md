@@ -18,7 +18,7 @@
 <div align="center">
   <div style="display: flex; flex-direction: row">
     <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="HTML" height="50"/>
-    <p align="center">Next JS</p>
+    <p align="center">NextJS</p>
   </div>
 </div>
    
@@ -39,7 +39,7 @@
   
 <h2 style="color: grey" align="center">What I learnt:</h2>
  
- <p align="center">First usage of Next JS and its SSG/SSR/CSR functionality.</p>
+ <p align="center">First usage of NextJS and its SSG/SSR/CSR functionality.</p>
 <p align="center">Continued development of my React knowledge and my initial usage of global state with useContext / Context API.</p>
 <p align="center">Further usage of Typescript with React including usage of generics and interfaces.</p>
 <p align="center">First implementation of a ‘dark mode’ toggle via the context API and the tailwind dark: selector.</p>
