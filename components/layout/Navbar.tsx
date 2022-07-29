@@ -9,6 +9,14 @@ function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ');
 }
 
+const navTitles = [
+	{ title: 'Home', href: '#' },
+	{ title: 'Projects', href: '#projects' },
+	{ title: 'About', href: '#about' },
+	{ title: 'Experience', href: '#experience' },
+	{ title: 'Contact', href: '#contact' },
+];
+
 const Navbar = () => {
 	const theme = useContext(ThemeContext);
 
@@ -43,14 +51,14 @@ const Navbar = () => {
 				leaveTo="transform opacity-0 scale-95"
 			>
 				<Menu.Items className="absolute right-0 mt-2 h-[400px] w-64 origin-top-right divide-y  rounded-md bg-dark backdrop-brightness-[0.9] dark:bg-light">
-					<div className=" flex h-full flex-col items-center justify-evenly py-1">
+					<div className="flex h-full flex-col items-center justify-around">
 						<Menu.Item>
 							{({ active }) => (
 								<a
 									href="#"
 									className={classNames(
-										active ? '' : 'text-light dark:text-dark',
-										'group flex items-center px-4 py-2 text-4xl ',
+										active ? 'underline' : '',
+										'group flex items-center px-4 py-2 text-4xl text-light dark:text-dark',
 									)}
 								>
 									Home
@@ -62,8 +70,8 @@ const Navbar = () => {
 								<a
 									href="#projects"
 									className={classNames(
-										active ? '' : 'text-light dark:text-dark',
-										'group flex items-center border-t-4 border-solid border-light px-4 py-2 text-4xl dark:border-dark',
+										active ? 'underline' : '',
+										'group flex items-center px-4 py-2 text-4xl text-light dark:text-dark',
 									)}
 								>
 									Projects
@@ -75,8 +83,8 @@ const Navbar = () => {
 								<a
 									href="#about"
 									className={classNames(
-										active ? '' : 'text-light dark:text-dark',
-										'group flex items-center border-t-4 border-solid border-light px-4 py-2 text-4xl dark:border-dark',
+										active ? 'underline' : '',
+										'group flex items-center px-4 py-2 text-4xl text-light dark:text-dark',
 									)}
 								>
 									About
@@ -86,10 +94,10 @@ const Navbar = () => {
 						<Menu.Item>
 							{({ active }) => (
 								<a
-									href="#skills"
+									href="#experience"
 									className={classNames(
-										active ? '' : 'text-light dark:text-dark',
-										'group flex items-center border-t-4 border-solid border-light px-4 py-2 text-4xl dark:border-dark',
+										active ? 'underline' : '',
+										'group flex items-center px-4 py-2 text-4xl text-light dark:text-dark',
 									)}
 								>
 									Experience
@@ -101,8 +109,8 @@ const Navbar = () => {
 								<a
 									href="#contact"
 									className={classNames(
-										active ? '' : 'text-light dark:text-dark',
-										'group flex items-center border-t-4 border-solid border-light px-4 py-2 text-4xl dark:border-dark',
+										active ? 'underline' : '',
+										'group flex items-center px-4 py-2 text-4xl text-light dark:text-dark',
 									)}
 								>
 									Contact

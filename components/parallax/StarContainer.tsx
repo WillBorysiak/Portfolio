@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-
 import MobileStars from './stars/MobileStars';
 import TabletStars from './stars/TabletStars';
 import DesktopStars from './stars/DesktopStars';

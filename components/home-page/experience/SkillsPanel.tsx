@@ -1,12 +1,20 @@
+import { motion } from 'framer-motion';
+import { scrollAnimationVariants } from '../../utils/scrollAnimationVariants';
 import Heading from '../../typography/Heading';
 import TechList from './TechList';
 
 const SkillsPanel = () => {
 	return (
-		<div className="mx-auto mt-5 max-w-7xl py-8 px-4 backdrop-brightness-[0.8] sm:px-6 lg:px-8">
+		<motion.div
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true }}
+			variants={scrollAnimationVariants}
+			className="mx-auto mt-5 max-w-7xl bg-transparentBg py-8 px-4 sm:px-6 lg:px-8"
+		>
 			<Heading content="Technologies I Use" />
 			<TechList />
-		</div>
+		</motion.div>
 	);
 };
 

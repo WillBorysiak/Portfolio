@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { scrollAnimationVariants } from '../../../utils/scrollAnimationVariants';
 import { ProjectTypes as ProjectModel } from '../../../../models/project.model';
 import ProjectLinks from '../ProjectLinks';
 import CyclingTechStack from '../cyclingDashboard/CyclingTechStack';
@@ -12,8 +14,14 @@ const CyclingDashboard = (props: ProjectTypes) => {
 	const { title, description, screenshot } = content;
 
 	return (
-		<article className="relative overflow-hidden font-kalam">
-			<div className="mb-5 mt-5 rounded-md backdrop-brightness-[0.8] lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:pl-8">
+		<motion.article
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true }}
+			variants={scrollAnimationVariants}
+			className="relative overflow-hidden font-kalam"
+		>
+			<div className="mb-5 mt-5 rounded-md bg-transparentBg lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:pl-8">
 				<div className="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
 					<div>
 						<div className="mt-5">
@@ -47,7 +55,7 @@ const CyclingDashboard = (props: ProjectTypes) => {
 					</div>
 				</div>
 			</div>
-		</article>
+		</motion.article>
 	);
 };
 

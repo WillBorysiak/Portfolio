@@ -19,7 +19,7 @@ const ContactInfo = () => {
 					<div className="absolute inset-0 h-1/2 " />
 					<div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 						<div className="mx-auto max-w-4xl">
-							<dl className="rounded-lg  shadow-lg backdrop-brightness-[0.4] dark:backdrop-brightness-[0.2] sm:grid sm:grid-cols-3">
+							<dl className="rounded-lg bg-black/[.75] shadow-lg dark:bg-black/[.5] sm:grid sm:grid-cols-3">
 								<div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
 									<dt className="order-2 mt-2 leading-6">
 										<a href="/cv.pdf" target="_blank" rel="noreferrer">

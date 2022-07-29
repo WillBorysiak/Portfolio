@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { scrollAnimationVariants } from '../../utils/scrollAnimationVariants';
 import { AboutTypes as AboutCardModel } from '../../../models/about.model';
 
 interface AboutCardTypes {
@@ -9,13 +11,19 @@ const AboutCard = (props: AboutCardTypes) => {
 	const { content, reverse, image, imageAlt } = props.content;
 
 	return (
-		<section className="mx-5 mt-5 overflow-hidden font-kalam">
-			<div className="relative mx-auto max-w-7xl text-center sm:px-2 lg:px-2 lg:py-2">
+		<motion.article
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true }}
+			variants={scrollAnimationVariants}
+			className="relative overflow-hidden font-kalam"
+		>
+			<div className="relative mx-auto max-w-7xl py-5 text-center sm:px-2 lg:px-2 lg:py-5">
 				<div
 					className={
 						reverse
-							? 'relative w-full flex-row-reverse rounded-md p-5 backdrop-brightness-[0.8]  md:flex md:flex-row-reverse md:items-center'
-							: 'relative w-full rounded-md p-5 backdrop-brightness-[0.8] md:flex md:flex-row md:items-center'
+							? 'relative w-full flex-row-reverse rounded-md bg-transparentBg p-5  md:flex md:flex-row-reverse md:items-center'
+							: 'relative w-full rounded-md bg-transparentBg p-5 md:flex md:flex-row md:items-center'
 					}
 				>
 					{/* Tablet/Desktop */}
@@ -53,7 +61,7 @@ const AboutCard = (props: AboutCardTypes) => {
 					</div>
 				</div>
 			</div>
-		</section>
+		</motion.article>
 	);
 };
 

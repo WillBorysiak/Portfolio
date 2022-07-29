@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+import { scrollAnimationVariants } from '../../utils/scrollAnimationVariants';
 import SectionTitle from '../../typography/SectionTitle';
 import ContactInfo from './ContactInfo';
 import ContactNav from './ContactNav';
@@ -7,11 +9,17 @@ const Contact = () => {
 	return (
 		<section id="contact" className=" flex w-screen flex-col bg-daySky bg-cover bg-center dark:bg-nightSky">
 			<SectionTitle text="Contact Me" />
-			<div className="flex flex-col items-center justify-center">
+			<motion.div
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+				variants={scrollAnimationVariants}
+				className="flex flex-col items-center justify-center"
+			>
 				<ContactInfo />
 				<ContactNav />
 				<Footer />
-			</div>
+			</motion.div>
 		</section>
 	);
 };
