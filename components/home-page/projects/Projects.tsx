@@ -12,16 +12,16 @@ interface ProjectsTypes {
 }
 
 const Projects = (props: ProjectsTypes) => {
-	const projectArray = props.projects.items;
+	const projects = props.projects.items.sort((a, b) => a.fields.order - b.fields.order);
 
 	return (
 		<>
 			<ParallaxBackground />
 			<section id="projects" className="flex w-screen flex-col items-center">
 				<SectionTitle text="Projects" />
-				<CyclingDashboard content={projectArray[0]} />
-				<HandcraftedByBR content={projectArray[1]} />
-				<WW2EuropeanMap content={projectArray[2]} />
+				<CyclingDashboard content={projects[0]} />
+				<HandcraftedByBR content={projects[1]} />
+				<WW2EuropeanMap content={projects[2]} />
 			</section>
 		</>
 	);

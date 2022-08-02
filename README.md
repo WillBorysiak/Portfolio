@@ -24,7 +24,7 @@
    
  <div align="center">
   <div style="display: flex; flex-direction: row">
-    <img align="center" src="https://symbols.getvecta.com/stencil_97/3_tailwind-css-icon.5009c3dbea.svg" alt="HTML" height="50"/>
+    <img align="center" src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.79614a5f61617ba49a0891494521226b.svg" alt="HTML" height="50"/>
     <p align="center">Tailwind CSS</p>
   </div>
 </div>
