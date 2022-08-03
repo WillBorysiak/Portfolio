@@ -10,28 +10,28 @@
  
 <div align="center">
   <div style="display: flex; flex-direction: row">
-    <img align="center" src="https://symbols.getvecta.com/stencil_94/22_react-icon.e55e75bd2e.svg" alt="HTML" height="50"/>
+    <img align="center" src="/assets/readme-icons/react-logo.svg" alt="HTML" height="50"/>
     <p align="center">React</p>
  </div>
 </div>
    
 <div align="center">
   <div style="display: flex; flex-direction: row">
-    <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="HTML" height="50"/>
+    <img align="center" src="/assets/readme-icons/nextjs-logo.svg" alt="HTML" height="50"/>
     <p align="center">NextJS</p>
   </div>
 </div>
    
  <div align="center">
   <div style="display: flex; flex-direction: row">
-    <img align="center" src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.79614a5f61617ba49a0891494521226b.svg" alt="HTML" height="50"/>
+    <img align="center" src="/assets/readme-icons/tailwindcss-logo.svg" alt="HTML" height="50"/>
     <p align="center">Tailwind CSS</p>
   </div>
 </div>
 
 <div align="center">
   <div style="display: flex; flex-direction: row">
-    <img align="center" src="https://seeklogo.com/images/C/contentful-logo-C395C545BF-seeklogo.com.png" alt="HTML" height="50"/>
+    <img align="center" src="/assets/readme-icons/contentful-logo.svg" alt="HTML" height="50"/>
     <p align="center">Contentful</p>
   </div>
 </div>
