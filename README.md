@@ -2,7 +2,7 @@
  
 <h2 align="center">Purpose of the Website/App:</h2>
  
-<h3 align="center">To serve as a portfolio for my web development experience.<p>
+<h3 align="center">To serve as a portfolio for my web development experience.</h3>
  
 <h2 align="center">Technology used</h2>
  

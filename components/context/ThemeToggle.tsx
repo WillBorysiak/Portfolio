@@ -1,8 +1,8 @@
-import { useContext } from 'react';
-import { ThemeContext } from '../context/ThemeContext';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSunBright } from '@fortawesome/pro-duotone-svg-icons';
 import { faMoon } from '@fortawesome/pro-duotone-svg-icons';
+import { faSunBright } from '@fortawesome/pro-duotone-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ThemeContext } from '../context/ThemeContext';
+import { useContext } from 'react';
 
 const ThemeToggle = () => {
 	const theme = useContext(ThemeContext);

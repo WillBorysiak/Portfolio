@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { scrollAnimationVariants } from '../../utils/scrollAnimationVariants';
-import { JobTypes } from '../../../models/job.model';
 import Heading from '../../typography/Heading';
 import Job from './Job';
+import { JobTypes } from '../../../models/job.model';
+import { motion } from 'framer-motion';
+import { scrollAnimationVariants } from '../../utils/scrollAnimationVariants';
 
 interface JobPanelTypes {
 	experiences: { items: [fields: { fields: JobTypes }] };

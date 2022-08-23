@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import DesktopStars from './stars/DesktopStars';
 import MobileStars from './stars/MobileStars';
 import TabletStars from './stars/TabletStars';
-import DesktopStars from './stars/DesktopStars';
+import { useEffect, useState } from 'react';
 
 const StarContainer = () => {
 	const [device, setDevice] = useState('');

@@ -1,7 +1,4 @@
-interface ProjectLinksPropTypes {
-	github: string;
-	website: string;
-}
+import { ProjectLinksPropTypes } from '../../../models/links.model';
 
 const ProjectLinks = (props: ProjectLinksPropTypes) => {
 	return (

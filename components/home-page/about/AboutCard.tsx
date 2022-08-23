@@ -1,7 +1,7 @@
 import Image from 'next/image';
+import { AboutTypes as AboutCardModel } from '../../../models/about.model';
 import { motion } from 'framer-motion';
 import { scrollAnimationVariants } from '../../utils/scrollAnimationVariants';
-import { AboutTypes as AboutCardModel } from '../../../models/about.model';
 
 interface AboutCardTypes {
 	content: AboutCardModel;

@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileLines } from '@fortawesome/pro-thin-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ContactInfo = () => {
 	return (
@@ -7,10 +7,10 @@ const ContactInfo = () => {
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				<div className="mx-auto max-w-4xl text-center">
 					<h2 className="text-3xl font-extrabold text-dark dark:text-light sm:text-4xl">
-						I am currently looking for a junior web developer job based in the UK.
+						I&lsquo;m currently employed as junior software developer in the UK.
 					</h2>
 					<p className="dark:text-v mt-3 text-2xl text-dark dark:text-light sm:mt-4">
-						Hybrid or remote working practises are preferred.
+						Feel free to browse my site and see the self taught projects I&lsquo;ve made.
 					</p>
 				</div>
 			</div>

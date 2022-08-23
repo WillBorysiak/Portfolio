@@ -1,9 +1,9 @@
+import { faCloudWord } from '@fortawesome/pro-solid-svg-icons';
+import { faEarthEurope } from '@fortawesome/pro-duotone-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Fragment, useContext } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { ThemeContext } from '../context/ThemeContext';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEarthEurope } from '@fortawesome/pro-duotone-svg-icons';
-import { faCloudWord } from '@fortawesome/pro-solid-svg-icons';
 
 function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ');

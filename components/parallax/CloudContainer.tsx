@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-
+import DesktopClouds from './clouds/DesktopClouds';
 import MobileClouds from './clouds/MobileClouds';
 import TabletClouds from './clouds/TabletClouds';
-import DesktopClouds from './clouds/DesktopClouds';
+import { useEffect, useState } from 'react';
+
 
 const CloudContainer = () => {
 	const [device, setDevice] = useState('');

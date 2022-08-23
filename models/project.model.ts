@@ -4,3 +4,14 @@ export interface ProjectTypes {
 	description: string;
 	screenshot: { fields: { file: { url: string } } };
 }
+
+export interface ProjectsTypes {
+	projects: {
+		items: [
+			content: { fields: ProjectTypes },
+			content: { fields: ProjectTypes },
+			content: { fields: ProjectTypes },
+			content: { fields: ProjectTypes },
+		];
+	};
+}

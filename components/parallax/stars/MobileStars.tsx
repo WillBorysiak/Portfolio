@@ -1,7 +1,7 @@
 import Star from '../Star';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlanetRinged } from '@fortawesome/pro-duotone-svg-icons';
 import { faPlanetMoon } from '@fortawesome/pro-duotone-svg-icons';
+import { faPlanetRinged } from '@fortawesome/pro-duotone-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const MobileStars = () => {
 	return (

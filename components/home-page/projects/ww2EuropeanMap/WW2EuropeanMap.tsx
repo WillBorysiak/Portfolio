@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { scrollAnimationVariants } from '../../../utils/scrollAnimationVariants';
-import { ProjectTypes as ProjectModel } from '../../../../models/project.model';
 import ProjectLinks from '../ProjectLinks';
 import WW2TechStack from './WW2TechStack';
+import { motion } from 'framer-motion';
+import { ProjectTypes as ProjectModel } from '../../../../models/project.model';
+import { scrollAnimationVariants } from '../../../utils/scrollAnimationVariants';
 
 interface ProjectTypes {
 	content: { fields: ProjectModel };

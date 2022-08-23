@@ -1,7 +1,7 @@
-import { AboutTypes as AboutModel } from '../../../models/about.model';
+import AboutCard from './AboutCard';
 import ParallaxBackground from '../../parallax/ParallaxBackground';
 import SectionTitle from '../../typography/SectionTitle';
-import AboutCard from './AboutCard';
+import { AboutTypes as AboutModel } from '../../../models/about.model';
 
 interface AboutTypes {
 	abouts: { items: [fields: { fields: AboutModel; sys: { id: number } }] };

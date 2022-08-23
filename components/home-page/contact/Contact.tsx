@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
-import { scrollAnimationVariants } from '../../utils/scrollAnimationVariants';
-import SectionTitle from '../../typography/SectionTitle';
 import ContactInfo from './ContactInfo';
 import ContactNav from './ContactNav';
 import Footer from './Footer';
+import SectionTitle from '../../typography/SectionTitle';
+import { motion } from 'framer-motion';
+import { scrollAnimationVariants } from '../../utils/scrollAnimationVariants';
 
 const Contact = () => {
 	return (

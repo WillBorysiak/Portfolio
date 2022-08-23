@@ -1,16 +1,14 @@
-import type { NextPage } from 'next';
-
 import * as contentful from 'contentful';
-import { HomeTypes } from '../models/home.model';
-
-import Layout from '../components/layout/Layout';
-import Hero from '../components/home-page/hero/Hero';
-import Projects from '../components/home-page/projects/Projects';
 import About from '../components/home-page/about/About';
-import Experience from '../components/home-page/experience/Experience';
-import Transition from '../components/layout/Transition';
 import Contact from '../components/home-page/contact/Contact';
+import Experience from '../components/home-page/experience/Experience';
+import Hero from '../components/home-page/hero/Hero';
+import Layout from '../components/layout/Layout';
+import Projects from '../components/home-page/projects/Projects';
 import SEO from '../components/layout/SEO';
+import Transition from '../components/layout/Transition';
+import { HomeTypes } from '../models/home.model';
+import type { NextPage } from 'next';
 
 let client = contentful.createClient({
 	space: process.env.CONTENTFUL_SPACE_ID!,

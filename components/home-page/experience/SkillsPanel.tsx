@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { scrollAnimationVariants } from '../../utils/scrollAnimationVariants';
 import Heading from '../../typography/Heading';
 import TechList from './TechList';
+import { motion } from 'framer-motion';
+import { scrollAnimationVariants } from '../../utils/scrollAnimationVariants';
 
 const SkillsPanel = () => {
 	return (

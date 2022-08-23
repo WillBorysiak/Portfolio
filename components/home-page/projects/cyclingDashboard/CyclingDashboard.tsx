@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { scrollAnimationVariants } from '../../../utils/scrollAnimationVariants';
-import { ProjectTypes as ProjectModel } from '../../../../models/project.model';
-import ProjectLinks from '../ProjectLinks';
 import CyclingTechStack from '../cyclingDashboard/CyclingTechStack';
+import Image from 'next/image';
+import ProjectLinks from '../ProjectLinks';
+import { motion } from 'framer-motion';
+import { ProjectTypes as ProjectModel } from '../../../../models/project.model';
+import { scrollAnimationVariants } from '../../../utils/scrollAnimationVariants';
 
 interface ProjectTypes {
 	content: { fields: ProjectModel };

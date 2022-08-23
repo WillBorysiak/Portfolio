@@ -1,8 +1,8 @@
-import { JobTypes } from '../../../models/job.model';
+import JobsPanel from './JobsPanel';
 import ParallaxBackground from '../../parallax/ParallaxBackground';
 import SectionTitle from '../../typography/SectionTitle';
 import SkillsPanel from './SkillsPanel';
-import JobsPanel from './JobsPanel';
+import { JobTypes } from '../../../models/job.model';
 
 interface ExperienceTypes {
 	experiences: { items: [fields: { fields: JobTypes }] };

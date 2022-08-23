@@ -1,7 +1,7 @@
 import Cloud from '../Cloud';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlaneProp } from '@fortawesome/pro-duotone-svg-icons';
 import { faClouds } from '@fortawesome/pro-duotone-svg-icons';
+import { faPlaneProp } from '@fortawesome/pro-duotone-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const DesktopClouds = () => {
 	return (
