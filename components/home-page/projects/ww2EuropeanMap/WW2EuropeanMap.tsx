@@ -31,7 +31,7 @@ const WW2EuropeanMap = (props: ProjectTypes) => {
 							<p className="mt-4 text-lg font-bold text-dark dark:text-light md:text-xl">{description}</p>
 							<ProjectLinks
 								github="https://github.com/WillBorysiak/WW2-European-Map"
-								website="https://ww2-european-map.netlify.app/"
+								website="https://ww2-european-map.vercel.app/"
 							/>
 						</div>
 					</div>
