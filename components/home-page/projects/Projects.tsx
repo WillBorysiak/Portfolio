@@ -1,5 +1,5 @@
 import CanICalorie from './canICalorie/CanICalorie';
-import CyclingDashboard from './cyclingDashboard/CyclingDashboard';
+import StravaDashboard from './stravaDashboard/StravaDashboard';
 import HandcraftedByBR from './handcraftedByBarbaraRuth/HandcraftedByBR';
 import ParallaxBackground from '../../parallax/ParallaxBackground';
 import SectionTitle from '../../typography/SectionTitle';
@@ -14,7 +14,7 @@ const Projects = (props: ProjectsTypes) => {
 			<ParallaxBackground />
 			<section id="projects" className="flex w-screen flex-col items-center">
 				<SectionTitle text="Projects" />
-				<CyclingDashboard content={projects[0]} />
+				<StravaDashboard content={projects[0]} />
 				<HandcraftedByBR content={projects[1]} />
 				<CanICalorie content={projects[2]} />
 				<WW2EuropeanMap content={projects[3]} />

@@ -1,4 +1,4 @@
-import CyclingTechStack from '../cyclingDashboard/CyclingTechStack';
+import CyclingTechStack from './StravaTechStack';
 import Image from 'next/image';
 import ProjectLinks from '../ProjectLinks';
 import { motion } from 'framer-motion';
@@ -9,7 +9,7 @@ interface ProjectTypes {
 	content: { fields: ProjectModel };
 }
 
-const CyclingDashboard = (props: ProjectTypes) => {
+const StravaDashboard = (props: ProjectTypes) => {
 	const content = props.content.fields;
 	const { title, description, screenshot } = content;
 
@@ -30,8 +30,8 @@ const CyclingDashboard = (props: ProjectTypes) => {
 							</h2>
 							<p className="mt-4 text-lg font-bold text-dark dark:text-light md:text-xl">{description}</p>
 							<ProjectLinks
-								github="https://github.com/WillBorysiak/Cycling-Dashboard"
-								website="https://cycling-dashboard.vercel.app/"
+								github="https://github.com/WillBorysiak/Strava-Dashboard"
+								website="https://strava-api-dashboard.vercel.app/"
 							/>
 						</div>
 					</div>
@@ -59,4 +59,4 @@ const CyclingDashboard = (props: ProjectTypes) => {
 	);
 };
 
-export default CyclingDashboard;
+export default StravaDashboard;
