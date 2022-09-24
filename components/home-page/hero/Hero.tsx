@@ -23,7 +23,7 @@ const Hero = () => {
 						<h1 className="pb-3 font-amatic text-7xl font-extrabold text-dark dark:text-light sm:text-9xl">
 							Will Borysiak
 						</h1>
-						<h2 className=" font-amatic text-6xl text-dark  dark:text-light sm:text-8xl">Web Developer</h2>
+						<h2 className=" font-amatic text-6xl text-dark  dark:text-light sm:text-8xl">Software Developer</h2>
 						<div className="mt-20 md:mt-32">
 							<p className=" mt-5 text-center font-amatic text-4xl font-extrabold text-dark  dark:text-light sm:text-5xl">
 								Road, trail, mountain, computer desk, whats the difference?
