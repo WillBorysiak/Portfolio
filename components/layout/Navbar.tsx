@@ -1,8 +1,9 @@
-import { faCloudWord } from '@fortawesome/pro-solid-svg-icons';
 import { faEarthEurope } from '@fortawesome/pro-duotone-svg-icons';
+import { faCloudWord } from '@fortawesome/pro-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Fragment, useContext } from 'react';
 import { Menu, Transition } from '@headlessui/react';
+import Link from 'next/link';
+import { Fragment, useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 
 function classNames(...classes: string[]) {
@@ -54,7 +55,7 @@ const Navbar = () => {
 					<div className="flex h-full flex-col items-center justify-around">
 						<Menu.Item>
 							{({ active }) => (
-								<a
+								<Link
 									href="#"
 									className={classNames(
 										active ? 'underline' : '',
@@ -62,12 +63,12 @@ const Navbar = () => {
 									)}
 								>
 									Home
-								</a>
+								</Link>
 							)}
 						</Menu.Item>
 						<Menu.Item>
 							{({ active }) => (
-								<a
+								<Link
 									href="#projects"
 									className={classNames(
 										active ? 'underline' : '',
@@ -75,12 +76,12 @@ const Navbar = () => {
 									)}
 								>
 									Projects
-								</a>
+								</Link>
 							)}
 						</Menu.Item>
 						<Menu.Item>
 							{({ active }) => (
-								<a
+								<Link
 									href="#about"
 									className={classNames(
 										active ? 'underline' : '',
@@ -88,12 +89,12 @@ const Navbar = () => {
 									)}
 								>
 									About
-								</a>
+								</Link>
 							)}
 						</Menu.Item>
 						<Menu.Item>
 							{({ active }) => (
-								<a
+								<Link
 									href="#experience"
 									className={classNames(
 										active ? 'underline' : '',
@@ -101,12 +102,12 @@ const Navbar = () => {
 									)}
 								>
 									Experience
-								</a>
+								</Link>
 							)}
 						</Menu.Item>
 						<Menu.Item>
 							{({ active }) => (
-								<a
+								<Link
 									href="#contact"
 									className={classNames(
 										active ? 'underline' : '',
@@ -114,7 +115,7 @@ const Navbar = () => {
 									)}
 								>
 									Contact
-								</a>
+								</Link>
 							)}
 						</Menu.Item>
 					</div>

@@ -1,6 +1,6 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { AboutTypes as AboutCardModel } from '../../../models/about.model';
-import { motion } from 'framer-motion';
 import { scrollAnimationVariants } from '../../utils/scrollAnimationVariants';
 
 interface AboutCardTypes {
@@ -22,8 +22,8 @@ const AboutCard = (props: AboutCardTypes) => {
 				<div
 					className={
 						reverse
-							? 'relative w-full flex-row-reverse rounded-md bg-transparentBg p-5  md:flex md:flex-row-reverse md:items-center'
-							: 'relative w-full rounded-md bg-transparentBg p-5 md:flex md:flex-row md:items-center'
+							? 'relative w-full flex-row-reverse rounded-sm bg-transparentBg p-5  md:flex md:flex-row-reverse md:items-center'
+							: 'relative w-full rounded-sm bg-transparentBg p-5 md:flex md:flex-row md:items-center'
 					}
 				>
 					{/* Tablet/Desktop */}
@@ -32,10 +32,10 @@ const AboutCard = (props: AboutCardTypes) => {
 							<Image
 								src={'https:' + image.fields.file.url}
 								alt={imageAlt}
-								height={200}
-								width={200}
-								layout="responsive"
-								objectFit="cover"
+								height={550}
+								width={550}
+								quality={100}
+								priority={true}
 							/>
 						</div>
 					</div>
@@ -50,10 +50,10 @@ const AboutCard = (props: AboutCardTypes) => {
 									<Image
 										src={'https:' + image.fields.file.url}
 										alt={imageAlt}
-										height={200}
-										width={200}
-										layout="responsive"
-										objectFit="cover"
+										height={550}
+										width={550}
+										quality={100}
+										priority={true}
 									/>
 								</div>
 							</div>

@@ -1,9 +1,7 @@
-import CanICalorie from './canICalorie/CanICalorie';
-import StravaDashboard from './stravaDashboard/StravaDashboard';
-import HandcraftedByBR from './handcraftedByBarbaraRuth/HandcraftedByBR';
 import ParallaxBackground from '../../parallax/ParallaxBackground';
 import SectionTitle from '../../typography/SectionTitle';
-import WW2EuropeanMap from './ww2EuropeanMap/WW2EuropeanMap';
+import Project from './Project';
+
 import { ProjectsTypes } from '../../../models/project.model';
 
 const Projects = (props: ProjectsTypes) => {
@@ -14,10 +12,30 @@ const Projects = (props: ProjectsTypes) => {
 			<ParallaxBackground />
 			<section id="projects" className="flex w-screen flex-col items-center">
 				<SectionTitle text="Projects" />
-				<StravaDashboard content={projects[0]} />
-				<HandcraftedByBR content={projects[1]} />
-				<CanICalorie content={projects[2]} />
-				<WW2EuropeanMap content={projects[3]} />
+				<Project
+					content={projects[0]}
+					website="https://strava-api-dashboard.vercel.app/"
+					github="https://github.com/WillBorysiak/Strava-Dashboard"
+					techStack="stravaDashboard"
+				/>
+				<Project
+					content={projects[1]}
+					website="https://www.handcrafted-by-barbara-ruth.com/"
+					github="https://github.com/WillBorysiak/Handcrafted-By-BR"
+					techStack="handcraftedByBarbaraRuth"
+				/>
+				<Project
+					content={projects[2]}
+					website="https://can-i-calorie.vercel.app/"
+					github="https://github.com/WillBorysiak/Can-I-Calorie"
+					techStack="canICalorie"
+				/>
+				<Project
+					content={projects[3]}
+					website="https://ww2-european-map.vercel.app/"
+					github="https://github.com/WillBorysiak/WW2-European-Map"
+					techStack="ww2EuropeanMap"
+				/>
 			</section>
 		</>
 	);

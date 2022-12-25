@@ -1,6 +1,6 @@
 // Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc.
 
-const CyclingTechStack = () => {
+const StravaTechStack = () => {
 	return (
 		<>
 			<div className="mt-5 flex flex-wrap gap-x-3 xs:flex-nowrap">
@@ -76,4 +76,4 @@ const CyclingTechStack = () => {
 	);
 };
 
-export default CyclingTechStack;
+export default StravaTechStack;

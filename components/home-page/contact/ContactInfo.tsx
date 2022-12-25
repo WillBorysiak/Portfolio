@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { faFileLines } from '@fortawesome/pro-thin-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -22,9 +23,9 @@ const ContactInfo = () => {
 							<dl className="rounded-lg bg-black/[.75] shadow-lg dark:bg-black/[.5] sm:grid sm:grid-cols-2">
 								<div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
 									<dt className="order-2 mt-2 leading-6">
-										<a href="/cv.pdf" target="_blank" rel="noreferrer">
+										<Link href="/cv.pdf" target="_blank" rel="noreferrer">
 											<FontAwesomeIcon className="text-light dark:text-light" icon={faFileLines} size="3x" />
-										</a>
+										</Link>
 									</dt>
 									<dd className="order-1 text-4xl font-extrabold text-wideLightTransition">CV</dd>
 								</div>

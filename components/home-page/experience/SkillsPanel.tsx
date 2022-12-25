@@ -1,7 +1,7 @@
-import Heading from '../../typography/Heading';
-import TechList from './TechList';
 import { motion } from 'framer-motion';
+import Heading from '../../typography/Heading';
 import { scrollAnimationVariants } from '../../utils/scrollAnimationVariants';
+import TechList from './TechList';
 
 const SkillsPanel = () => {
 	return (

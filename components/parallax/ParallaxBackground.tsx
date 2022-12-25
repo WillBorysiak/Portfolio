@@ -1,7 +1,7 @@
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 import CloudContainer from './CloudContainer';
 import StarContainer from './StarContainer';
-import { ThemeContext } from '../context/ThemeContext';
-import { useContext } from 'react';
 
 const ParallaxBackground = () => {
 	const theme = useContext(ThemeContext);
