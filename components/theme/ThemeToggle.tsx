@@ -1,42 +1,36 @@
 import { faMoon, faSunBright } from '@fortawesome/pro-duotone-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useContext } from 'react';
-import { ThemeContext } from '../context/ThemeContext';
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 const ThemeToggle = () => {
-	const theme = useContext(ThemeContext);
+	const { theme, setTheme } = useTheme();
+	const [mounted, setMounted] = useState(false);
+
+	// state hydration
+	useEffect(() => {
+		setMounted(true);
+	}, []);
+	if (!mounted) {
+		return null;
+	}
 
 	return (
-		<button
-			type="button"
-			className="mt-3"
-			onClick={() => {
-				const root = window.document.documentElement;
-
-				if (!theme.isDark) {
-					theme.setIsDark(true);
-					root.classList.add('dark');
-					return;
-				}
-				if (theme.isDark) {
-					theme.setIsDark(false);
-					root.classList.remove('dark');
-					return;
-				}
-			}}
-		>
-			{theme.isDark && (
+		<button type="button" className="mt-3">
+			{theme === 'dark' && (
 				<FontAwesomeIcon
 					className="text-black opacity-50 transition delay-200 duration-1000 ease-in-out hover:text-yellow-300 hover:opacity-100 md:hover:scale-125"
 					icon={faSunBright}
 					size="4x"
+					onClick={() => setTheme('light')}
 				/>
 			)}
-			{!theme.isDark && (
+			{theme === 'light' && (
 				<FontAwesomeIcon
 					className="text-black opacity-50 transition-all delay-200 duration-1000 ease-in-out hover:text-gray-100 hover:opacity-100 md:hover:scale-125"
 					icon={faMoon}
 					size="4x"
+					onClick={() => setTheme('dark')}
 				/>
 			)}
 		</button>

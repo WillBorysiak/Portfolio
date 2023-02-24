@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import ThemeToggle from '../../context/ThemeToggle';
 import Navbar from '../../layout/Navbar';
 import ParallaxBackground from '../../parallax/ParallaxBackground';
+import ThemeToggle from '../../theme/ThemeToggle';
 import { scrollAnimationVariants } from '../../utils/scrollAnimationVariants';
 
 const Hero = () => {

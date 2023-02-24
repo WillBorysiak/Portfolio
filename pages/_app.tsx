@@ -1,12 +1,13 @@
-import '@fortawesome/fontawesome-svg-core/styles.css';
+import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
-import { ThemeProvider } from '../components/context/ThemeContext';
+
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
-			<ThemeProvider>
+			<ThemeProvider enableSystem={true} attribute="class">
 				<Component {...pageProps} />
 			</ThemeProvider>
 		</>
