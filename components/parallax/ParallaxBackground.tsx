@@ -4,7 +4,7 @@ import CloudContainer from './CloudContainer';
 import StarContainer from './StarContainer';
 
 const ParallaxBackground = () => {
-	const { theme } = useTheme();
+	const { resolvedTheme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 
 	// state hydration
@@ -16,8 +16,8 @@ const ParallaxBackground = () => {
 	}
 	return (
 		<div className="linear fixed -z-10 h-full w-full bg-lightBackground transition duration-1000 dark:bg-darkBackground">
-			{theme === 'dark' && <StarContainer />}
-			{theme === 'light' && <CloudContainer />}
+			{resolvedTheme === 'dark' && <StarContainer />}
+			{resolvedTheme === 'light' && <CloudContainer />}
 		</div>
 	);
 };

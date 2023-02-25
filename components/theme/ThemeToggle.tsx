@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
 const ThemeToggle = () => {
-	const { theme, setTheme } = useTheme();
+	const { resolvedTheme, setTheme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 
 	// state hydration
@@ -17,7 +17,7 @@ const ThemeToggle = () => {
 
 	return (
 		<button type="button" className="mt-3">
-			{theme === 'dark' && (
+			{resolvedTheme === 'dark' && (
 				<FontAwesomeIcon
 					className="text-black opacity-50 transition delay-200 duration-1000 ease-in-out hover:text-yellow-300 hover:opacity-100 md:hover:scale-125"
 					icon={faSunBright}
@@ -25,7 +25,7 @@ const ThemeToggle = () => {
 					onClick={() => setTheme('light')}
 				/>
 			)}
-			{theme === 'light' && (
+			{resolvedTheme === 'light' && (
 				<FontAwesomeIcon
 					className="text-black opacity-50 transition-all delay-200 duration-1000 ease-in-out hover:text-gray-100 hover:opacity-100 md:hover:scale-125"
 					icon={faMoon}

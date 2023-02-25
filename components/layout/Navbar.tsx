@@ -16,7 +16,7 @@ const navItems = [
 ];
 
 const Navbar = () => {
-	const { theme } = useTheme();
+	const { resolvedTheme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 
 	// state hydration
@@ -30,14 +30,14 @@ const Navbar = () => {
 	return (
 		<Menu as="div" className="relative mt-3 inline-block text-left">
 			<Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium">
-				{theme === 'dark' && (
+				{resolvedTheme === 'dark' && (
 					<FontAwesomeIcon
 						className="text-light transition delay-200 duration-1000 ease-in-out hover:scale-125"
 						icon={faEarthEurope}
 						size="4x"
 					/>
 				)}
-				{theme === 'light' && (
+				{resolvedTheme === 'light' && (
 					<FontAwesomeIcon
 						className="text-white transition delay-200 duration-1000 ease-in-out hover:scale-125"
 						icon={faCloudWord}
