@@ -29,24 +29,22 @@ const Navbar = () => {
 
 	return (
 		<Menu as="div" className="relative mt-3 inline-block text-left">
-			<div>
-				<Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium">
-					{theme === 'dark' && (
-						<FontAwesomeIcon
-							className="text-light transition delay-200 duration-1000 ease-in-out hover:scale-125"
-							icon={faEarthEurope}
-							size="4x"
-						/>
-					)}
-					{theme === 'light' && (
-						<FontAwesomeIcon
-							className="text-white transition delay-200 duration-1000 ease-in-out hover:scale-125"
-							icon={faCloudWord}
-							size="4x"
-						/>
-					)}
-				</Menu.Button>
-			</div>
+			<Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium">
+				{theme === 'dark' && (
+					<FontAwesomeIcon
+						className="text-light transition delay-200 duration-1000 ease-in-out hover:scale-125"
+						icon={faEarthEurope}
+						size="4x"
+					/>
+				)}
+				{theme === 'light' && (
+					<FontAwesomeIcon
+						className="text-white transition delay-200 duration-1000 ease-in-out hover:scale-125"
+						icon={faCloudWord}
+						size="4x"
+					/>
+				)}
+			</Menu.Button>
 
 			<Transition
 				as={Fragment}
@@ -61,22 +59,19 @@ const Navbar = () => {
 					<div className="flex h-full flex-col items-center justify-around">
 						{navItems.map((item, index) => {
 							return (
-								<>
-									key={index}
-									<Menu.Item>
-										{({ active }) => (
-											<Link
-												href={item.href}
-												className={classNames(
-													active ? 'underline' : '',
-													'group flex items-center px-4 py-2 text-4xl text-light dark:text-dark',
-												)}
-											>
-												{item.title}
-											</Link>
-										)}
-									</Menu.Item>
-								</>
+								<Menu.Item key={index}>
+									{({ active }) => (
+										<Link
+											href={item.href}
+											className={classNames(
+												active ? 'underline' : '',
+												'group flex items-center px-4 py-2 text-4xl text-light dark:text-dark',
+											)}
+										>
+											{item.title}
+										</Link>
+									)}
+								</Menu.Item>
 							);
 						})}
 					</div>
