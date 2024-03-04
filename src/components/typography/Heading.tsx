@@ -1,13 +1,23 @@
+import { classNames } from "../utils/classNames";
+
 interface HeadingProps {
-	content: string;
+  content: string;
+  center?: boolean;
 }
 
 const Heading = (props: HeadingProps) => {
-	return (
-		<h2 className="text-center font-kalam text-3xl font-extrabold text-dark dark:text-light sm:text-4xl">
-			{props.content}
-		</h2>
-	);
+  const { content, center = true } = props;
+
+  return (
+    <h2
+      className={classNames(
+        center ? "text-center" : "",
+        "font-kalam text-3xl font-extrabold text-dark dark:text-light sm:text-4xl",
+      )}
+    >
+      {content}
+    </h2>
+  );
 };
 
 export default Heading;

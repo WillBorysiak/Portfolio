@@ -4,7 +4,7 @@ import { ProjectLink } from '../../../models/links.model';
 
 const ProjectLinks = (props: ProjectLink) => {
 	return (
-		<div className="mt-5 flex gap-x-5">
+		<div id="project-link" className="mt-5 flex gap-x-5">
 			{/* website */}
 			<Link href={props.website} target="_blank" rel="noreferrer">
 				<svg

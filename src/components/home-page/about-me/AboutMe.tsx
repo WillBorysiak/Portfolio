@@ -9,7 +9,7 @@ const AboutMe = (props: { abouts: AboutModel[] }) => {
 	return (
 		<>
 			<ParallaxBackground />
-			<section id="about" className="flex w-screen flex-col items-center justify-start ">
+			<section id="about" className="flex w-screen flex-col items-center justify-center">
 				<SectionTitle text="About Me" />
 				{abouts.map((item, index) => {
 					return <AboutCard key={index} content={item} />;

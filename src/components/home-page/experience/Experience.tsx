@@ -1,22 +1,25 @@
-import { Position } from '../../../models/position.model';
-import ParallaxBackground from '../../parallax/ParallaxBackground';
-import SectionTitle from '../../typography/SectionTitle';
-import JobsPanel from './JobsPanel';
-import SkillsPanel from './SkillsPanel';
+import { Position } from "../../../models/position.model";
+import ParallaxBackground from "../../parallax/ParallaxBackground";
+import SectionTitle from "../../typography/SectionTitle";
+import Technologies from "./Technologies";
+import WorkExperience from "./WorkExperience";
 
 const Experience = (props: { experiences: Position[] }) => {
-	const experiences = props.experiences;
+  const experiences = props.experiences;
 
-	return (
-		<>
-			<ParallaxBackground />
-			<section id="experience" className="flex w-screen flex-col items-center justify-start pb-10 md:mt-0">
-				<SectionTitle text="Experience" />
-				<SkillsPanel />
-				<JobsPanel experiences={experiences} />
-			</section>
-		</>
-	);
+  return (
+    <>
+      <ParallaxBackground />
+      <section
+        id="experience"
+        className="flex w-full flex-col items-center justify-center"
+      >
+        <SectionTitle text="Experience" />
+        <Technologies />
+        <WorkExperience experiences={experiences} />
+      </section>
+    </>
+  );
 };
 
 export default Experience;
