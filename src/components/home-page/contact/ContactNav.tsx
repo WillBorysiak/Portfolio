@@ -1,6 +1,7 @@
+import Link from "next/link";
+
 import { faArrowUp } from "@fortawesome/pro-duotone-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
 
 const ContactNav = () => {
   const scrollToTop = () =>

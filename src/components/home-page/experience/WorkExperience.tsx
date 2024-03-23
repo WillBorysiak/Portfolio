@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 
-import { Position } from "../../../models/position.model";
+import { Position } from "../../../interfaces/position.interface";
 import Heading from "../../typography/Heading";
 import { scrollAnimationVariants } from "../../utils/scrollAnimationVariants";
 import Job from "./Job";
 
 const WorkExperience = (props: { experiences: Position[] }) => {
-  const experiences = props.experiences.reverse();
+  const experiences = props.experiences.sort(
+    (a, b) => a.fields.order - b.fields.order,
+  );
 
   return (
     <motion.section

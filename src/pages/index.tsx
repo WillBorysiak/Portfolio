@@ -1,4 +1,3 @@
-import * as contentful from "contentful";
 import type { NextPage } from "next";
 
 import AboutMe from "../components/home-page/about-me/AboutMe";
@@ -9,16 +8,27 @@ import Projects from "../components/home-page/projects/Projects";
 import Layout from "../components/layout/Layout";
 import SEO from "../components/layout/SEO";
 import Transition from "../components/layout/Transition";
-import { HomeProps } from "../models/home.model";
+import { getContentfulData } from "../helpers/getContentfulData";
+import { About } from "../interfaces/about.interface";
+import { Position } from "../interfaces/position.interface";
+import { Project } from "../interfaces/project.interface";
+
+export interface HomeProps {
+  projects: Project[];
+  abouts: About[];
+  experiences: Position[];
+}
 
 const Home: NextPage<HomeProps> = (props) => {
+  const { projects, abouts, experiences } = props;
+
   return (
     <Layout>
       <SEO />
       <Hero />
-      <Projects projects={props.projects} />
-      <AboutMe abouts={props.abouts} />
-      <Experience experiences={props.experiences} />
+      <Projects projects={projects} />
+      <AboutMe abouts={abouts} />
+      <Experience experiences={experiences} />
       <Transition />
       <Contact />
     </Layout>
@@ -27,29 +37,14 @@ const Home: NextPage<HomeProps> = (props) => {
 
 export default Home;
 
-let client = contentful.createClient({
-  space: process.env.CONTENTFUL_SPACE_ID!,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
-});
-
 export async function getStaticProps() {
-  const projects = await client.getEntries({
-    content_type: "portfolioProjectImages",
-  });
-
-  const abouts = await client.getEntries({
-    content_type: "portfolioAbout",
-  });
-
-  const experiences = await client.getEntries({
-    content_type: "portfolioExperience",
-  });
+  const { projects, abouts, experiences } = await getContentfulData();
 
   return {
     props: {
-      projects: projects.items,
-      abouts: abouts.items,
-      experiences: experiences.items,
+      projects,
+      abouts,
+      experiences,
     },
   };
 }

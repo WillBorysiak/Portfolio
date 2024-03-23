@@ -1,7 +1,8 @@
-import { faMoon, faSunBright } from "@fortawesome/pro-duotone-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+
+import { faMoon, faSunBright } from "@fortawesome/pro-duotone-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ThemeToggle = () => {
   const { resolvedTheme, setTheme } = useTheme();

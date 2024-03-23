@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
 import Image from "next/image";
 
-import { About } from "../../../models/about.model";
+import { motion } from "framer-motion";
+
+import { About } from "../../../interfaces/about.interface";
 import { parseSentence } from "../../utils/parseSentence";
 import { scrollAnimationVariants } from "../../utils/scrollAnimationVariants";
 

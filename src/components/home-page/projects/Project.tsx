@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
 import Image from "next/image";
 
-import { Project as ProjectModel } from "../../../models/project.model";
-import Heading from "../../typography/Heading";
+import { motion } from "framer-motion";
+
+import { Project as ProjectModel } from "../../../interfaces/project.interface";
 import { scrollAnimationVariants } from "../../utils/scrollAnimationVariants";
 import ProjectLinks from "./ProjectLinks";
 import CalorieTechStack from "./tech-stacks/CalorieTechStack";
@@ -28,7 +28,7 @@ const Project = (props: { content: ProjectModel }) => {
         <div id="project-info" className="px-5 lg:px-0 lg:py-16">
           <div className="mt-5">
             <h2 className="pt-5 text-3xl font-extrabold tracking-tight text-dark dark:text-light md:text-4xl">
-              <Heading content={title} center={false} />
+              {title}
             </h2>
 
             <p className="mt-5 text-lg font-bold text-dark dark:text-light md:text-xl">

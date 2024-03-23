@@ -1,6 +1,7 @@
+import Link from "next/link";
+
 import { faFileLines } from "@fortawesome/pro-thin-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
 
 const ContactInfo = () => {
   return (

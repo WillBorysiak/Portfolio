@@ -1,4 +1,4 @@
-import { Position } from "../../../models/position.model";
+import { Position } from "../../../interfaces/position.interface";
 
 const Job = (props: { content: Position }) => {
   const job = props.content.fields;

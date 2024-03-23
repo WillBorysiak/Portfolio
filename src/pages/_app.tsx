@@ -1,6 +1,7 @@
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
+import { ThemeProvider } from "next-themes";
+
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
 import "../styles/globals.css";
 

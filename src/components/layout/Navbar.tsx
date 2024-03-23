@@ -1,10 +1,11 @@
+import { useTheme } from "next-themes";
+import Link from "next/link";
+import { Fragment, useEffect, useState } from "react";
+
 import { faEarthEurope } from "@fortawesome/pro-duotone-svg-icons";
 import { faCloudWord } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Menu, Transition } from "@headlessui/react";
-import { useTheme } from "next-themes";
-import Link from "next/link";
-import { Fragment, useEffect, useState } from "react";
 
 import { classNames } from "../utils/classNames";
 

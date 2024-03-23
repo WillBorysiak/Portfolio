@@ -1,4 +1,4 @@
-import { Position } from "../../../models/position.model";
+import { Position } from "../../../interfaces/position.interface";
 import ParallaxBackground from "../../parallax/ParallaxBackground";
 import SectionTitle from "../../typography/SectionTitle";
 import Technologies from "./Technologies";

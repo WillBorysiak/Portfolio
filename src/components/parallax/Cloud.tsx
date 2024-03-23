@@ -1,7 +1,7 @@
 import { faCloud } from "@fortawesome/pro-duotone-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { AnimatedObjectProps } from "../../models/moving-object.model";
+import { AnimatedObjectProps } from "../../interfaces/animated-object.interface";
 
 const Cloud = (props: AnimatedObjectProps) => {
   return (

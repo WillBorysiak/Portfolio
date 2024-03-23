@@ -1,9 +1,9 @@
-import { Project as ProjectModel } from "../../../models/project.model";
+import { Project as IProject } from "../../../interfaces/project.interface";
 import ParallaxBackground from "../../parallax/ParallaxBackground";
 import SectionTitle from "../../typography/SectionTitle";
 import Project from "./Project";
 
-const Projects = (props: { projects: ProjectModel[] }) => {
+const Projects = (props: { projects: IProject[] }) => {
   const projects = props.projects.sort(
     (a, b) => a.fields.order - b.fields.order,
   );
