@@ -18,17 +18,13 @@
             "position": "before"
           },
           {
-            "pattern": "{framer-motion,@/*}",
+            "pattern": "{*}",
             "group": "external",
             "position": "after"
           },
+
           {
-            "pattern": "*",
-            "group": "external",
-            "position": "after"
-          },
-          {
-            "pattern": "**/*",
+            "pattern": "{*}",
             "group": "internal",
             "position": "after"
           }
