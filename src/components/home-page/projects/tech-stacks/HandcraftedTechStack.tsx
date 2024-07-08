@@ -12,13 +12,10 @@ const HandcraftedTechStack = () => {
     >
       {/* React */}
       <TechLogo iconPath={react.src} size="Small" />
-
       {/* Gatsby */}
       <TechLogo iconPath={gatsby.src} size="Small" />
-
       {/* Tailwind */}
       <TechLogo iconPath={tailwindcss.src} size="Small" />
-
       {/* Contentful */}
       <TechLogo iconPath={contentful.src} size="Small" />
     </div>

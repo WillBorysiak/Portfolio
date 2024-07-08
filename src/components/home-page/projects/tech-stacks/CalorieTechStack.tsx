@@ -13,16 +13,12 @@ const CalorieTechStack = () => {
     >
       {/* Angular */}
       <TechLogo iconPath={angular.src} size="Small" />
-
       {/* SASS */}
       <TechLogo iconPath={sass.src} size="Small" />
-
       {/* Material */}
       <TechLogo iconPath={material.src} size="Small" />
-
       {/* RxJS */}
       <TechLogo iconPath={rxjs.src} size="Small" />
-
       {/* NgRx */}
       <TechLogo iconPath={ngrx.src} size="Small" />
     </div>

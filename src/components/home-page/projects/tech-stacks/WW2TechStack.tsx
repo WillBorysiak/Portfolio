@@ -7,19 +7,18 @@ import TechLogo from "../../experience/TechLogo";
 
 const WW2TechStack = () => {
   return (
-    <div className="mt-5 flex flex-wrap gap-x-3 xs:flex-nowrap">
+    <div
+      id="ww2-tech-stack"
+      className="mt-5 flex flex-wrap gap-x-3 xs:flex-nowrap"
+    >
       {/* HTML */}
       <TechLogo iconPath={html.src} size="Small" />
-
       {/* CSS */}
       <TechLogo iconPath={css.src} size="Small" />
-
       {/* JavaScript */}
       <TechLogo iconPath={javascript.src} size="Small" />
-
       {/* SASS */}
       <TechLogo iconPath={sass.src} size="Small" />
-
       {/* Webpack */}
       <TechLogo iconPath={webpack.src} size="Small" />
     </div>

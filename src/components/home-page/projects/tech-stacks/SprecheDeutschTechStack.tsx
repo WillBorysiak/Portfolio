@@ -1,14 +1,14 @@
-import chartjs from "../../../../../public/tech-logos/chartjs.svg";
 import nextjs from "../../../../../public/tech-logos/nextjs.svg";
+import postgresql from "../../../../../public/tech-logos/postgresql.svg";
+import python from "../../../../../public/tech-logos/python.svg";
 import react from "../../../../../public/tech-logos/react.svg";
-import strava from "../../../../../public/tech-logos/strava.svg";
 import tailwindcss from "../../../../../public/tech-logos/tailwindcss.svg";
 import TechLogo from "../../experience/TechLogo";
 
-const StravaTechStack = () => {
+const SprecheDeutschTechStack = () => {
   return (
     <div
-      id="strava-tech-stack"
+      id="spreche-deutsch-tech-stack"
       className="mt-5 flex flex-wrap gap-x-3 xs:flex-nowrap"
     >
       {/* React */}
@@ -17,12 +17,12 @@ const StravaTechStack = () => {
       <TechLogo iconPath={nextjs.src} size="Small" />
       {/* Tailwind */}
       <TechLogo iconPath={tailwindcss.src} size="Small" />
-      {/* Strava */}
-      <TechLogo iconPath={strava.src} size="Small" />
-      {/* Chart JS */}
-      <TechLogo iconPath={chartjs.src} size="Small" />
+      {/* Python */}
+      <TechLogo iconPath={python.src} size="Small" />
+      {/* Postgresql */}
+      <TechLogo iconPath={postgresql.src} size="Small" />
     </div>
   );
 };
 
-export default StravaTechStack;
+export default SprecheDeutschTechStack;

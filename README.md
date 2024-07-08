@@ -2,27 +2,27 @@
  
 <h2 align="center">Purpose of the Website/App:</h2>
  
-<h3 align="center">To serve as a portfolio for my web development experience.</h3>
+<h3 align="center">To serve as a portfolio for my software development experience.</h3>
  
 <h2 align="center">Technology used</h2>
  
 <div align="center">
-  <img align="center" src="/assets/readme-icons/react-logo.svg" alt="HTML" height="50"/>
+  <img align="center" src="/docs/readme-icons/react.svg" alt="HTML" height="50"/>
   <p align="center">React</p>
 </div>
 
 <div align="center">
-  <img align="center" src="/assets/readme-icons/nextjs-logo.svg" alt="HTML" height="50"/>
+  <img align="center" src="/docs/readme-icons/nextjs.svg" alt="HTML" height="50"/>
   <p align="center">NextJS</p>
 </div>
 
 <div align="center">
-  <img align="center" src="/assets/readme-icons/tailwindcss-logo.svg" alt="HTML" height="50"/>
+  <img align="center" src="/docs/readme-icons/tailwindcss.svg" alt="HTML" height="50"/>
   <p align="center">Tailwind CSS</p>
 </div>
 
 <div align="center">
-  <img align="center" src="/assets/readme-icons/contentful-logo.svg" alt="HTML" height="50"/>
+  <img align="center" src="/docs/readme-icons/contentful.svg" alt="HTML" height="50"/>
   <p align="center">Contentful</p>
 </div>
 

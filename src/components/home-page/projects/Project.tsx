@@ -7,6 +7,7 @@ import { scrollAnimationVariants } from "../../utils/scrollAnimationVariants";
 import ProjectLinks from "./ProjectLinks";
 import CalorieTechStack from "./tech-stacks/CalorieTechStack";
 import HandcraftedTechStack from "./tech-stacks/HandcraftedTechStack";
+import SprecheDeutschTechStack from "./tech-stacks/SprecheDeutschTechStack";
 import StravaTechStack from "./tech-stacks/StravaTechStack";
 import WW2TechStack from "./tech-stacks/WW2TechStack";
 
@@ -40,9 +41,10 @@ const Project = (props: { content: ProjectModel }) => {
 
           <div className="mt-5 border-t border-gray-200" />
 
+          {techStack === "sprecheDeutsch" && <SprecheDeutschTechStack />}
           {techStack === "stravaDashboard" && <StravaTechStack />}
-          {techStack === "handcraftedByBarbaraRuth" && <HandcraftedTechStack />}
           {techStack === "canICalorie" && <CalorieTechStack />}
+          {techStack === "handcraftedByBarbaraRuth" && <HandcraftedTechStack />}
           {techStack === "ww2EuropeanMap" && <WW2TechStack />}
         </div>
 
