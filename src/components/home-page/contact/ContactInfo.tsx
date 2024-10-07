@@ -12,7 +12,7 @@ const ContactInfo = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-extrabold text-dark dark:text-light sm:text-4xl">
-            I&lsquo;m currently employed as junior software developer in the UK.
+            I&lsquo;m currently employed as software developer in the UK.
           </h2>
           <p className="dark:text-v mt-3 text-2xl text-dark dark:text-light sm:mt-4">
             Feel free to browse my site and see the self taught projects
@@ -22,7 +22,7 @@ const ContactInfo = () => {
       </div>
       <div className="mt-10 pb-12 sm:pb-16">
         <div className="relative">
-          <div className="absolute inset-0 h-1/2 " />
+          <div className="absolute inset-0 h-1/2" />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-4xl">
               <dl className="rounded-lg bg-black/[.75] shadow-lg dark:bg-black/[.5] sm:grid sm:grid-cols-2">

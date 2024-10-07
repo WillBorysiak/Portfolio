@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
         <div className="mt-8 flex flex-col items-center md:order-1 md:mt-0">
           <p className="text-lg text-dark dark:text-light">
-            &copy; Will Borysiak - 2022. All rights reserved.
+            &copy; Will Borysiak - 2024. All rights reserved.
           </p>
           <Link
             className="text-lg text-dark dark:text-light"
@@ -22,7 +22,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            Powered by <span className="bg-white text-black">NextJS.</span>
+            Powered by <span className="bg-white text-black">NextJS</span>
           </Link>
         </div>
       </div>
