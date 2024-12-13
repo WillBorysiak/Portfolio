@@ -4,51 +4,59 @@ import {
 } from "@fortawesome/pro-duotone-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Star from "../Star";
+import { AnimatedObject } from "../../../interfaces/animated-object.interface";
+import Star from "./Star";
 
 const MobileStars = () => {
+  const stars: AnimatedObject[] = [
+    {
+      location: "mt-5",
+      speed: "animate-[starSM_10s_linear_infinite]",
+      size: "1x",
+    },
+    {
+      location: "mt-40",
+      speed: "animate-[starSMReverse_10s_linear_infinite]",
+      size: "1x",
+    },
+    {
+      location: "mt-60",
+      speed: "animate-[starSMReverse_12s_linear_infinite]",
+      size: "1x",
+    },
+    {
+      location: "mt-80",
+      speed: "animate-[starSM_17s_linear_infinite]",
+      size: "1x",
+    },
+    {
+      location: "mt-[400px]",
+      speed: "animate-[starSM_20s_linear_infinite]",
+      size: "1x",
+    },
+    {
+      location: "mt-[475px]",
+      speed: "animate-[starSM_26s_linear_infinite]",
+      size: "1x",
+    },
+    {
+      location: "mt-[550px]",
+      speed: "animate-[starSMReverse_14s_linear_infinite]",
+      size: "1x",
+    },
+    {
+      location: "mt-[600px]",
+      speed: "animate-[starSM_9s_linear_infinite]",
+      size: "1x",
+    },
+  ];
+
   return (
     <>
-      <Star
-        speed="animate-[starSM_10s_linear_infinite]"
-        size="1x"
-        location="mt-5"
-      />
-      <Star
-        speed="animate-[starSMReverse_10s_linear_infinite]"
-        size="1x"
-        location="mt-40"
-      />
-      <Star
-        speed="animate-[starSMReverse_12s_linear_infinite]"
-        size="1x"
-        location="mt-60"
-      />
-      <Star
-        speed="animate-[starSM_17s_linear_infinite]"
-        size="1x"
-        location="mt-80"
-      />
-      <Star
-        speed="animate-[starSM_20s_linear_infinite]"
-        size="1x"
-        location="mt-[400px]"
-      />
-      <Star
-        speed="animate-[starSM_26s_linear_infinite]"
-        size="1x"
-        location="mt-[475px]"
-      />
-      <Star
-        speed="animate-[starSMReverse_14s_linear_infinite]"
-        size="1x"
-        location="mt-[550px]"
-      />
-      <Star
-        speed="animate-[starSM_9s_linear_infinite]"
-        size="1x"
-        location="mt-[600px]"
-      />
+      {stars.map((star, index) => (
+        <Star key={index} star={star} />
+      ))}
+
       <FontAwesomeIcon
         icon={faPlanetRinged}
         size="6x"

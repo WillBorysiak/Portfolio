@@ -1,4 +1,4 @@
-import { classNames } from "../utils/classNames";
+import { classNames } from "../utils/class-names";
 
 interface HeadingProps {
   content: string;

@@ -4,8 +4,12 @@ import SectionTitle from "../../typography/SectionTitle";
 import Technologies from "./Technologies";
 import WorkExperience from "./WorkExperience";
 
-const Experience = (props: { experiences: Position[] }) => {
-  const experiences = props.experiences;
+interface ExperienceProps {
+  experiences: Position[];
+}
+
+const Experience = (props: ExperienceProps) => {
+  const { experiences } = props;
 
   return (
     <>

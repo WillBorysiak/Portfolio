@@ -1,41 +1,49 @@
 import { faClouds, faPlaneProp } from "@fortawesome/pro-duotone-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Cloud from "../Cloud";
+import { AnimatedObject } from "../../../interfaces/animated-object.interface";
+import Cloud from "./Cloud";
 
 const DesktopClouds = () => {
+  const clouds: AnimatedObject[] = [
+    {
+      location: "mt-5",
+      speed: "animate-[cloudLG_20s_linear_infinite]",
+      size: "5x",
+    },
+    {
+      location: "mt-60",
+      speed: "animate-[cloudLGReverse_25s_linear_infinite]",
+      size: "7x",
+    },
+    {
+      location: "mt-96",
+      speed: "animate-[cloudLGReverse_29s_linear_infinite]",
+      size: "5x",
+    },
+    {
+      location: "mt-[500px]",
+      speed: "animate-[cloudLG_40s_linear_infinite]",
+      size: "6x",
+    },
+    {
+      location: "mt-[750px]",
+      speed: "animate-[cloudLGReverse_30s_linear_infinite]",
+      size: "6x",
+    },
+    {
+      location: "mt-[900px]",
+      speed: "animate-[cloudLG_37s_linear_infinite]",
+      size: "6x",
+    },
+  ];
+
   return (
     <>
-      <Cloud
-        speed="animate-[cloudLG_20s_linear_infinite]"
-        size="5x"
-        location="mt-5"
-      />
-      <Cloud
-        speed="animate-[cloudLGReverse_25s_linear_infinite]"
-        size="7x"
-        location="mt-60"
-      />
-      <Cloud
-        speed="animate-[cloudLGReverse_29s_linear_infinite]"
-        size="5x"
-        location="mt-96"
-      />
-      <Cloud
-        speed="animate-[cloudLG_40s_linear_infinite]"
-        size="6x"
-        location="mt-[500px]"
-      />
-      <Cloud
-        speed="animate-[cloudLGReverse_30s_linear_infinite]"
-        size="6x"
-        location="mt-[750px]"
-      />
-      <Cloud
-        speed="animate-[cloudLG_37s_linear_infinite]"
-        size="6x"
-        location="mt-[900px]"
-      />
+      {clouds.map((cloud, index) => (
+        <Cloud key={index} cloud={cloud} />
+      ))}
+
       <FontAwesomeIcon
         icon={faPlaneProp}
         size="6x"

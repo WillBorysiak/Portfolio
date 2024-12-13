@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Navbar from "../../layout/Navbar";
 import ParallaxBackground from "../../parallax/ParallaxBackground";
 import ThemeToggle from "../../theme/ThemeToggle";
-import { scrollAnimationVariants } from "../../utils/scrollAnimationVariants";
+import { scrollAnimationVariants } from "../../utils/scroll-animation-variants";
 
 const Hero = () => {
   return (
@@ -34,7 +34,7 @@ const Hero = () => {
             </h2>
 
             <div className="mt-20 md:mt-32">
-              <p className="mt-5 text-center text-4xl font-extrabold text-dark  dark:text-light sm:text-5xl">
+              <p className="mt-5 text-center text-4xl font-extrabold text-dark dark:text-light sm:text-5xl">
                 Road, trail, mountain, computer desk, whats the difference?
               </p>
 

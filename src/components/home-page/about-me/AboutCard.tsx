@@ -3,14 +3,19 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { About } from "../../../interfaces/about.interface";
-import { parseSentence } from "../../utils/parseSentence";
-import { scrollAnimationVariants } from "../../utils/scrollAnimationVariants";
+import { scrollAnimationVariants } from "../../utils/scroll-animation-variants";
+import { TextHelper } from "../../utils/text-helper";
 
-const AboutCard = (props: { content: About }) => {
-  const about = props.content.fields;
-  const { content, reverse, image, imageAlt } = about;
+interface AboutCardProps {
+  content: About;
+}
 
-  const aboutContent = parseSentence(content);
+const AboutCard = (props: AboutCardProps) => {
+  const { fields } = props.content;
+
+  const { content, reverse, image, imageAlt } = fields;
+
+  const aboutData: string[] = TextHelper.parseAbout(content);
 
   return (
     <motion.article
@@ -24,7 +29,7 @@ const AboutCard = (props: { content: About }) => {
         <div
           className={
             reverse
-              ? "w-full flex-row-reverse rounded-sm bg-transparentBg p-5  md:flex md:flex-row-reverse md:items-center"
+              ? "w-full flex-row-reverse rounded-sm bg-transparentBg p-5 md:flex md:flex-row-reverse md:items-center"
               : "w-full rounded-sm bg-transparentBg p-5 md:flex md:flex-row md:items-center"
           }
         >
@@ -44,7 +49,7 @@ const AboutCard = (props: { content: About }) => {
 
           <div className="relative lg:ml-10">
             <div className="text-xl font-bold leading-9 text-dark dark:text-light lg:text-2xl">
-              {aboutContent.map((content, index) => {
+              {aboutData.map((content, index) => {
                 return (
                   <p
                     key={index}

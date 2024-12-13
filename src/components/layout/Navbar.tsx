@@ -7,7 +7,7 @@ import { faCloudWord } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Menu, Transition } from "@headlessui/react";
 
-import { classNames } from "../utils/classNames";
+import { classNames } from "../utils/class-names";
 
 const navigation = [
   { title: "Home", href: "#" },
@@ -55,7 +55,7 @@ const Navbar = () => {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 mt-2 h-[400px] w-64 origin-top-right divide-y  rounded-md bg-dark backdrop-brightness-[0.9] dark:bg-light">
+        <Menu.Items className="absolute right-0 mt-2 h-[400px] w-64 origin-top-right divide-y rounded-md bg-dark backdrop-brightness-[0.9] dark:bg-light">
           <div className="flex h-full flex-col items-center justify-around">
             {navigation.map((item, index) => {
               return (
@@ -65,7 +65,7 @@ const Navbar = () => {
                       href={item.href}
                       className={classNames(
                         active ? "underline" : "",
-                        "group flex items-center px-4 py-2 font-kalam text-5xl  text-light dark:text-dark",
+                        "group flex items-center px-4 py-2 font-kalam text-5xl text-light dark:text-dark",
                       )}
                     >
                       {item.title}

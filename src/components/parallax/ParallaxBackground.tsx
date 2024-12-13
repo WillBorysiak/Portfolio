@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
-import CloudContainer from "./CloudContainer";
-import StarContainer from "./StarContainer";
+import CloudContainer from "./clouds/CloudContainer";
+import StarContainer from "./stars/StarContainer";
 
 const ParallaxBackground = () => {
   const { resolvedTheme } = useTheme();

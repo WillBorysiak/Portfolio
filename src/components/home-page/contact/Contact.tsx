@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import SectionTitle from "../../typography/SectionTitle";
-import { scrollAnimationVariants } from "../../utils/scrollAnimationVariants";
+import { scrollAnimationVariants } from "../../utils/scroll-animation-variants";
 import ContactInfo from "./ContactInfo";
 import ContactNav from "./ContactNav";
 import Footer from "./Footer";

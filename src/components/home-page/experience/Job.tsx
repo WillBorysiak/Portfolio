@@ -1,12 +1,21 @@
 import { Position } from "../../../interfaces/position.interface";
 
-const Job = (props: { content: Position }) => {
-  const job = props.content.fields;
-  const { position, company, date, description } = job;
+interface JobProps {
+  content: Position;
+}
+
+const Job = (props: JobProps) => {
+  const { fields } = props.content;
+
+  const { position, company, date, description } = fields;
+
   const descriptions: any = description?.description[0];
 
   const descriptionArray = [];
-  for (let key in descriptions) descriptionArray.push(descriptions[key]);
+
+  for (let key in descriptions) {
+    descriptionArray.push(descriptions[key]);
+  }
 
   return (
     <div id="job" className="mt-5 flex flex-col border-b-4 px-8 pb-5 md:px-0">

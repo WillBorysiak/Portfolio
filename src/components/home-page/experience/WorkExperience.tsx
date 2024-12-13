@@ -2,11 +2,17 @@ import { motion } from "framer-motion";
 
 import { Position } from "../../../interfaces/position.interface";
 import Heading from "../../typography/Heading";
-import { scrollAnimationVariants } from "../../utils/scrollAnimationVariants";
+import { scrollAnimationVariants } from "../../utils/scroll-animation-variants";
 import Job from "./Job";
 
-const WorkExperience = (props: { experiences: Position[] }) => {
-  const experiences = props.experiences.sort(
+interface WorkExperienceProps {
+  experiences: Position[];
+}
+
+const WorkExperience = (props: WorkExperienceProps) => {
+  const { experiences } = props;
+
+  const experienceData = experiences.sort(
     (a, b) => a.fields.order - b.fields.order,
   );
 
@@ -21,7 +27,7 @@ const WorkExperience = (props: { experiences: Position[] }) => {
     >
       <article className="mx-2 mt-10 max-w-7xl rounded-sm bg-transparentBg py-5 text-dark dark:text-light lg:py-8">
         <Heading content="Work Experience" />
-        {experiences.map((item, index) => {
+        {experienceData.map((item, index) => {
           return <Job key={index} content={item} />;
         })}
       </article>

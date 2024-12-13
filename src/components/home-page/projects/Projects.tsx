@@ -3,10 +3,14 @@ import ParallaxBackground from "../../parallax/ParallaxBackground";
 import SectionTitle from "../../typography/SectionTitle";
 import Project from "./Project";
 
-const Projects = (props: { projects: IProject[] }) => {
-  const projects = props.projects.sort(
-    (a, b) => a.fields.order - b.fields.order,
-  );
+interface ProjectsProps {
+  projects: IProject[];
+}
+
+const Projects = (props: ProjectsProps) => {
+  const { projects } = props;
+
+  const projectData = projects.sort((a, b) => a.fields.order - b.fields.order);
 
   return (
     <>
@@ -16,7 +20,7 @@ const Projects = (props: { projects: IProject[] }) => {
         className="flex w-screen flex-col items-center justify-center"
       >
         <SectionTitle text="Projects" />
-        {projects.map((project, index) => (
+        {projectData.map((project, index) => (
           <Project key={index} content={project} />
         ))}
       </section>

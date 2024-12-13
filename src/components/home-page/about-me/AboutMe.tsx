@@ -3,8 +3,14 @@ import ParallaxBackground from "../../parallax/ParallaxBackground";
 import SectionTitle from "../../typography/SectionTitle";
 import AboutCard from "./AboutCard";
 
-const AboutMe = (props: { abouts: About[] }) => {
-  const abouts = props.abouts.sort((a, b) => a.fields.order - b.fields.order);
+interface AboutMeProps {
+  abouts: About[];
+}
+
+const AboutMe = (props: AboutMeProps) => {
+  const { abouts } = props;
+
+  const aboutData = abouts.sort((a, b) => a.fields.order - b.fields.order);
 
   return (
     <>
@@ -14,7 +20,7 @@ const AboutMe = (props: { abouts: About[] }) => {
         className="flex w-screen flex-col items-center justify-center"
       >
         <SectionTitle text="About Me" />
-        {abouts.map((item, index) => {
+        {aboutData.map((item, index) => {
           return <AboutCard key={index} content={item} />;
         })}
       </section>

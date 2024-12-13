@@ -3,7 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { Project as ProjectModel } from "../../../interfaces/project.interface";
-import { scrollAnimationVariants } from "../../utils/scrollAnimationVariants";
+import { scrollAnimationVariants } from "../../utils/scroll-animation-variants";
 import ProjectLinks from "./ProjectLinks";
 import CalorieTechStack from "./tech-stacks/CalorieTechStack";
 import HandcraftedTechStack from "./tech-stacks/HandcraftedTechStack";
@@ -11,10 +11,14 @@ import SprecheDeutschTechStack from "./tech-stacks/SprecheDeutschTechStack";
 import StravaTechStack from "./tech-stacks/StravaTechStack";
 import WW2TechStack from "./tech-stacks/WW2TechStack";
 
-const Project = (props: { content: ProjectModel }) => {
-  const content = props.content.fields;
-  const { title, description, website, github, techStack, screenshot } =
-    content;
+interface ProjectProps {
+  content: ProjectModel;
+}
+
+const Project = (props: ProjectProps) => {
+  const { fields } = props.content;
+
+  const { title, description, website, github, techStack, screenshot } = fields;
 
   return (
     <motion.article

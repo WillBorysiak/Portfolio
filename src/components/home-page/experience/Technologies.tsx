@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import Heading from "../../typography/Heading";
-import { scrollAnimationVariants } from "../../utils/scrollAnimationVariants";
+import { scrollAnimationVariants } from "../../utils/scroll-animation-variants";
 import TechList from "./TechList";
 
 const Technologies = () => {

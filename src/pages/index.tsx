@@ -8,7 +8,7 @@ import Projects from "../components/home-page/projects/Projects";
 import Layout from "../components/layout/Layout";
 import SEO from "../components/layout/SEO";
 import Transition from "../components/layout/Transition";
-import { getContentfulData } from "../helpers/getContentfulData";
+import { getContentfulData } from "../contentful/contentful-client";
 import { About } from "../interfaces/about.interface";
 import { Position } from "../interfaces/position.interface";
 import { Project } from "../interfaces/project.interface";

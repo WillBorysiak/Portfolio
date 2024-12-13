@@ -6,10 +6,12 @@ export interface ProjectLinkProps {
 }
 
 const ProjectLinks = (props: ProjectLinkProps) => {
+  const { github, website } = props;
+
   return (
     <div id="project-link" className="mt-5 flex gap-x-5">
       {/* website */}
-      <Link href={props.website} target="_blank" rel="noreferrer">
+      <Link href={website} target="_blank" rel="noreferrer">
         <svg
           className="h-10 w-10 fill-dark dark:fill-light md:hover:scale-110"
           xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +22,7 @@ const ProjectLinks = (props: ProjectLinkProps) => {
       </Link>
 
       {/* github */}
-      <Link href={props.github} target="_blank" rel="noreferrer">
+      <Link href={github} target="_blank" rel="noreferrer">
         <svg
           className="h-10 w-10 fill-dark dark:fill-light md:hover:scale-110"
           xmlns="http://www.w3.org/2000/svg"
