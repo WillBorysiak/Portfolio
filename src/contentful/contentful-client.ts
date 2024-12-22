@@ -14,13 +14,13 @@ export const getContentfulData = async () => {
     content_type: "portfolioAbout",
   });
 
-  const experiences = await client.getEntries({
+  const workplaces = await client.getEntries({
     content_type: "portfolioExperience",
   });
 
   return {
     projects: projects.items,
     abouts: abouts.items,
-    experiences: experiences.items,
+    workplaces: workplaces.items,
   };
 };

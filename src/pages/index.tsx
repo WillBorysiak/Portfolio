@@ -1,34 +1,44 @@
 import type { NextPage } from "next";
+import { useEffect } from "react";
 
-import AboutMe from "../components/home-page/about-me/AboutMe";
 import Contact from "../components/home-page/contact/Contact";
-import Experience from "../components/home-page/experience/Experience";
 import Hero from "../components/home-page/hero/Hero";
-import Projects from "../components/home-page/projects/Projects";
 import Layout from "../components/layout/Layout";
 import SEO from "../components/layout/SEO";
 import Transition from "../components/layout/Transition";
+import AboutMe from "../containers/AboutMe";
+import Experience from "../containers/Experience";
+import Projects from "../containers/Projects";
 import { getContentfulData } from "../contentful/contentful-client";
-import { About } from "../interfaces/about.interface";
-import { Position } from "../interfaces/position.interface";
-import { Project } from "../interfaces/project.interface";
+import { IAbout } from "../interfaces/about.interface";
+import { IProject } from "../interfaces/project.interface";
+import { IWorkplace } from "../interfaces/workplace.interface";
+import { usePortfolioStore } from "../store/portfolio-store";
 
 export interface HomeProps {
-  projects: Project[];
-  abouts: About[];
-  experiences: Position[];
+  projects: IProject[];
+  abouts: IAbout[];
+  workplaces: IWorkplace[];
 }
 
 const Home: NextPage<HomeProps> = (props) => {
-  const { projects, abouts, experiences } = props;
+  const { projects, abouts, workplaces } = props;
+
+  const { setProjects, setAbouts, setWorkplaces } = usePortfolioStore();
+
+  useEffect(() => {
+    setProjects(projects);
+    setAbouts(abouts);
+    setWorkplaces(workplaces);
+  }, [projects, abouts, workplaces, setProjects, setAbouts, setWorkplaces]);
 
   return (
     <Layout>
       <SEO />
       <Hero />
-      <Projects projects={projects} />
-      <AboutMe abouts={abouts} />
-      <Experience experiences={experiences} />
+      <Projects />
+      <AboutMe />
+      <Experience />
       <Transition />
       <Contact />
     </Layout>
@@ -38,13 +48,13 @@ const Home: NextPage<HomeProps> = (props) => {
 export default Home;
 
 export async function getStaticProps() {
-  const { projects, abouts, experiences } = await getContentfulData();
+  const { projects, abouts, workplaces } = await getContentfulData();
 
   return {
     props: {
       projects,
       abouts,
-      experiences,
+      workplaces,
     },
   };
 }

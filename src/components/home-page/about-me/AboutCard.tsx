@@ -2,20 +2,17 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 
-import { About } from "../../../interfaces/about.interface";
+import { About } from "../../../models/about.model";
 import { scrollAnimationVariants } from "../../utils/scroll-animation-variants";
-import { TextHelper } from "../../utils/text-helper";
 
 interface AboutCardProps {
-  content: About;
+  about: About;
 }
 
 const AboutCard = (props: AboutCardProps) => {
-  const { fields } = props.content;
+  const { about } = props;
 
-  const { content, reverse, image, imageAlt } = fields;
-
-  const aboutData: string[] = TextHelper.parseAbout(content);
+  const { content, reverse, imageUrl, imageAlt } = about;
 
   return (
     <motion.article
@@ -37,7 +34,7 @@ const AboutCard = (props: AboutCardProps) => {
           <div className="hidden w-1/3 md:block md:flex-shrink-0">
             <div>
               <Image
-                src={"https:" + image.fields.file.url}
+                src={imageUrl}
                 alt={imageAlt}
                 height={550}
                 width={550}
@@ -49,7 +46,7 @@ const AboutCard = (props: AboutCardProps) => {
 
           <div className="relative lg:ml-10">
             <div className="text-xl font-bold leading-9 text-dark dark:text-light lg:text-2xl">
-              {aboutData.map((content, index) => {
+              {content.map((content, index) => {
                 return (
                   <p
                     key={index}
@@ -65,7 +62,7 @@ const AboutCard = (props: AboutCardProps) => {
             <div className="mt-3 flex justify-center">
               <div className="w-3/5 flex-shrink-0 md:hidden md:w-1/2">
                 <Image
-                  src={"https:" + image.fields.file.url}
+                  src={imageUrl}
                   alt={imageAlt}
                   height={550}
                   width={550}

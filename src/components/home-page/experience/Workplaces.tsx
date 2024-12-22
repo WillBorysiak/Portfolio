@@ -1,20 +1,16 @@
 import { motion } from "framer-motion";
 
-import { Position } from "../../../interfaces/position.interface";
+import { Workplace as WorkplaceModel } from "../../../models/workplace.model";
 import Heading from "../../typography/Heading";
 import { scrollAnimationVariants } from "../../utils/scroll-animation-variants";
-import Job from "./Job";
+import Workplace from "./Workplace";
 
-interface WorkExperienceProps {
-  experiences: Position[];
+interface WorkplaceProps {
+  workplaces: WorkplaceModel[];
 }
 
-const WorkExperience = (props: WorkExperienceProps) => {
-  const { experiences } = props;
-
-  const experienceData = experiences.sort(
-    (a, b) => a.fields.order - b.fields.order,
-  );
+const Workplaces = (props: WorkplaceProps) => {
+  const { workplaces } = props;
 
   return (
     <motion.section
@@ -27,12 +23,12 @@ const WorkExperience = (props: WorkExperienceProps) => {
     >
       <article className="mx-2 mt-10 max-w-7xl rounded-sm bg-transparentBg py-5 text-dark dark:text-light lg:py-8">
         <Heading content="Work Experience" />
-        {experienceData.map((item, index) => {
-          return <Job key={index} content={item} />;
+        {workplaces.map((workplace, index) => {
+          return <Workplace key={index} workplace={workplace} />;
         })}
       </article>
     </motion.section>
   );
 };
 
-export default WorkExperience;
+export default Workplaces;

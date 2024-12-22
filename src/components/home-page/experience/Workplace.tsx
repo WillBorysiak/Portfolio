@@ -1,21 +1,13 @@
-import { Position } from "../../../interfaces/position.interface";
+import { Workplace as WorkplaceModel } from "../../../models/workplace.model";
 
-interface JobProps {
-  content: Position;
+interface WorkplaceProps {
+  workplace: WorkplaceModel;
 }
 
-const Job = (props: JobProps) => {
-  const { fields } = props.content;
+const Workplace = (props: WorkplaceProps) => {
+  const { workplace } = props;
 
-  const { position, company, date, description } = fields;
-
-  const descriptions: any = description?.description[0];
-
-  const descriptionArray = [];
-
-  for (let key in descriptions) {
-    descriptionArray.push(descriptions[key]);
-  }
+  const { company, position, date, descriptions } = workplace;
 
   return (
     <div id="job" className="mt-5 flex flex-col border-b-4 px-8 pb-5 md:px-0">
@@ -27,13 +19,13 @@ const Job = (props: JobProps) => {
         <h4 className="border-b-2 pb-3 italic">{date}</h4>
 
         <ul className="mt-5 list-disc">
-          {descriptionArray.map((desc: string, index: number) => {
+          {descriptions.map((description: string, index: number) => {
             return (
               <li
                 className="mb-2 text-lg font-bold text-dark dark:text-light md:text-xl"
                 key={index}
               >
-                {desc}
+                {description}
               </li>
             );
           })}
@@ -43,4 +35,4 @@ const Job = (props: JobProps) => {
   );
 };
 
-export default Job;
+export default Workplace;

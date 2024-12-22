@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 
-import { Project as ProjectModel } from "../../../interfaces/project.interface";
+import { Project as ProjectModel } from "../../../models/project.model";
 import { scrollAnimationVariants } from "../../utils/scroll-animation-variants";
 import ProjectLinks from "./ProjectLinks";
 import CalorieTechStack from "./tech-stacks/CalorieTechStack";
@@ -12,13 +12,14 @@ import StravaTechStack from "./tech-stacks/StravaTechStack";
 import WW2TechStack from "./tech-stacks/WW2TechStack";
 
 interface ProjectProps {
-  content: ProjectModel;
+  project: ProjectModel;
 }
 
 const Project = (props: ProjectProps) => {
-  const { fields } = props.content;
+  const { project } = props;
 
-  const { title, description, website, github, techStack, screenshot } = fields;
+  const { title, description, website, github, techStack, screenshotUrl } =
+    project;
 
   return (
     <motion.article
@@ -57,7 +58,7 @@ const Project = (props: ProjectProps) => {
           className="flex justify-center pt-3 lg:items-center lg:justify-end lg:pt-0"
         >
           <Image
-            src={"https:" + screenshot.fields.file.url}
+            src={screenshotUrl}
             alt={title}
             height={550}
             width={550}
