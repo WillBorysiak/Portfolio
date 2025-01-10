@@ -1,7 +1,7 @@
-import { usePortfolioStore } from "../store/portfolio-store";
+import AboutCard from "../components/home-page/about-me/AboutCard";
 import ParallaxBackground from "../components/parallax/ParallaxBackground";
 import SectionTitle from "../components/typography/SectionTitle";
-import AboutCard from "../components/home-page/about-me/AboutCard";
+import { usePortfolioStore } from "../store/portfolio-store.store";
 
 const AboutMe = () => {
   const { getAbouts } = usePortfolioStore();

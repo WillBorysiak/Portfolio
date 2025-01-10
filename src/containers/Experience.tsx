@@ -2,7 +2,7 @@ import Technologies from "../components/home-page/experience/Technologies";
 import WorkExperience from "../components/home-page/experience/Workplaces";
 import ParallaxBackground from "../components/parallax/ParallaxBackground";
 import SectionTitle from "../components/typography/SectionTitle";
-import { usePortfolioStore } from "../store/portfolio-store";
+import { usePortfolioStore } from "../store/portfolio-store.store";
 
 const Experience = () => {
   const { getWorkplaces } = usePortfolioStore();

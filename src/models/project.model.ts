@@ -10,8 +10,9 @@ export class Project {
   techStack: string;
   screenshotUrl: string;
 
-  constructor(project: IProject) {
-    const fields = project.fields;
+  constructor(iProject: IProject) {
+    const fields = iProject.fields;
+
     this.title = fields.title;
     this.description = fields.description;
     this.order = fields.order;
@@ -27,9 +28,11 @@ export class Project {
     this.screenshotUrl = this.generateScreenshotUrl();
   }
 
-  generateScreenshotUrl() {
-    const screenshoturl = PortfolioHelper.generateUrl(this.screenshotUrl);
+  generateScreenshotUrl(): string {
+    const screenshotUrl: string = PortfolioHelper.generateUrl(
+      this.screenshotUrl,
+    );
 
-    return screenshoturl;
+    return screenshotUrl;
   }
 }

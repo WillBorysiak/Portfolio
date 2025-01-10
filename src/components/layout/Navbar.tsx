@@ -65,7 +65,7 @@ const Navbar = () => {
                       href={item.href}
                       className={classNames(
                         active ? "underline" : "",
-                        "group flex items-center px-4 py-2 font-kalam text-5xl text-light dark:text-dark",
+                        "group flex items-center px-4 py-2 font-kalam text-4xl text-light dark:text-dark",
                       )}
                     >
                       {item.title}

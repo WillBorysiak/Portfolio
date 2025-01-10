@@ -9,8 +9,8 @@ export class Workplace {
 
   _descriptions: IDescription;
 
-  constructor(job: IWorkplace) {
-    const fields = job.fields;
+  constructor(iWorkplace: IWorkplace) {
+    const fields = iWorkplace.fields;
 
     this.position = fields.position;
     this.company = fields.company;

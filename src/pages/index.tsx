@@ -13,7 +13,7 @@ import { getContentfulData } from "../contentful/contentful-client";
 import { IAbout } from "../interfaces/about.interface";
 import { IProject } from "../interfaces/project.interface";
 import { IWorkplace } from "../interfaces/workplace.interface";
-import { usePortfolioStore } from "../store/portfolio-store";
+import { usePortfolioStore } from "../store/portfolio-store.store";
 
 export interface HomeProps {
   projects: IProject[];

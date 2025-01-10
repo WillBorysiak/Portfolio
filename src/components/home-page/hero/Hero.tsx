@@ -35,7 +35,7 @@ const Hero = () => {
 
             <div className="mt-20 md:mt-32">
               <p className="mt-5 text-center text-4xl font-extrabold text-dark dark:text-light sm:text-5xl">
-                Road, trail, mountain, computer desk, whats the difference?
+                Road, trail, mountain, computer, whats the difference?
               </p>
 
               <div className="mt-10 flex flex-row justify-around">

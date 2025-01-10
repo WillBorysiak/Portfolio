@@ -10,8 +10,8 @@ export class About {
 
   _content: string;
 
-  constructor(project: IAbout) {
-    const fields = project.fields;
+  constructor(iAbout: IAbout) {
+    const fields = iAbout.fields;
 
     this.content = [];
     this.order = fields.order;
@@ -29,14 +29,14 @@ export class About {
     this.imageUrl = this.generateImageUrl();
   }
 
-  generateContent() {
-    const aboutContent = this._content.split(". ");
+  generateContent(): string[] {
+    const aboutContent: string[] = this._content.split("/");
 
     return aboutContent;
   }
 
-  generateImageUrl() {
-    const imageUrl = PortfolioHelper.generateUrl(this.imageUrl);
+  generateImageUrl(): string {
+    const imageUrl: string = PortfolioHelper.generateUrl(this.imageUrl);
 
     return imageUrl;
   }
