@@ -11,7 +11,6 @@ const Experience = () => {
 
   return (
     <>
-      <ParallaxBackground />
       <section
         id="experience"
         className="flex w-full flex-col items-center justify-center"

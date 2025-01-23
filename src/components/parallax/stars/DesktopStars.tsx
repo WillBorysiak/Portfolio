@@ -11,47 +11,47 @@ const DesktopStars = () => {
   const stars: AnimatedObject[] = [
     {
       location: "mt-5",
-      speed: "animate-[starLG_20s_linear_infinite]",
+      speed: "animate-[star-desktop-reverse_10s_linear_infinite]",
       size: "1x",
     },
     {
       location: "mt-40",
-      speed: "animate-[starLGReverse_15s_linear_infinite]",
+      speed: "animate-[star-desktop-reverse_15s_linear_infinite]",
       size: "1x",
     },
     {
       location: "mt-60",
-      speed: "animate-[starLGReverse_19s_linear_infinite]",
+      speed: "animate-[star-desktop-reverse_19s_linear_infinite]",
       size: "1x",
     },
     {
       location: "mt-80",
-      speed: "animate-[starLG_21s_linear_infinite]",
+      speed: "animate-[star-desktop_21s_linear_infinite]",
       size: "1x",
     },
     {
       location: "mt-[400px]",
-      speed: "animate-[starLG_25s_linear_infinite]",
+      speed: "animate-[star-desktop_25s_linear_infinite]",
       size: "1x",
     },
     {
       location: "mt-[550px]",
-      speed: "animate-[starLGReverse_14s_linear_infinite]",
+      speed: "animate-[star-desktop-reverse_14s_linear_infinite]",
       size: "1x",
     },
     {
       location: "mt-[650px]",
-      speed: "animate-[starLGReverse_19s_linear_infinite]",
+      speed: "animate-[star-desktop-reverse_19s_linear_infinite]",
       size: "1x",
     },
     {
       location: "mt-[725px]",
-      speed: "animate-[starLG_26s_linear_infinite]",
+      speed: "animate-[star-desktop_26s_linear_infinite]",
       size: "1x",
     },
     {
       location: "mt-[900px]",
-      speed: "animate-[starLG_30s_linear_infinite]",
+      speed: "animate-[star-desktop_30s_linear_infinite]",
       size: "1x",
     },
   ];
@@ -65,12 +65,12 @@ const DesktopStars = () => {
       <FontAwesomeIcon
         icon={faPlanetRinged}
         size="6x"
-        className="absolute left-2/3 top-40 z-0 text-light opacity-20"
+        className="text-light absolute top-40 left-2/3 z-0 opacity-20"
       />
       <FontAwesomeIcon
         icon={faPlanetMoon}
         size="6x"
-        className="absolute left-52 top-2/4 z-0 text-light opacity-20"
+        className="text-light absolute top-2/4 left-52 z-0 opacity-20"
       />
     </>
   );

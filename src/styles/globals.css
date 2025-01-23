@@ -1,5 +1,208 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Kalam:wght@300;400;700&display=swap");
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-amatic: Amatic SC, san-serif;
+  --font-kalam: Kalam, san-serif;
+
+  --background-image-night-sky: url("/backgrounds/dark-background.jpg");
+  --background-image-day-sky: url("/backgrounds/light-background.jpg");
+
+  --color-light: #f3f4f6;
+  --color-dark: #1f2937;
+  --color-light-background: #7dd3fc;
+  --color-dark-background: #080808;
+  --color-transparent-background: rgba(0, 0, 0, 0.2);
+
+  --color-mobile-light-transition: #488fd1;
+  --color-tablet-light-transition: #4d94d6;
+  --color-desktop-light-transition: #5195d6;
+  --color-wide-light-transition: #63a1de;
+  --color-extra-wide-light-transition: #99c7ee;
+  --color-mobile-dark-transition: #020305;
+  --color-desktop-dark-transition: #07080c;
+
+  --animate-cloud-mobile: cloud-mobile;
+  --animate-cloud-mobile-reverse: cloud-mobile-reverse;
+  --animate-cloud-tablet: cloud-tablet;
+  --animate-cloud-tablet-reverse: cloud-tablet-reverse;
+  --animate-cloud-desktop: cloud-desktop;
+  --animate-cloud-desktop-reverse: cloud-desktop-reverse;
+
+  --animate-star-mobile: star-mobile;
+  --animate-star-mobile-reverse: star-mobile-reverse;
+  --animate-star-tablet: star-tablet;
+  --animate-star-tablet-reverse: star-tablet-reverse;
+  --animate-star-desktop: star-desktop;
+  --animate-star-desktop-reverse: star-desktop-reverse;
+
+  @keyframes cloud-mobile {
+    0% {
+      left: 0%;
+      opacity: 0;
+    }
+    50% {
+      left: 30%;
+      opacity: 0.9;
+    }
+    100% {
+      left: 60%;
+      opacity: 0;
+    }
+  }
+  @keyframes cloud-mobile-reverse {
+    0% {
+      left: 60%;
+      opacity: 0;
+    }
+    50% {
+      left: 30%;
+      opacity: 0.9;
+    }
+    100% {
+      left: 0%;
+      opacity: 0;
+    }
+  }
+  @keyframes cloud-tablet {
+    0% {
+      left: 0%;
+      opacity: 0;
+    }
+    50% {
+      left: 40%;
+      opacity: 0.9;
+    }
+    100% {
+      left: 80%;
+      opacity: 0;
+    }
+  }
+  @keyframes cloud-tablet-reverse {
+    0% {
+      left: 80%;
+      opacity: 0;
+    }
+    50% {
+      left: 40%;
+      opacity: 0.9;
+    }
+    100% {
+      left: 0%;
+      opacity: 0;
+    }
+  }
+  @keyframes cloud-desktop {
+    0% {
+      left: 0%;
+      opacity: 0;
+    }
+    50% {
+      left: 50%;
+      opacity: 0.9;
+    }
+    100% {
+      left: 90%;
+      opacity: 0;
+    }
+  }
+  @keyframes cloud-desktop-reverse {
+    0% {
+      left: 90%;
+      opacity: 0;
+    }
+    50% {
+      left: 50%;
+      opacity: 0.9;
+    }
+    100% {
+      left: 0%;
+      opacity: 0;
+    }
+  }
+  @keyframes star-mobile {
+    0% {
+      left: 0%;
+      opacity: 0;
+    }
+    50% {
+      left: 50%;
+      opacity: 0.9;
+    }
+    100% {
+      left: 100%;
+      opacity: 0;
+    }
+  }
+  @keyframes star-mobile-reverse {
+    0% {
+      left: 100%;
+      opacity: 0;
+    }
+    50% {
+      left: 50%;
+      opacity: 0.9;
+    }
+    100% {
+      left: 0%;
+      opacity: 0;
+    }
+  }
+  @keyframes star-tablet {
+    0% {
+      left: 0%;
+      opacity: 0;
+    }
+    50% {
+      left: 50%;
+      opacity: 0.9;
+    }
+    100% {
+      left: 100%;
+      opacity: 0;
+    }
+  }
+  @keyframes star-tablet-reverse {
+    0% {
+      left: 100%;
+      opacity: 0;
+    }
+    50% {
+      left: 50%;
+      opacity: 0.9;
+    }
+    100% {
+      left: 0%;
+      opacity: 0;
+    }
+  }
+  @keyframes star-desktop {
+    0% {
+      left: 0%;
+      opacity: 0;
+    }
+    50% {
+      left: 50%;
+      opacity: 0.9;
+    }
+    100% {
+      left: 100%;
+      opacity: 0;
+    }
+  }
+  @keyframes star-desktop-reverse {
+    0% {
+      left: 100%;
+      opacity: 0;
+    }
+    50% {
+      left: 50%;
+      opacity: 0.9;
+    }
+    100% {
+      left: 0%;
+      opacity: 0;
+    }
+  }
+}

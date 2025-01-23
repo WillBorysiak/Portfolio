@@ -10,7 +10,6 @@ const Projects = () => {
 
   return (
     <>
-      <ParallaxBackground />
       <section
         id="projects"
         className="flex w-screen flex-col items-center justify-center"

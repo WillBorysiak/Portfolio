@@ -8,27 +8,27 @@ const MobileClouds = () => {
   const clouds: AnimatedObject[] = [
     {
       location: "mt-5",
-      speed: "animate-[cloudSM_8s_linear_infinite]",
+      speed: "animate-[cloud-mobile_8s_linear_infinite]",
       size: "5x",
     },
     {
       location: "mt-60",
-      speed: "animate-[cloudSMReverse_10s_linear_infinite]",
+      speed: "animate-[cloud-mobile-reverse_10s_linear_infinite]",
       size: "7x",
     },
     {
       location: "mt-96",
-      speed: "animate-[cloudSMReverse_15s_linear_infinite]",
+      speed: "animate-[cloud-mobile-reverse_15s_linear_infinite]",
       size: "5x",
     },
     {
       location: "mt-[500px]",
-      speed: "animate-[cloudSM_20s_linear_infinite]",
+      speed: "animate-[cloud-mobile_20s_linear_infinite]",
       size: "6x",
     },
     {
       location: "mt-[600px]",
-      speed: "animate-[cloudSMReverse_14s_linear_infinite]",
+      speed: "animate-[cloud-mobile-reverse_14s_linear_infinite]",
       size: "6x",
     },
   ];
@@ -42,12 +42,12 @@ const MobileClouds = () => {
       <FontAwesomeIcon
         icon={faPlaneProp}
         size="6x"
-        className="absolute z-0 ml-56 mt-32 text-light opacity-50"
+        className="text-light absolute z-0 mt-32 ml-56 opacity-50"
       />
       <FontAwesomeIcon
         icon={faClouds}
         size="5x"
-        className="absolute z-0 ml-16 mt-[450px] text-light opacity-50"
+        className="text-light absolute z-0 mt-[450px] ml-16 opacity-50"
       />
     </>
   );

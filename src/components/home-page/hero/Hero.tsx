@@ -13,7 +13,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         variants={scrollAnimationVariants}
-        className="relative overflow-hidden font-amatic"
+        className="font-amatic relative overflow-hidden"
       >
         <section
           id="hero"
@@ -25,16 +25,16 @@ const Hero = () => {
           </div>
 
           <div className="flex h-full flex-col items-center justify-center">
-            <h1 className="pb-3 text-7xl font-extrabold text-dark dark:text-light sm:text-9xl">
+            <h1 className="text-dark dark:text-light pb-3 text-7xl font-extrabold sm:text-9xl">
               Will Borysiak
             </h1>
 
-            <h2 className="font-amatic text-6xl text-dark dark:text-light sm:text-8xl">
+            <h2 className="text-dark dark:text-light text-6xl sm:text-8xl">
               Software Developer
             </h2>
 
             <div className="mt-20 md:mt-32">
-              <p className="mt-5 text-center text-4xl font-extrabold text-dark dark:text-light sm:text-5xl">
+              <p className="text-dark dark:text-light mt-5 text-center text-4xl font-extrabold sm:text-5xl">
                 Road, trail, mountain, computer, whats the difference?
               </p>
 

@@ -20,18 +20,18 @@ const AboutCard = (props: AboutCardProps) => {
       whileInView="visible"
       viewport={{ once: true }}
       variants={scrollAnimationVariants}
-      className="relative overflow-hidden font-kalam"
+      className="font-kalam relative overflow-hidden"
     >
       <div className="mx-2 max-w-7xl py-5 text-center">
         <div
           className={
             reverse
-              ? "w-full flex-row-reverse rounded-sm bg-transparentBg p-5 md:flex md:flex-row-reverse md:items-center"
-              : "w-full rounded-sm bg-transparentBg p-5 md:flex md:flex-row md:items-center"
+              ? "bg-transparent-background w-full flex-row-reverse rounded-xs p-5 md:flex md:flex-row-reverse md:items-center"
+              : "bg-transparent-background w-full rounded-xs p-5 md:flex md:flex-row md:items-center"
           }
         >
           {/* large image */}
-          <div className="hidden w-1/3 md:block md:flex-shrink-0">
+          <div className="hidden w-1/3 md:block md:shrink-0">
             <div>
               <Image
                 src={imageUrl}
@@ -45,7 +45,7 @@ const AboutCard = (props: AboutCardProps) => {
           </div>
 
           <div className="relative lg:ml-10">
-            <div className="text-xl font-bold leading-9 text-dark dark:text-light lg:text-2xl">
+            <div className="text-dark dark:text-light text-xl leading-9 font-bold lg:text-2xl">
               {content.map((content, index) => {
                 return (
                   <p
@@ -60,7 +60,7 @@ const AboutCard = (props: AboutCardProps) => {
 
             {/* small image */}
             <div className="mt-3 flex justify-center">
-              <div className="w-3/5 flex-shrink-0 md:hidden md:w-1/2">
+              <div className="w-3/5 shrink-0 md:hidden md:w-1/2">
                 <Image
                   src={imageUrl}
                   alt={imageAlt}

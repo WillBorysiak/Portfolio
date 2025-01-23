@@ -15,7 +15,7 @@ const ParallaxBackground = () => {
   if (!mounted) return null;
 
   return (
-    <div className="linear fixed -z-10 h-full w-full bg-lightBackground transition duration-1000 dark:bg-darkBackground">
+    <div className="linear bg-light-background dark:bg-dark-background fixed -z-10 h-full w-full transition duration-1000">
       {resolvedTheme === "dark" && <StarContainer />}
       {resolvedTheme === "light" && <CloudContainer />}
     </div>

@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex w-screen flex-col bg-daySky bg-cover bg-center dark:bg-nightSky"
+      className="bg-day-sky dark:bg-night-sky flex w-screen flex-col bg-cover bg-center"
     >
       <motion.div
         initial="hidden"

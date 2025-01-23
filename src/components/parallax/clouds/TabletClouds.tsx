@@ -8,32 +8,32 @@ const TabletClouds = () => {
   const clouds: AnimatedObject[] = [
     {
       location: "mt-5",
-      speed: "animate-[cloudMD_14s_linear_infinite]",
+      speed: "animate-[cloud-tablet_14s_linear_infinite]",
       size: "5x",
     },
     {
       location: "mt-60",
-      speed: "animate-[cloudMDReverse_20s_linear_infinite]",
+      speed: "animate-[cloud-tablet-reverse_20s_linear_infinite]",
       size: "7x",
     },
     {
       location: "mt-96",
-      speed: "animate-[cloudMDReverse_23s_linear_infinite]",
+      speed: "animate-[cloud-tablet-reverse_23s_linear_infinite]",
       size: "5x",
     },
     {
       location: "mt-[500px]",
-      speed: "animate-[cloudMD_30s_linear_infinite]",
+      speed: "animate-[cloud-tablet_30s_linear_infinite]",
       size: "6x",
     },
     {
       location: "mt-[750px]",
-      speed: "animate-[cloudMDReverse_19s_linear_infinite]",
+      speed: "animate-[cloud-tablet-reverse_19s_linear_infinite]",
       size: "6x",
     },
     {
       location: "mt-[900px]",
-      speed: "animate-[cloudMDReverse_25s_linear_infinite]",
+      speed: "animate-[cloud-tablet-reverse_25s_linear_infinite]",
       size: "6x",
     },
   ];
@@ -47,12 +47,12 @@ const TabletClouds = () => {
       <FontAwesomeIcon
         icon={faPlaneProp}
         size="6x"
-        className="absolute z-0 ml-[500px] mt-36 text-light opacity-50"
+        className="text-light absolute z-0 mt-36 ml-[500px] opacity-50"
       />
       <FontAwesomeIcon
         icon={faClouds}
         size="5x"
-        className="absolute z-0 ml-16 mt-[600px] text-light opacity-50"
+        className="text-light absolute z-0 mt-[600px] ml-16 opacity-50"
       />
     </>
   );

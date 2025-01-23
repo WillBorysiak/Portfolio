@@ -10,7 +10,6 @@ const AboutMe = () => {
 
   return (
     <>
-      <ParallaxBackground />
       <section
         id="about"
         className="flex w-screen flex-col items-center justify-center"

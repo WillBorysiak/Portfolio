@@ -19,9 +19,9 @@ const Workplaces = (props: WorkplaceProps) => {
       whileInView="visible"
       viewport={{ once: true }}
       variants={scrollAnimationVariants}
-      className="relative overflow-hidden font-kalam"
+      className="font-kalam relative overflow-hidden"
     >
-      <article className="mx-2 mt-10 max-w-7xl rounded-sm bg-transparentBg py-5 text-dark dark:text-light lg:py-8">
+      <article className="bg-transparent-background text-dark dark:text-light mx-2 mt-10 max-w-7xl rounded-xs py-5 lg:py-8">
         <Heading content="Work Experience" />
         {workplaces.map((workplace, index) => {
           return <Workplace key={index} workplace={workplace} />;
