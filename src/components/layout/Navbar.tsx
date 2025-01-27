@@ -45,7 +45,7 @@ const Navbar = () => {
         )}
         {resolvedTheme === "light" && (
           <FontAwesomeIcon
-            className="text-white transition delay-100 duration-500 ease-in-out hover:scale-110 hover:cursor-pointer"
+            className="text-light transition delay-100 duration-500 ease-in-out hover:scale-110 hover:cursor-pointer"
             icon={faCloudWord}
             size="4x"
           />

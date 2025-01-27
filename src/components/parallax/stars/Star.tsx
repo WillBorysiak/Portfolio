@@ -16,7 +16,7 @@ const Star = (props: StarProps) => {
     <span>
       <FontAwesomeIcon
         icon={faStar}
-        className={`absolute ${location} z-0 text-white ${speed}`}
+        className={`absolute ${location} text-light z-0 ${speed}`}
         size={size}
       />
     </span>

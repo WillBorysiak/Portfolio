@@ -18,7 +18,7 @@ const ThemeToggle = () => {
     <button id="theme-toggle" type="button" className="mt-3">
       {resolvedTheme === "dark" && (
         <FontAwesomeIcon
-          className="text-black opacity-50 transition delay-100 duration-500 ease-in-out hover:cursor-pointer hover:text-yellow-300 hover:opacity-100 md:hover:scale-110"
+          className="text-light opacity-50 transition delay-100 duration-500 ease-in-out hover:cursor-pointer hover:text-yellow-300 hover:opacity-100 md:hover:scale-110"
           icon={faSunBright}
           size="4x"
           onClick={() => setTheme("light")}
