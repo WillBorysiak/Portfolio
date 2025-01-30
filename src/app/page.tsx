@@ -7,7 +7,7 @@ import { SEOMetadata } from "./seo-metdata";
 export const metadata = SEOMetadata;
 
 const Page = async () => {
-  const portfolioData = await getStaticData();
+  const portfolioData = await getPortfolioData();
 
   return (
     <Layout>
@@ -19,8 +19,10 @@ const Page = async () => {
 
 export default Page;
 
-const getStaticData = async (): Promise<IPortfolio> => {
-  const res = await fetch(`${process.env.API_URL}/api/contentful`);
+const getPortfolioData = async (): Promise<IPortfolio> => {
+  const res = await fetch(`${process.env.API_URL}/api/contentful`, {
+    cache: "no-store",
+  });
 
   if (!res.ok) throw new Error("Failed to fetch static data");
 
