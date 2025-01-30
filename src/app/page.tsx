@@ -21,7 +21,7 @@ export default Page;
 
 const getPortfolioData = async (): Promise<IPortfolio> => {
   const res = await fetch(`${process.env.API_URL}/api/contentful`, {
-    cache: "no-store",
+    cache: "force-cache",
   });
 
   if (!res.ok) throw new Error("Failed to fetch static data");
