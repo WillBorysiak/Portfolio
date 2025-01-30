@@ -10,11 +10,17 @@ const StarContainer = () => {
   useEffect(() => {
     const width = window.innerWidth;
 
-    if (width < 640) setDevice("mobile");
+    if (width < 640) {
+      setDevice("mobile");
+    }
 
-    if (width > 641 && width < 1024) setDevice("tablet");
+    if (width > 641 && width < 1024) {
+      setDevice("tablet");
+    }
 
-    if (width > 1025) setDevice("desktop");
+    if (width > 1025) {
+      setDevice("desktop");
+    }
   }, []);
 
   return (

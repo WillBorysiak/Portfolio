@@ -10,15 +10,13 @@ export class Workplace {
   _descriptions: IDescription;
 
   constructor(iWorkplace: IWorkplace) {
-    const fields = iWorkplace.fields;
-
-    this.position = fields.position;
-    this.company = fields.company;
-    this.date = fields.date;
+    this.position = iWorkplace.position;
+    this.company = iWorkplace.company;
+    this.date = iWorkplace.date;
     this.descriptions = [];
-    this.order = fields.order;
+    this.order = iWorkplace.order;
 
-    this._descriptions = fields.description;
+    this._descriptions = iWorkplace.description;
 
     this.intialise();
   }

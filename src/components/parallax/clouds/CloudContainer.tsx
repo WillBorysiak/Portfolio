@@ -13,9 +13,11 @@ const CloudContainer = () => {
     if (width < 640) {
       setDevice("mobile");
     }
+
     if (width > 641 && width < 1024) {
       setDevice("tablet");
     }
+
     if (width > 1025) {
       setDevice("desktop");
     }

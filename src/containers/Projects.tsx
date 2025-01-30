@@ -1,5 +1,4 @@
 import Project from "../components/home-page/projects/Project";
-import ParallaxBackground from "../components/parallax/ParallaxBackground";
 import SectionTitle from "../components/typography/SectionTitle";
 import { usePortfolioStore } from "../store/portfolio-store.store";
 

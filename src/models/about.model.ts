@@ -11,15 +11,13 @@ export class About {
   _content: string;
 
   constructor(iAbout: IAbout) {
-    const fields = iAbout.fields;
-
     this.content = [];
-    this.order = fields.order;
-    this.reverse = fields.reverse;
-    this.imageUrl = fields.image.fields.file.url;
-    this.imageAlt = fields.imageAlt;
+    this.order = iAbout.order;
+    this.reverse = iAbout.reverse;
+    this.imageUrl = iAbout.image.fields.file.url;
+    this.imageAlt = iAbout.imageAlt;
 
-    this._content = fields.content;
+    this._content = iAbout.content;
 
     this.intialise();
   }

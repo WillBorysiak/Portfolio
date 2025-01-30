@@ -10,11 +10,9 @@ export interface IDescription {
 }
 
 export interface IWorkplace {
-  fields: {
-    position: string;
-    company: string;
-    date: string;
-    description: IDescription;
-    order: number;
-  };
+  position: string;
+  company: string;
+  date: string;
+  description: IDescription;
+  order: number;
 }

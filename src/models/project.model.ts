@@ -11,15 +11,13 @@ export class Project {
   screenshotUrl: string;
 
   constructor(iProject: IProject) {
-    const fields = iProject.fields;
-
-    this.title = fields.title;
-    this.description = fields.description;
-    this.order = fields.order;
-    this.website = fields.website;
-    this.github = fields.github;
-    this.techStack = fields.techStack;
-    this.screenshotUrl = fields.screenshot.fields.file.url;
+    this.title = iProject.title;
+    this.description = iProject.description;
+    this.order = iProject.order;
+    this.website = iProject.website;
+    this.github = iProject.github;
+    this.techStack = iProject.techStack;
+    this.screenshotUrl = iProject.screenshot.fields.file.url;
 
     this.intialise();
   }
