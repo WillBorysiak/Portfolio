@@ -1,12 +1,14 @@
 {
   "name": "will-borysiak-portfolio",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "version-minor": "npm version patch --no-git-tag-version && npm install",
+    "version-major": "npm version minor --no-git-tag-version && npm install"
   },
   "dependencies": {
     "@fortawesome/fontawesome-pro": "^6.7.2",
@@ -15,6 +17,7 @@
     "@fortawesome/pro-solid-svg-icons": "^6.7.2",
     "@fortawesome/pro-thin-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@vercel/analytics": "^1.4.1",
     "contentful": "^11.4.4",
     "framer-motion": "^12.0.6",
     "next": "15.1.6",

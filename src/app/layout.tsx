@@ -1,9 +1,12 @@
-import { ThemeProvider } from "next-themes";
 import { ReactNode } from "react";
 
 import { Amatic_SC, Kalam } from "next/font/google";
+import { ThemeProvider } from "next-themes";
+
+import { Analytics } from "@vercel/analytics/next";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
+
 import "../styles/globals.css";
 
 const amaticSC = Amatic_SC({
@@ -30,6 +33,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         >
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

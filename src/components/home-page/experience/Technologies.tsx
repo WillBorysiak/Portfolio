@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import Heading from "../../typography/Heading";
 import { scrollAnimationVariants } from "../../utils/scroll-animation-variants";
-import TechList from "./TechList";
+import TechLogos from "./TechLogos";
 
 const Technologies = () => {
   return (
@@ -15,7 +15,7 @@ const Technologies = () => {
       className="bg-transparent-background mx-auto mt-5 max-w-7xl px-3 py-8 sm:px-6 lg:px-8"
     >
       <Heading content="Technologies I Use" />
-      <TechList />
+      <TechLogos />
     </motion.div>
   );
 };

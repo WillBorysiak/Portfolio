@@ -1,5 +1,11 @@
 "use client";
 
+import {
+  faBicycle,
+  faComputer,
+  faMountain,
+} from "@fortawesome/pro-duotone-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 
 import Navbar from "../../layout/Navbar";
@@ -41,9 +47,27 @@ const Hero = () => {
               </p>
 
               <div className="mt-10 flex flex-row justify-around">
-                <p className="text-4xl sm:text-5xl">🚴</p>
-                <p className="text-4xl sm:text-5xl">⛰️</p>
-                <p className="text-4xl sm:text-5xl">💻</p>
+                <p className="text-4xl sm:text-5xl">
+                  <FontAwesomeIcon
+                    className="text-dark dark:text-light"
+                    icon={faBicycle}
+                    size="1x"
+                  />
+                </p>
+                <p className="text-4xl sm:text-5xl">
+                  <FontAwesomeIcon
+                    className="text-dark dark:text-light"
+                    icon={faMountain}
+                    size="1x"
+                  />
+                </p>
+                <p className="text-4xl sm:text-5xl">
+                  <FontAwesomeIcon
+                    className="text-dark dark:text-light"
+                    icon={faComputer}
+                    size="1x"
+                  />
+                </p>
               </div>
             </div>
           </div>

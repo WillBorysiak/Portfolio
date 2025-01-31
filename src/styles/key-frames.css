@@ -1,0 +1,168 @@
+@keyframes cloud-mobile {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  50% {
+    left: 30%;
+    opacity: 0.9;
+  }
+  100% {
+    left: 60%;
+    opacity: 0;
+  }
+}
+@keyframes cloud-mobile-reverse {
+  0% {
+    left: 60%;
+    opacity: 0;
+  }
+  50% {
+    left: 30%;
+    opacity: 0.9;
+  }
+  100% {
+    left: 0%;
+    opacity: 0;
+  }
+}
+@keyframes cloud-tablet {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  50% {
+    left: 40%;
+    opacity: 0.9;
+  }
+  100% {
+    left: 80%;
+    opacity: 0;
+  }
+}
+@keyframes cloud-tablet-reverse {
+  0% {
+    left: 80%;
+    opacity: 0;
+  }
+  50% {
+    left: 40%;
+    opacity: 0.9;
+  }
+  100% {
+    left: 0%;
+    opacity: 0;
+  }
+}
+@keyframes cloud-desktop {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  50% {
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    left: 90%;
+    opacity: 0;
+  }
+}
+@keyframes cloud-desktop-reverse {
+  0% {
+    left: 90%;
+    opacity: 0;
+  }
+  50% {
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    left: 0%;
+    opacity: 0;
+  }
+}
+@keyframes star-mobile {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  50% {
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@keyframes star-mobile-reverse {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  50% {
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    left: 0%;
+    opacity: 0;
+  }
+}
+@keyframes star-tablet {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  50% {
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@keyframes star-tablet-reverse {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  50% {
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    left: 0%;
+    opacity: 0;
+  }
+}
+@keyframes star-desktop {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  50% {
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@keyframes star-desktop-reverse {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  50% {
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    left: 0%;
+    opacity: 0;
+  }
+}

@@ -28,10 +28,10 @@ import vscode from "../../../../public/tech-logos/vscode.svg";
 import vstudio from "../../../../public/tech-logos/vstudio.svg";
 import TechLogo from "./TechLogo";
 
-const TechList = () => {
+const TechLogos = () => {
   return (
     <div
-      id="tech-list"
+      id="tech-logos"
       className="mt-6 grid grid-cols-3 gap-8 md:grid-cols-6 lg:grid-cols-5"
     >
       {/* HTML */}
@@ -150,4 +150,4 @@ const TechList = () => {
   );
 };
 
-export default TechList;
+export default TechLogos;
