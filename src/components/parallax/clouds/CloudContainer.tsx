@@ -1,34 +1,33 @@
-import { useEffect, useState } from "react";
+import { faClouds, faPlaneProp } from "@fortawesome/pro-duotone-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import DesktopClouds from "./DesktopClouds";
-import MobileClouds from "./MobileClouds";
-import TabletClouds from "./TabletClouds";
+import { BackgroundObject } from "../../../interfaces/background-object.interface";
+import Cloud from "./Cloud";
 
-const CloudContainer = () => {
-  const [device, setDevice] = useState("");
+interface CloudContainerProps {
+  clouds: BackgroundObject[];
+}
 
-  useEffect(() => {
-    const width = window.innerWidth;
-
-    if (width < 640) {
-      setDevice("mobile");
-    }
-
-    if (width > 641 && width < 1024) {
-      setDevice("tablet");
-    }
-
-    if (width > 1025) {
-      setDevice("desktop");
-    }
-  }, []);
+const CloudContainer = (props: CloudContainerProps) => {
+  const { clouds } = props;
 
   return (
-    <div className="z-0">
-      {device === "mobile" && <MobileClouds />}
-      {device === "tablet" && <TabletClouds />}
-      {device === "desktop" && <DesktopClouds />}
-    </div>
+    <>
+      {clouds.map((cloud, index) => (
+        <Cloud key={index} cloud={cloud} />
+      ))}
+
+      <FontAwesomeIcon
+        icon={faPlaneProp}
+        size="6x"
+        className="text-light-theme absolute z-0 mt-[20vh] ml-[60vw] opacity-20"
+      />
+      <FontAwesomeIcon
+        icon={faClouds}
+        size="6x"
+        className="text-light-theme absolute z-0 mt-[60vh] ml-[20vw] opacity-20"
+      />
+    </>
   );
 };
 

@@ -1,34 +1,36 @@
-import { useEffect, useState } from "react";
+import {
+  faPlanetMoon,
+  faPlanetRinged,
+} from "@fortawesome/pro-duotone-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import DesktopStars from "./DesktopStars";
-import MobileStars from "./MobileStars";
-import TabletStars from "./TabletStars";
+import { BackgroundObject } from "../../../interfaces/background-object.interface";
+import Star from "./Star";
 
-const StarContainer = () => {
-  const [device, setDevice] = useState("");
+interface StarContainerProps {
+  stars: BackgroundObject[];
+}
 
-  useEffect(() => {
-    const width = window.innerWidth;
-
-    if (width < 640) {
-      setDevice("mobile");
-    }
-
-    if (width > 641 && width < 1024) {
-      setDevice("tablet");
-    }
-
-    if (width > 1025) {
-      setDevice("desktop");
-    }
-  }, []);
+const StarContainer = (props: StarContainerProps) => {
+  const { stars } = props;
 
   return (
-    <div className="z-0">
-      {device === "mobile" && <MobileStars />}
-      {device === "tablet" && <TabletStars />}
-      {device === "desktop" && <DesktopStars />}
-    </div>
+    <>
+      {stars.map((star, index) => (
+        <Star key={index} star={star} />
+      ))}
+
+      <FontAwesomeIcon
+        icon={faPlanetRinged}
+        size="6x"
+        className="text-light-theme absolute z-0 mt-[20vh] ml-[60vw] opacity-20"
+      />
+      <FontAwesomeIcon
+        icon={faPlanetMoon}
+        size="6x"
+        className="text-light-theme absolute z-0 mt-[60vh] ml-[20vw] opacity-20"
+      />
+    </>
   );
 };
 

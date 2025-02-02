@@ -10,10 +10,9 @@ const ProjectLinks = (props: ProjectLinkProps) => {
 
   return (
     <div id="project-link" className="mt-5 flex gap-x-5">
-      {/* website */}
       <Link href={website} target="_blank" rel="noreferrer">
         <svg
-          className="h-10 w-10 fill-dark dark:fill-light md:hover:scale-110"
+          className="fill-dark-theme dark:fill-light-theme h-10 w-10 md:hover:scale-110"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
         >
@@ -21,10 +20,9 @@ const ProjectLinks = (props: ProjectLinkProps) => {
         </svg>
       </Link>
 
-      {/* github */}
       <Link href={github} target="_blank" rel="noreferrer">
         <svg
-          className="h-10 w-10 fill-dark dark:fill-light md:hover:scale-110"
+          className="fill-dark-theme dark:fill-light-theme h-10 w-10 md:hover:scale-110"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 496 512"
         >

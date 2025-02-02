@@ -26,8 +26,8 @@ const AboutCard = (props: AboutCardProps) => {
         <div
           className={
             reverse
-              ? "bg-transparent-background w-full flex-row-reverse rounded-xs p-5 md:flex md:flex-row-reverse md:items-center"
-              : "bg-transparent-background w-full rounded-xs p-5 md:flex md:flex-row md:items-center"
+              ? "bg-very-light w-full flex-row-reverse rounded-xs p-5 md:flex md:flex-row-reverse md:items-center"
+              : "bg-very-light w-full rounded-xs p-5 md:flex md:flex-row md:items-center"
           }
         >
           {/* large image */}
@@ -45,7 +45,7 @@ const AboutCard = (props: AboutCardProps) => {
           </div>
 
           <div className="relative lg:ml-10">
-            <div className="text-dark dark:text-light text-xl leading-9 font-bold lg:text-2xl">
+            <div className="text-dynamic-theme text-xl leading-9 font-bold lg:text-2xl">
               {content.map((content, index) => {
                 return (
                   <p

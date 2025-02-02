@@ -12,7 +12,7 @@ const Heading = (props: HeadingProps) => {
     <h2
       className={classNames(
         center ? "text-center" : "",
-        "font-kalam text-3xl font-extrabold text-dark dark:text-light sm:text-4xl",
+        "font-kalam text-dynamic-theme text-3xl font-extrabold sm:text-4xl",
       )}
     >
       {content}

@@ -32,41 +32,27 @@ const Hero = () => {
             <Navbar />
           </div>
 
-          <div className="flex h-full flex-col items-center justify-center">
-            <h1 className="text-dark dark:text-light pb-3 text-7xl font-extrabold sm:text-9xl">
+          <div className="text-dynamic-theme flex h-full flex-col items-center justify-center">
+            <h1 className="pb-3 text-7xl font-extrabold sm:text-9xl">
               Will Borysiak
             </h1>
 
-            <h2 className="text-dark dark:text-light text-6xl sm:text-8xl">
-              Software Developer
-            </h2>
+            <h2 className="text-6xl sm:text-8xl">Software Developer</h2>
 
             <div className="mt-20 md:mt-32">
-              <p className="text-dark dark:text-light mt-5 text-center text-4xl font-extrabold sm:text-5xl">
+              <p className="mt-5 text-center text-4xl font-extrabold sm:text-5xl">
                 Road, trail, mountain, computer, whats the difference?
               </p>
 
               <div className="mt-10 flex flex-row justify-around">
                 <p className="text-4xl sm:text-5xl">
-                  <FontAwesomeIcon
-                    className="text-dark dark:text-light"
-                    icon={faBicycle}
-                    size="1x"
-                  />
+                  <FontAwesomeIcon icon={faBicycle} size="1x" />
                 </p>
                 <p className="text-4xl sm:text-5xl">
-                  <FontAwesomeIcon
-                    className="text-dark dark:text-light"
-                    icon={faMountain}
-                    size="1x"
-                  />
+                  <FontAwesomeIcon icon={faMountain} size="1x" />
                 </p>
                 <p className="text-4xl sm:text-5xl">
-                  <FontAwesomeIcon
-                    className="text-dark dark:text-light"
-                    icon={faComputer}
-                    size="1x"
-                  />
+                  <FontAwesomeIcon icon={faComputer} size="1x" />
                 </p>
               </div>
             </div>

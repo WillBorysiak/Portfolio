@@ -14,7 +14,7 @@ const Workplace = (props: WorkplaceProps) => {
       <div className="ml-5">
         <h2 className="text-2xl md:text-3xl">{company}</h2>
       </div>
-      <div className="ml-10 mt-3 text-xl md:text-2xl">
+      <div className="mt-3 ml-10 text-xl md:text-2xl">
         <h2 className="font-bold">{position}</h2>
         <h4 className="border-b-2 pb-3 italic">{date}</h4>
 
@@ -22,7 +22,7 @@ const Workplace = (props: WorkplaceProps) => {
           {descriptions.map((description: string, index: number) => {
             return (
               <li
-                className="mb-2 text-lg font-bold text-dark dark:text-light md:text-xl"
+                className="text-dynamic-theme mb-2 text-lg font-bold md:text-xl"
                 key={index}
               >
                 {description}

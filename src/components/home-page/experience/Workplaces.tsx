@@ -21,7 +21,7 @@ const Workplaces = (props: WorkplaceProps) => {
       variants={scrollAnimationVariants}
       className="font-kalam relative overflow-hidden"
     >
-      <article className="bg-transparent-background text-dark dark:text-light mx-2 mt-10 max-w-7xl rounded-xs py-5 lg:py-8">
+      <article className="text-dynamic-theme bg-very-light mx-2 mt-10 max-w-7xl rounded-xs py-5 lg:py-8">
         <Heading content="Work Experience" />
         {workplaces.map((workplace, index) => {
           return <Workplace key={index} workplace={workplace} />;

@@ -1,21 +1,22 @@
 @import "tailwindcss";
-@import "./key-frames.css";
+@import "./keyframes.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
+  /* fonts */
+
   --font-amatic: Amatic SC, san-serif;
   --font-kalam: Kalam, san-serif;
 
-  --color-light: #f3f4f6;
-  --color-dark: #1f2937;
+  /* colors */
 
-  --color-light-background: #7dd3fc;
-  --color-dark-background: #161b22;
-  --color-transparent-background: rgba(0, 0, 0, 0.2);
+  --color-light-theme: #f3f4f6;
+  --color-dark-theme: #1f2937;
 
-  --background-image-night-sky: url("/backgrounds/dark-background.jpg");
-  --background-image-day-sky: url("/backgrounds/light-background.jpg");
+  --color-light-blue: #7dd3fc;
+  --color-dark-grey: #161b22;
+  --color-very-light: rgba(0, 0, 0, 0.2);
 
   --color-mobile-light-transition: #488fd1;
   --color-tablet-light-transition: #4d94d6;
@@ -23,19 +24,14 @@
   --color-wide-light-transition: #63a1de;
   --color-extra-wide-light-transition: #99c7ee;
   --color-mobile-dark-transition: #020305;
-  --color-desktop-dark-transition: #07080c;
+  --color-desktop-dark-transition: #020305;
 
-  --animate-cloud-mobile: cloud-mobile;
-  --animate-cloud-mobile-reverse: cloud-mobile-reverse;
-  --animate-cloud-tablet: cloud-tablet;
-  --animate-cloud-tablet-reverse: cloud-tablet-reverse;
-  --animate-cloud-desktop: cloud-desktop;
-  --animate-cloud-desktop-reverse: cloud-desktop-reverse;
+  /* backgrounds */
 
-  --animate-star-mobile: star-mobile;
-  --animate-star-mobile-reverse: star-mobile-reverse;
-  --animate-star-tablet: star-tablet;
-  --animate-star-tablet-reverse: star-tablet-reverse;
-  --animate-star-desktop: star-desktop;
-  --animate-star-desktop-reverse: star-desktop-reverse;
+  --background-image-night-sky: url("/backgrounds/dark-background.jpg");
+  --background-image-day-sky: url("/backgrounds/light-background.jpg");
+}
+
+.text-dynamic-theme {
+  @apply text-[var(--color-dark-theme)] dark:text-[var(--color-light-theme)];
 }

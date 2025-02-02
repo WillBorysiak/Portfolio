@@ -1,25 +1,34 @@
 import { faStar } from "@fortawesome/pro-duotone-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { AnimatedObject } from "../../../interfaces/animated-object.interface";
+import { BackgroundObject } from "../../../interfaces/background-object.interface";
+import { AnimationHelper } from "../../utils/animation-helper";
 
 interface StarProps {
-  star: AnimatedObject;
+  star: BackgroundObject;
 }
 
 const Star = (props: StarProps) => {
   const { star } = props;
 
-  const { location, speed, size } = star;
+  const { type, device, location, speed, isReverse } = star;
+
+  const animationType = AnimationHelper.getObjectKeyframe(
+    type,
+    device,
+    isReverse,
+  );
 
   return (
-    <span>
-      <FontAwesomeIcon
-        icon={faStar}
-        className={`absolute ${location} text-light z-0 ${speed}`}
-        size={size}
-      />
-    </span>
+    <FontAwesomeIcon
+      icon={faStar}
+      className="text-light-theme absolute z-0"
+      size="1x"
+      style={{
+        marginTop: `${location}px`,
+        animation: `${animationType} ${speed}s linear infinite`,
+      }}
+    />
   );
 };
 

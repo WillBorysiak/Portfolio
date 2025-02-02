@@ -15,7 +15,7 @@ const ContactNav = () => {
       <FontAwesomeIcon
         icon={faArrowUp}
         size="4x"
-        className="mb-10 mt-10 animate-bounce text-light dark:text-light"
+        className="text-light-theme mt-10 mb-10 animate-bounce"
         onClick={scrollToTop}
       />
     </Link>

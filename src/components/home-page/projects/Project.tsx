@@ -30,16 +30,14 @@ const Project = (props: ProjectProps) => {
       variants={scrollAnimationVariants}
       className="font-kalam relative overflow-hidden"
     >
-      <div className="bg-transparent-background mx-3 mt-5 mb-5 max-w-xl rounded-xs px-3 pb-5 lg:grid lg:h-[550px] lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-0 lg:pb-0 lg:pl-8">
+      <div className="bg-very-light mx-3 mt-5 mb-5 max-w-xl rounded-xs px-3 pb-5 lg:grid lg:h-[550px] lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-0 lg:pb-0 lg:pl-8">
         <div id="project-info" className="px-5 lg:px-0 lg:py-16">
-          <div className="mt-5">
-            <h2 className="text-dark dark:text-light pt-5 text-3xl font-extrabold tracking-tight md:text-4xl">
+          <div className="text-dynamic-theme mt-5">
+            <h2 className="pt-5 text-3xl font-extrabold tracking-tight md:text-4xl">
               {title}
             </h2>
 
-            <p className="text-dark dark:text-light mt-5 text-lg font-bold md:text-xl">
-              {description}
-            </p>
+            <p className="mt-5 text-lg font-bold md:text-xl">{description}</p>
 
             <ProjectLinks website={website} github={github} />
           </div>

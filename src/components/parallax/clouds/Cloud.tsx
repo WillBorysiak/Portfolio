@@ -1,23 +1,34 @@
 import { faCloud } from "@fortawesome/pro-duotone-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { AnimatedObject } from "../../../interfaces/animated-object.interface";
+import { BackgroundObject } from "../../../interfaces/background-object.interface";
+import { AnimationHelper } from "../../utils/animation-helper";
 
 interface CloudProps {
-  cloud: AnimatedObject;
+  cloud: BackgroundObject;
 }
 
 const Cloud = (props: CloudProps) => {
   const { cloud } = props;
 
-  const { location, speed, size } = cloud;
+  const { type, device, location, speed, isReverse } = cloud;
+
+  const animationType = AnimationHelper.getObjectKeyframe(
+    type,
+    device,
+    isReverse,
+  );
 
   return (
     <span>
       <FontAwesomeIcon
         icon={faCloud}
-        className={`absolute ${location} text-light z-0 ${speed} `}
-        size={size}
+        className="text-light-theme absolute z-0"
+        size="5x"
+        style={{
+          marginTop: `${location}px`,
+          animation: `${animationType} ${speed}s linear infinite`,
+        }}
       />
     </span>
   );
