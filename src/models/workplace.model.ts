@@ -32,7 +32,7 @@ export class Workplace {
       this._descriptions.description[0];
     const descriptionKeys = Object.keys(descriptionObj);
 
-    for (let key in descriptionKeys) {
+    for (const key in descriptionKeys) {
       const descriptionkey: string = descriptionKeys[key];
       const description: string = descriptionObj[descriptionkey];
 

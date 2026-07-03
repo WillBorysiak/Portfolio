@@ -1,7 +1,6 @@
-import { useLayoutEffect, useState } from "react";
-
 import { useTheme } from "next-themes";
 
+import { useMounted } from "../../hooks/useMounted";
 import { BackgroundObjectType } from "../../interfaces/background-object.interface";
 import { AnimationHelper } from "../utils/animation-helper";
 import { PortfolioHelper } from "../utils/portfolio-helper";
@@ -10,10 +9,8 @@ import StarContainer from "./stars/StarContainer";
 
 const ParallaxBackground = () => {
   const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
 
-  // state hydration
-  useLayoutEffect(() => setMounted(true), []);
+  const mounted = useMounted();
 
   if (!mounted) return null;
 

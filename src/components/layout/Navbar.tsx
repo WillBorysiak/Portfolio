@@ -1,4 +1,4 @@
-import { Fragment, useLayoutEffect, useState } from "react";
+import { Fragment } from "react";
 
 import { useTheme } from "next-themes";
 import Link from "next/link";
@@ -14,6 +14,8 @@ import {
   Transition,
 } from "@headlessui/react";
 
+import { useMounted } from "../../hooks/useMounted";
+
 const navigation = [
   { title: "Home", href: "#" },
   { title: "Projects", href: "#projects" },
@@ -24,10 +26,8 @@ const navigation = [
 
 const Navbar = () => {
   const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
 
-  // state hydration
-  useLayoutEffect(() => setMounted(true), []);
+  const mounted = useMounted();
 
   if (!mounted) return null;
 

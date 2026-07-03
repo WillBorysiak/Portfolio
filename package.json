@@ -1,12 +1,12 @@
 {
   "name": "will-borysiak-portfolio",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "version-minor": "npm version patch --no-git-tag-version",
     "version-major": "npm version minor --no-git-tag-version"
   },
@@ -17,15 +17,15 @@
     "@fortawesome/pro-solid-svg-icons": "^7.3.0",
     "@fortawesome/pro-thin-svg-icons": "^7.3.0",
     "@fortawesome/react-fontawesome": "^3.3.1",
-    "@vercel/analytics": "^1.6.1",
+    "@vercel/analytics": "^2.0.1",
     "contentful": "^11.12.6",
     "framer-motion": "^12.42.2",
-    "next": "15.5.19",
+    "next": "16.2.10",
     "next-themes": "^0.4.6",
     "prettier": "^3.9.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "sharp": "^0.35.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "sharp": "^0.35.3",
     "zustand": "^5.0.14"
   },
   "devDependencies": {
@@ -34,19 +34,19 @@
     "@eslint/js": "^9.39.4",
     "@headlessui/react": "^2.2.10",
     "@tailwindcss/postcss": "^4.3.2",
-    "@types/node": "22.20.0",
+    "@types/node": "26.1.0",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "@typescript-eslint/eslint-plugin": "^8.62.1",
     "@typescript-eslint/parser": "^8.62.1",
     "eslint": "9.39.4",
-    "eslint-config-next": "15.5.19",
+    "eslint-config-next": "16.2.10",
     "eslint-import-resolver-typescript": "^4.4.5",
     "eslint-plugin-import": "^2.32.0",
     "postcss": "^8.5.16",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "tailwindcss": "^4.3.2",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
   "prettier": {
     "plugins": [
