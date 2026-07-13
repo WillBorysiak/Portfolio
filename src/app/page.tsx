@@ -1,5 +1,6 @@
 import Hero from "../components/home-page/hero/Hero";
 import Layout from "../components/layout/Layout";
+import { getContentfulData } from "../contentful/contentful-client";
 import Portfolio from "../containers/Portfolio";
 import { IPortfolio } from "../interfaces/portfolio.interface";
 import { SEOMetadata } from "./seo-metdata";
@@ -20,11 +21,5 @@ const Page = async () => {
 export default Page;
 
 const getPortfolioData = async (): Promise<IPortfolio> => {
-  const res = await fetch(`${process.env.API_URL}/api/contentful`, {
-    cache: "force-cache",
-  });
-
-  if (!res.ok) throw new Error("Failed to fetch static data");
-
-  return res.json();
+  return getContentfulData();
 };
