@@ -9,7 +9,7 @@ import { IWorkplace } from "../interfaces/workplace.interface";
 export const getContentfulData = async (): Promise<IPortfolio> => {
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE_ID!,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
+    accessToken: process.env.CONTENTFUL_API_KEY!,
   });
 
   const projects = await client.getEntries<Skeleton<IProject>>({
