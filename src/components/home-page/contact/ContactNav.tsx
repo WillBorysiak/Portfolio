@@ -1,4 +1,4 @@
-import Link from "next/link";
+"use client";
 
 import { faArrowUp } from "@fortawesome/pro-duotone-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,14 +11,13 @@ const ContactNav = () => {
     });
 
   return (
-    <Link href="#home">
-      <FontAwesomeIcon
-        icon={faArrowUp}
-        size="4x"
-        className="text-light-theme mt-10 mb-10 animate-bounce"
-        onClick={scrollToTop}
-      />
-    </Link>
+    <button
+      type="button"
+      className="text-light-theme mt-10 mb-10 animate-bounce cursor-pointer"
+      onClick={scrollToTop}
+    >
+      <FontAwesomeIcon icon={faArrowUp} size="4x" />
+    </button>
   );
 };
 
