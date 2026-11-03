@@ -6,7 +6,7 @@ export interface IProject {
   title: string;
   description: string;
   order: number;
-  website: string;
+  website?: string;
   github: string;
   techStack: string;
   screenshot: IScreenShot;

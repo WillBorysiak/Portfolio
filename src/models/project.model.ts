@@ -5,7 +5,7 @@ export class Project {
   title: string;
   description: string;
   order: number;
-  website: string;
+  website?: string;
   github: string;
   techStack: string;
   screenshotUrl: string;
